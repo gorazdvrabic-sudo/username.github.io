@@ -54,9 +54,13 @@ header .tagline {
     background: none;
     border: none;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.8em;
     cursor: pointer;
     padding: 10px 15px;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    z-index: 101;
 }
 
 .menu-toggle:focus {
@@ -350,103 +354,128 @@ footer a:focus {
 /* Mobile phones (480px and below) */
 @media (max-width: 480px) {
     header {
-        padding: 25px 10px;
-        margin-bottom: 20px;
+        padding: 20px 10px;
+        margin-bottom: 15px;
+        position: relative;
     }
 
     header h1 {
-        font-size: 1.5em;
-        margin-bottom: 8px;
+        font-size: 1.4em;
+        margin-bottom: 5px;
     }
     
     header .tagline {
-        font-size: 0.85em;
-    }
-
-    header p {
         font-size: 0.8em;
     }
 
+    header p {
+        font-size: 0.75em;
+        margin-top: 5px;
+    }
+
+    /* HAMBURGER MENU ON MOBILE */
+    .menu-toggle {
+        display: block;
+    }
+
     nav {
-        margin-bottom: 20px;
+        margin-bottom: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        flex-direction: column;
+    }
+
+    nav.open {
+        max-height: 500px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     nav a {
-        padding: 10px 15px;
-        font-size: 0.9em;
+        padding: 12px 15px;
+        font-size: 0.85em;
     }
 
     h2 {
-        font-size: 1.3em;
-        margin-top: 25px;
-        margin-bottom: 12px;
+        font-size: 1.2em;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 
     h3 {
-        font-size: 1.05em;
-        margin-top: 15px;
+        font-size: 1em;
+        margin-top: 12px;
     }
     
     .section {
-        padding: 15px;
-        margin-bottom: 20px;
+        padding: 12px;
+        margin-bottom: 15px;
     }
     
     .container {
-        padding: 0 10px;
+        padding: 0 8px;
     }
 
     iframe {
-        height: 250px;
+        height: 200px;
     }
 
     img {
-        margin: 15px 0;
+        margin: 12px 0;
     }
 
     p {
-        font-size: 0.9em;
-        margin-bottom: 12px;
+        font-size: 0.85em;
+        margin-bottom: 10px;
     }
 
     ul, ol {
-        margin-left: 15px;
-        font-size: 0.9em;
+        margin-left: 12px;
+        font-size: 0.85em;
     }
 
     li {
-        margin-bottom: 6px;
+        margin-bottom: 5px;
     }
 
     .btn {
-        padding: 10px 20px;
-        font-size: 0.9em;
-        margin-top: 15px;
+        padding: 9px 18px;
+        font-size: 0.85em;
+        margin-top: 12px;
     }
 
     .contact-info {
-        padding: 20px;
-        font-size: 0.9em;
+        padding: 15px;
+        font-size: 0.85em;
     }
 
     .contact-info p {
-        font-size: 0.95em;
-        margin-bottom: 8px;
+        font-size: 0.9em;
+        margin-bottom: 6px;
     }
 
     .highlight {
-        padding: 12px;
-        font-size: 0.9em;
+        padding: 10px;
+        font-size: 0.85em;
     }
 
     footer {
-        padding: 20px 15px;
-        margin-top: 30px;
+        padding: 15px 10px;
+        margin-top: 20px;
     }
 
     footer p {
-        font-size: 0.85em;
-        margin-bottom: 3px;
+        font-size: 0.8em;
+        margin-bottom: 2px;
     }
 }
 
@@ -477,20 +506,21 @@ footer a:focus {
 
 <!-- HEADER -->
 <header>
+    <button class="menu-toggle" id="menuToggle" aria-label="Odpri menu">☰</button>
     <h1>🏖️ Villa Mare</h1>
     <p class="tagline">Apartmaji in Parkiranje v Karigadorju, Istra</p>
     <p style="font-size: 0.95em; margin-top: 10px;">200 m od morja • Brezplačno parkiranje • Mirna lokacija</p>
 </header>
 
 <!-- NAVIGATION -->
-<nav role="navigation" aria-label="Glavna navigacija">
+<nav role="navigation" aria-label="Glavna navigacija" id="navMenu">
     <ul>
-        <li><a href="#about">O nas</a></li>
-        <li><a href="#distances">Oddaljenosti</a></li>
-        <li><a href="#apartments">Apartmaji</a></li>
-        <li><a href="#parking">Parkiranje</a></li>
-        <li><a href="#location">Lokacija</a></li>
-        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="#about" onclick="toggleMenu()">O nas</a></li>
+        <li><a href="#distances" onclick="toggleMenu()">Oddaljenosti</a></li>
+        <li><a href="#apartments" onclick="toggleMenu()">Apartmaji</a></li>
+        <li><a href="#parking" onclick="toggleMenu()">Parkiranje</a></li>
+        <li><a href="#location" onclick="toggleMenu()">Lokacija</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
     </ul>
 </nav>
 
@@ -594,6 +624,26 @@ footer a:focus {
     <p style="margin-top: 15px; font-size: 0.9em;">© 2026 Villa Mare. All rights reserved.</p>
     <p style="font-size: 0.85em; opacity: 0.8;">Ustvarjeno s ❤️ za nepozabne počitnice</p>
 </footer>
+
+<script>
+// Hamburger Menu Toggle
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+menuToggle.addEventListener('click', toggleMenu);
+
+function toggleMenu() {
+    navMenu.classList.toggle('open');
+}
+
+// Close menu when clicking on a link
+const navLinks = navMenu.querySelectorAll('a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+    });
+});
+</script>
 
 </body>
 </html>
