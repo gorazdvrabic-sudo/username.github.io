@@ -140,15 +140,17 @@ p {
 /* IMAGES */
 img {
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     height: auto;
+    min-height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    margin: 20px 0;
+    margin: 20px auto;
+    padding: 0;
     transition: transform 0.3s ease;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    object-fit: cover;
+    visibility: visible;
 }
 
 img:hover {
@@ -349,6 +351,12 @@ footer a:focus {
         padding: 10px 25px;
         font-size: 0.95em;
     }
+
+    img {
+        max-width: 100%;
+        width: 100% !important;
+        height: auto !important;
+    }
 }
 
 /* Mobile phones (480px and below) */
@@ -430,7 +438,12 @@ footer a:focus {
     }
 
     img {
-        margin: 12px 0;
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 15px 0 !important;
+        padding: 0 !important;
+        display: block !important;
     }
 
     p {
@@ -559,7 +572,7 @@ footer a:focus {
 <!-- KARIGADOR PHOTOS -->
 <section>
     <h2>Fotografije kraja in okolice</h2>
-    <img src="images/sl1.jpg" alt="Karigador - Pogled na morje" width="600">
+    <img src="images/sl1.jpg" alt="Karigador - Pogled na morje" loading="eager">
 </section>
 
 <!-- APARTMENTS -->
@@ -569,14 +582,14 @@ footer a:focus {
     <div class="section">
         <h3>🫒 Apartma Olive</h3>
         <p>Opis apartmaja.</p>
-        <img src="images/Olive1.JPG" alt="Apartma Olive" width="600">
+        <img src="images/Olive1.JPG" alt="Apartma Olive" loading="eager">
         <a href="mailto:gorazd.vrabic@gmail.com?subject=Povpraševanje za Apartma Olive" class="btn btn-primary">Pošlji povpraševanje</a>
     </div>
 
     <div class="section">    
         <h3>🪴 Apartma Lavender</h3>
         <p>Opis apartmaja.</p>
-        <img src="images/Lavander1.JPG" alt="Apartma Lavender" width="600">
+        <img src="images/Lavander1.JPG" alt="Apartma Lavender" loading="eager">
         <a href="mailto:gorazd.vrabic@gmail.com?subject=Povpraševanje za Apartma Lavender" class="btn btn-primary">Pošlji povpraševanje</a>
     </div>
 </section>
@@ -586,7 +599,7 @@ footer a:focus {
     <div class="section">   
         <h2>🚤 Parkirno mesto za plovila</h2>
         <p>Varovano nadkrito parkirno mesto 200 m od morja.</p>
-        <img src="images/Parking1.JPG" alt="Parkirno mesto za plovila" width="600">
+        <img src="images/Parking1.JPG" alt="Parkirno mesto za plovila" loading="lazy">
         <a href="mailto:gorazd.vrabic@gmail.com?subject=Povpraševanje za Parkirno mesto" class="btn btn-secondary">Pošlji povpraševanje</a>
     </div>
 </section>
