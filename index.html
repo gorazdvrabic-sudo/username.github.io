@@ -532,7 +532,19 @@ footer a:focus {
 .whatsapp-float:hover { 
  transform:scale(1.1); 
 } 
- 
+ .whatsapp-tooltip {
+    position: fixed;
+    bottom: 95px;
+    right: 25px;
+    background: white;
+    color: #333;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+    z-index: 9998;
+}
 @keyframes pulse { 
  0% {box-shadow:0 0 0 0 rgba(37,211,102,.7);}  
  70% {box-shadow:0 0 0 20px rgba(37,211,102,0);}  
@@ -726,7 +738,9 @@ navLinks.forEach(link => {
 });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
-
+<div class="whatsapp-tooltip">
+    ✅ Rezervacija preko WhatsAppa
+</div>
 <a href="https://wa.me/38641776608?text=Pozdravljeni,%20zanima%20me%20rezervacija" 
 class="whatsapp-float" target="_blank"> 
 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 32 32" fill="white"> 
