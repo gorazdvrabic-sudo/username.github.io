@@ -12,6 +12,7 @@
     <meta property="og:url" content="https://gorazdvrabic-sudo.github.io/username.github.io/">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#003366">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
     <style>
 
 * {
@@ -582,6 +583,37 @@ footer a:focus {
 <section>
     <h2>Fotografije kraja in okolice</h2>
     <img src="images/sl1.jpg" alt="Karigador - Pogled na morje" loading="eager">
+
+<div class="gallery"> 
+<a href="images/sl1.jpg" data-lightbox="okolica"><img src="images/sl1.jpg" alt="Slika 1"></a> 
+<a href="images/sl2.jpg" data-lightbox="okolica"><img src="images/sl2.jpg" alt="Slika 2"></a> 
+<a href="images/sl3.jpg" data-lightbox="okolica"><img src="images/sl3.jpg" alt="Slika 3"></a> 
+<a href="images/sl4.jpg" data-lightbox="okolica"><img src="images/sl4.jpg" alt="Slika 4"></a> 
+<a href="images/sl5.jpg" data-lightbox="okolica"><img src="images/sl5.jpg" alt="Slika 5"></a> 
+<a href="images/sl6.jpg" data-lightbox="okolica"><img src="images/sl6.jpg" alt="Slika 6"></a> 
+<a href="images/sl7.jpg" data-lightbox="okolica"><img src="images/sl7.jpg" alt="Slika 7"></a> 
+</div> 
+ 
+<style> 
+.gallery { 
+ display:flex; 
+ flex-wrap:wrap; 
+ gap:15px; 
+ justify-content:center; 
+} 
+.gallery img { 
+ width:250px; 
+ height:180px; 
+ object-fit:cover; 
+ border-radius:10px; 
+ box-shadow:0 2px 8px rgba(0,0,0,0.3); 
+ transition:transform 0.3s; 
+} 
+.gallery img:hover { 
+ transform:scale(1.05); 
+} 
+</style> 
+    
 </section>
 
 <!-- APARTMENTS -->
@@ -666,6 +698,6 @@ navLinks.forEach(link => {
     });
 });
 </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
