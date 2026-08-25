@@ -512,6 +512,35 @@ footer a:focus {
     }
 }
 
+.whatsapp-float { 
+ position: fixed; 
+ right: 25px; 
+ bottom: 25px; 
+ width: 65px; 
+ height: 65px; 
+ border-radius: 50%; 
+ background: #25D366; 
+ display:flex; 
+ align-items:center; 
+ justify-content:center; 
+ text-decoration:none; 
+ box-shadow:0 4px 15px rgba(0,0,0,.3); 
+ z-index:9999; 
+ animation:pulse 2s infinite; 
+} 
+ 
+.whatsapp-float:hover { 
+ transform:scale(1.1); 
+} 
+ 
+@keyframes pulse { 
+ 0% {box-shadow:0 0 0 0 rgba(37,211,102,.7);}  
+ 70% {box-shadow:0 0 0 20px rgba(37,211,102,0);}  
+ 100% {box-shadow:0 0 0 0 rgba(37,211,102,0);}  
+} 
+
+        
+
 </style>
     <title>Villa Mare - Apartmaji Olive & Lavender v Karigadorju, Istra</title>
 </head>
@@ -697,5 +726,14 @@ navLinks.forEach(link => {
 });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+
+<a href="https://wa.me/38641776608?text=Pozdravljeni,%20zanima%20me%20rezervacija" 
+class="whatsapp-float" target="_blank"> 
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 32 32" fill="white"> 
+<path d="M19.11 17.21c-.27-.14-1.58-.78-1.83-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.85 1.04-.15.18-.31.2-.58.07-.27-.14-1.13-.42-2.16-1.35-.8-.71-1.34-1.59-1.49-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.31.4-.47.13-.15.18-.27.27-.45.09-.18.04-.34-.02-.47-.07-.14-.6-1.45-.82-1.99-.22-.53-.44-.46-.6-.47h-.51c-.18 0-.47.07-.71.34s-.94.92-.94 2.24.96 2.59 1.09 2.77c.13.18 1.87 2.86 4.54 4.01.63.27 1.13.43 1.51.55.64.2 1.22.17 1.68.1.51-.08 1.58-.65 1.8-1.27.22-.63.22-1.17.16-1.28-.07-.11-.25-.18-.52-.31z"/> 
+</svg> 
+</a> 
+
+    
 </body>
 </html>
