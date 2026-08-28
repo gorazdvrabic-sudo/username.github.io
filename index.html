@@ -74,6 +74,11 @@ header .tagline {
     top: 20px;
     left: 20px;
     z-index: 300;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(6px);
+    padding: 6px 8px;
+    border-radius: 10px;
 }
 
 .language-switcher a {
@@ -91,6 +96,24 @@ header .tagline {
 .language-switcher a.active {
     transform: scale(1.15);
     filter: drop-shadow(0 0 8px rgba(255,255,255,1));
+}
+
+.language-switcher img {
+    width: 32px !important;
+    height: 24px !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline-block !important;
+    border-radius: 3px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.language-switcher a.active img {
+    border: 2px solid white;
+    box-shadow: 0 0 8px rgba(255,255,255,0.8);
 }
 
 .hero-btn {
@@ -712,18 +735,31 @@ header p {
 <header>
 
 <div class="language-switcher">
-    <a href="index.html" title="Slovenščina" class="active">🇸🇮 
-        <img src="https://flagcdn.com/16x12/ua.png"
-  srcset="https://flagcdn.com/32x24/ua.png 2x,
-    https://flagcdn.com/48x36/ua.png 3x"
-  width="16"
-  height="12"
-  alt="Ukraine">
+
+    <a href="index.html" class="active" title="Slovenščina">
+        <img src="https://flagcdn.com/16x12/si.png"
+             srcset="https://flagcdn.com/32x24/si.png 2x"
+             alt="Slovenščina">
     </a>
-    <a href="en.html" title="English">🇬🇧</a>
-    <a href="de.html" title="Deutsch">🇩🇪</a>
-   <a href="it.html" title="Italiano">🇮🇹</a>
-    </div>
+
+    <a href="en.html" title="English">
+        <img src="https://flagcdn.com/16x12/gb.png"
+             srcset="https://flagcdn.com/32x24/gb.png 2x"
+             alt="English">        
+    </a>
+
+    <a href="de.html" title="Deutsch">
+                    <img src="https://flagcdn.com/16x12/de.png"
+             srcset="https://flagcdn.com/32x24/de.png 2x"
+             alt="Deutsch"> 
+    </a>
+
+    <a href="it.html" title="Italiano">
+                <img src="https://flagcdn.com/16x12/it.png"
+             srcset="https://flagcdn.com/32x24/it.png 2x"
+             alt="Italiano">    </a>
+
+</div>
 <button class="menu-toggle" id="menuToggle" aria-label="Odpri menu">☰</button>
 
 
