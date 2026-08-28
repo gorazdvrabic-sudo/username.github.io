@@ -12,6 +12,7 @@
     <meta property="og:url" content="https://gorazdvrabic-sudo.github.io/username.github.io/">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#003366">
+    <link rel="canonical" href="https://gorazdvrabic-sudo.github.io/username.github.io/">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
     <style>
 
@@ -285,7 +286,41 @@ footer a:focus {
     text-decoration: underline;
     outline: none;
 }
+<style>
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
 
+.gallery img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+
+    .gallery {
+        gap: 10px;
+    }
+
+    .gallery img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+}
+</style>
 /* HIGHLIGHTS */
 .highlight {
     background-color: #fffacd;
@@ -617,7 +652,7 @@ footer a:focus {
         <div class="highlight">
             <strong>✨ Kaj te čaka:</strong> Mirna lokacija ob morju, idealno za družine, urejene plaže in čisto morje, 
                         kolesarske in sprehajalne poti, odlična istrska kulinarika s svežo ribo in lokalnimi dobrotami (pršut, fuži, tartufi, oljčno olje, vrhunska vina Malvazija, Teran...),
-                        prijazni domačini, mirno okolje in vendar bližinna centrov, kjer se zabave željni gostje lahko sprostijo in zabavajo dolgo v noč.
+                        prijazni domačini, mirno okolje in vendar bližina centrov, kjer se zabave željni gostje lahko sprostijo in zabavajo dolgo v noč.
                         Okolica Karigadorja ponuja številne urejene poti ob morju in skozi istrsko zaledje, primerne za rekreacijo in raziskovanje narave. Bližnje 
                         plaže slovijo po čistem morju, naravni senci borovcev in mirnem okolju.
         </div>
@@ -656,44 +691,7 @@ footer a:focus {
 <a href="images/sl6.jpg" data-lightbox="okolica"><img src="images/sl6.jpg" alt="Slika 6"></a> 
 <a href="images/sl7.jpg" data-lightbox="okolica"><img src="images/sl7.jpg" alt="Slika 7"></a> 
 </div> 
-    
-<style>
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-}
-
-.gallery img {
-    width: 250px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-@media (max-width: 480px) {
-
-    .gallery {
-        gap: 10px;
-    }
-
-    .gallery img {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-    }
-
-}
-</style>
-``
-    
+   
 </section>
 <!-- SERVICES -->
 <section id="services">
