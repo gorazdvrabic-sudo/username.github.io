@@ -63,12 +63,36 @@ header .tagline {
     font-size: 1.1em;
     opacity: 0.95;
 }
-       .header-subtitle {
+    .header-subtitle {
     margin-top: 15px;
     font-size: 1.2em;
     font-weight: 500;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
+    .language-switcher {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 300;
+}
+
+.language-switcher a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 8px;
+    transition: transform 0.25s ease;
+    display: inline-block;
+}
+
+.language-switcher a:hover {
+    transform: scale(1.15);
+}
+
+.language-switcher a.active {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,1));
+}
+
 .hero-btn {
     display: inline-flex;
     align-items: center;
@@ -457,7 +481,15 @@ footer a:focus {
 header p {
     margin-top: 5px;
 }
+.language-switcher {
+    top: 12px;
+    left: 12px;
+}
 
+.language-switcher a {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
     /* HAMBURGER MENU ON MOBILE */
     .menu-toggle {
         display: block;
@@ -678,9 +710,17 @@ header p {
 
 <!-- HEADER -->
 <header>
-    <button class="menu-toggle" id="menuToggle" aria-label="Odpri menu">☰</button>
 
-    <h1>🏖️ Villa Mare</h1>
+<div class="language-switcher">
+    <a href="index.html" title="Slovenščina" class="active">🇸🇮</a>
+    <a href="en.html" title="English">🇬🇧</a>
+    <a href="de.html" title="Deutsch">🇩🇪</a>
+   <a href="it.html" title="Italiano">🇮🇹</a>
+    </div>
+<button class="menu-toggle" id="menuToggle" aria-label="Odpri menu">☰</button>
+
+
+<h1>🏖️ Villa Mare</h1>
 
     <p class="tagline">
         Apartmaji Olive & Lavender
