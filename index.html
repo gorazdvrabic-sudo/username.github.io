@@ -286,7 +286,7 @@ footer a:focus {
     text-decoration: underline;
     outline: none;
 }
-<style>
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -320,7 +320,7 @@ footer a:focus {
     }
 
 }
-</style>
+
 /* HIGHLIGHTS */
 .highlight {
     background-color: #fffacd;
@@ -742,7 +742,7 @@ letna kuhinja, ki si jo lahko delijo z ostalimi gosti.
 Apartma Lavender je prijeten in sodobno opremljen apartma za do 4 osebe.
 Nahaja se v mirnem delu Karigadorja, le približno 200 metrov od morja.
 Gostom so na voljo večja spalnica z zakonsko posteljo, manjša spalnica z dvema posteljama, 
-skupen dnevni prostor z opremljeno kuhinja,
+skupen dnevni prostor z opremljeno kuhinjo,
 kopalnica, klimatizirani prostori, brezplačen WiFi ter nadkrito parkirno mesto.
 Apartma je odlična izbira za pare, družine in vse, ki si želijo sproščenih
 počitnic ob morju v prijetnem istrskem okolju. Gostom je na voljo tudi skupna 
@@ -785,7 +785,8 @@ letna kuhinja, ki si jo lahko delijo z ostalimi gosti.
     <p style="text-align:center;">
     <a href="https://maps.google.com/?q=45.3595613983202,13.56048904460079"
        class="btn"
-       target="_blank">
+       target="_blank"
+       rel="noopener noreferrer">
        Odpri v Google Maps
     </a>
 </p>
@@ -842,6 +843,13 @@ class="whatsapp-float" target="_blank">
 </svg> 
 </a> 
 
-    
+<script>
+setTimeout(() => {
+    const tooltip = document.querySelector('.whatsapp-tooltip');
+    if (tooltip) {
+        tooltip.style.display = 'none';
+    }
+}, 8000);
+</script>    
 </body>
 </html>
