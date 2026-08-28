@@ -69,7 +69,26 @@ header .tagline {
     font-weight: 500;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
+.hero-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 30px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.05em;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
 
+.hero-btn:hover {
+    background: #1ea952;
+    transform: translateY(-2px);
+    color: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.45);
+}
 
 /* HAMBURGER MENU */
 .menu-toggle {
@@ -417,12 +436,7 @@ footer a:focus {
         margin-bottom: 5px;
     }
     
-    header .tagline {
-        font-size: 1em;
-    }
-    .header-subtitle {
-    font-size: 0.9em;
-}
+
 
     header .tagline {
     font-size: 1em;
@@ -667,6 +681,12 @@ header p {
     <p class="header-subtitle">
         Karigador, Istra • 200 m od morja • Mirna lokacija • Brezplačno parkiranje
     </p>
+    <a href="https://wa.me/38641776608?text=Pozdravljeni,%20zanima%20me%20rezervacija"
+   class="hero-btn"
+   target="_blank"
+   rel="noopener noreferrer">
+   📱 Pošlji povpraševanje
+</a>
 </header>
 
 <!-- NAVIGATION -->
@@ -727,13 +747,13 @@ header p {
 <section>
     <h2>Fotografije kraja in okolice</h2>
 <div class="gallery"> 
-<a href="images/sl1.jpg" data-lightbox="okolica"><img src="images/sl1.jpg" alt="Slika 1"></a> 
-<a href="images/sl2.jpg" data-lightbox="okolica"><img src="images/sl2.jpg" alt="Slika 2"></a> 
-<a href="images/sl3.jpg" data-lightbox="okolica"><img src="images/sl3.jpg" alt="Slika 3"></a> 
-<a href="images/sl4.jpg" data-lightbox="okolica"><img src="images/sl4.jpg" alt="Slika 4"></a> 
-<a href="images/sl5.jpg" data-lightbox="okolica"><img src="images/sl5.jpg" alt="Slika 5"></a> 
-<a href="images/sl6.jpg" data-lightbox="okolica"><img src="images/sl6.jpg" alt="Slika 6"></a> 
-<a href="images/sl7.jpg" data-lightbox="okolica"><img src="images/sl7.jpg" alt="Slika 7"></a> 
+<a href="images/sl1.jpg" data-lightbox="okolica"><img src="images/sl1.jpg" alt="Slika 1" loading="lazy"></a> 
+<a href="images/sl2.jpg" data-lightbox="okolica"><img src="images/sl2.jpg" alt="Slika 2" loading="lazy"></a> 
+<a href="images/sl3.jpg" data-lightbox="okolica"><img src="images/sl3.jpg" alt="Slika 3" loading="lazy"></a> 
+<a href="images/sl4.jpg" data-lightbox="okolica"><img src="images/sl4.jpg" alt="Slika 4" loading="lazy"></a> 
+<a href="images/sl5.jpg" data-lightbox="okolica"><img src="images/sl5.jpg" alt="Slika 5" loading="lazy"></a> 
+<a href="images/sl6.jpg" data-lightbox="okolica"><img src="images/sl6.jpg" alt="Slika 6" loading="lazy"></a> 
+<a href="images/sl7.jpg" data-lightbox="okolica"><img src="images/sl7.jpg" alt="Slika 7" loading="lazy"></a> 
 </div> 
    
 </section>
