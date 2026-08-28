@@ -656,26 +656,43 @@ footer a:focus {
 <a href="images/sl6.jpg" data-lightbox="okolica"><img src="images/sl6.jpg" alt="Slika 6"></a> 
 <a href="images/sl7.jpg" data-lightbox="okolica"><img src="images/sl7.jpg" alt="Slika 7"></a> 
 </div> 
- 
-<style> 
-.gallery { 
- display:flex; 
- flex-wrap:wrap; 
- gap:15px; 
- justify-content:center; 
-} 
-.gallery img { 
- width:250px; 
- height:180px; 
- object-fit:cover; 
- border-radius:10px; 
- box-shadow:0 2px 8px rgba(0,0,0,0.3); 
- transition:transform 0.3s; 
-} 
-.gallery img:hover { 
- transform:scale(1.05); 
-} 
-</style> 
+    
+<style>
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+
+    .gallery {
+        gap: 10px;
+    }
+
+    .gallery img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+}
+</style>
+``
     
 </section>
 <!-- SERVICES -->
