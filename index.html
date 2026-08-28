@@ -31,24 +31,45 @@ body {
 
 /* HEADER */
 header {
-    background: linear-gradient(135deg, #003366 0%, #005599 100%);
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.45)
+        ),
+        url('images/hero.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     color: white;
-    padding: 40px 20px;
     text-align: center;
+
+    padding: 120px 20px;
+
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     margin-bottom: 30px;
+
+    position: relative;
 }
 
 header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
 }
 
 header .tagline {
     font-size: 1.1em;
     opacity: 0.95;
 }
+       .header-subtitle {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
 
 /* HAMBURGER MENU */
 .menu-toggle {
@@ -307,19 +328,7 @@ footer a:focus {
     transform: scale(1.05);
 }
 
-@media (max-width: 480px) {
 
-    .gallery {
-        gap: 10px;
-    }
-
-    .gallery img {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-    }
-
-}
 
 /* HIGHLIGHTS */
 .highlight {
@@ -335,7 +344,7 @@ footer a:focus {
 /* Tablets (768px and below) */
 @media (max-width: 768px) {
     header {
-        padding: 30px 15px;
+        padding: 80px 15px;
     }
 
     header h1 {
@@ -398,19 +407,22 @@ footer a:focus {
 /* Mobile phones (480px and below) */
 @media (max-width: 480px) {
     header {
-        padding: 20px 10px;
+        padding: 70px 10px;
         margin-bottom: 15px;
         position: relative;
     }
 
     header h1 {
-        font-size: 1.4em;
+        font-size: 2em;
         margin-bottom: 5px;
     }
     
     header .tagline {
-        font-size: 0.8em;
+        font-size: 1em;
     }
+    .header-subtitle {
+    font-size: 0.9em;
+}
 
     header p {
         font-size: 0.75em;
@@ -634,9 +646,16 @@ footer a:focus {
 <!-- HEADER -->
 <header>
     <button class="menu-toggle" id="menuToggle" aria-label="Odpri menu">☰</button>
+
     <h1>🏖️ Villa Mare</h1>
-    <p class="tagline">Apartmaji in Parkiranje v Karigadorju, Istra</p>
-    <p style="font-size: 0.95em; margin-top: 10px;">200 m od morja • Brezplačno parkiranje • Mirna lokacija</p>
+
+    <p class="tagline">
+        Apartmaji Olive & Lavender
+    </p>
+
+    <p class="header-subtitle">
+        Karigador, Istra • 200 m od morja • Mirna lokacija • Brezplačno parkiranje
+    </p>
 </header>
 
 <!-- NAVIGATION -->
