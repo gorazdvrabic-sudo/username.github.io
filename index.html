@@ -744,6 +744,18 @@ header p {
     margin: 20px auto;
     cursor: pointer;
 }
+#availability iframe {
+    width: 100%;
+    height: 600px;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    #availability iframe {
+        height: 500px;
+    }
+}
+        
 </style>
     <title>Apartmaji Olive & Lavender | Karigador | Villa Mare | Istra Hrvaška</title>
     <script type="application/ld+json">
@@ -835,6 +847,7 @@ header p {
         <li><a href="#apartments" onclick="toggleMenu()">Nastanitev</a></li>
         <li><a href="#about" onclick="toggleMenu()">Karigador</a></li>
         <li><a href="#distances" onclick="toggleMenu()">Lokacija in okolica</a></li>
+        <li><a href="#availability" onclick="toggleMenu()">📅 Prosti termini</a></li> 
         <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
     </ul>
 </nav>
@@ -1044,6 +1057,44 @@ možna je uporaba mehke vode za čiščenje (ne pušča sledi vodnega kamna), up
     </div> 
 </section> 
 
+<!-- AVAILABILITY -->
+<section id="availability">
+    <h2>📅 Prosti termini</h2>
+<p class="highlight">
+🏖️ Na spodnjih koledarjih preverite razpoložljive termine za apartmaja Olive in Lavender. Če je želeni termin prost, nas kontaktirajte in z veseljem pripravimo ponudbo za vaše počitnice v Karigadorju.
+</p>
+    <div class="section">
+
+        <h3>🫒 Apartma Olive</h3>
+
+        <iframe
+    src="https://calendar.google.com/calendar/embed?src=92aababb69957b4b9f654bd5c4208ed1a8900374a8868380069f38db8a034a3a%40group.calendar.google.com&ctz=Europe%2FLjubljana&mode=MONTH&showTitle=0&showNav=0&showPrint=0&showTabs=0"
+    style="border:0;width:100%;height:600px;border-radius:12px;"
+    loading="lazy">
+</iframe>
+
+        <h3 style="margin-top:30px;">🪴 Apartma Lavender</h3>
+
+        <iframe
+    src="https://calendar.google.com/calendar/embed?src=802838fe1bf49fc6a4ea9427d69bcb15e09b5641c10f7f0350ebdf742dab60af%40group.calendar.google.com&ctz=Europe%2FLjubljana&mode=MONTH&showTitle=0&showNav=0&showPrint=0&showTabs=0"
+    style="border:0;width:100%;height:600px;border-radius:12px;"
+    loading="lazy">
+</iframe>
+
+        <p style="text-align:center;margin-top:20px;">
+            💬 Za rezervacijo ali povpraševanje nas kontaktirajte preko WhatsAppa.
+        </p>
+<p style="text-align:center;">
+    <a href="https://wa.me/38641776608?text=Pozdravljeni,%20zanima%20me%20rezervacija"
+       class="btn btn-secondary"
+       target="_blank"
+       rel="noopener noreferrer">
+       📱 Pošlji WhatsApp povpraševanje
+    </a>
+</p>
+    </div>
+</section>
+    
 <!-- CONTACT -->
 <section id="contact">
     <h2>Kontakt in Rezervacija</h2>
