@@ -755,6 +755,60 @@ header p {
         height: 500px;
     }
 }
+.olive-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.olive-text {
+    flex: 0 0 72%;
+}
+
+.olive-calendar {
+    flex: 0 0 28%;
+    min-width: 280px;
+    position: sticky;
+    top: 90px;
+    background: #f8fbff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.olive-calendar h4 {
+    margin-bottom: 12px;
+    color: #003366;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.olive-calendar iframe {
+    width: 100%;
+    height: 420px;
+    border: 0;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .olive-layout {
+        flex-direction: column;
+    }
+
+    .olive-text,
+    .olive-calendar {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .olive-calendar iframe {
+        height: 500px;
+    }
+    .olive-calendar {
+position: static;
+}
+}
+
         
 </style>
     <title>Apartmaji Olive & Lavender | Karigador | Villa Mare | Istra Hrvaška</title>
@@ -881,7 +935,8 @@ header p {
         <p class="highlight">
             🏖️ 200 m od morja • 👥 2–3 osebe • ❄️ Klima • 📶 WiFi
         </p>
-    <p>
+ <div class="olive-layout"> 
+  <div class="olive-text">   <p>
 Apartma Olive je prijeten apartma za 2 do 3 osebe, namenjen vsem, ki si želijo sproščenih počitnic ob morju v mirnem istrskem okolju. Le 200 metrov od plaže ponuja udobje, zasebnost in vse potrebno za brezskrben oddih.
 Po dnevu, preživetem na morju, raziskovanju istrskih mest ali kolesarjenju po obalnih poteh, se lahko sprostite v prijetno urejenih prostorih, pripravite večerjo v opremljeni kuhinji ali uživate v poletnih večerih na prostem.
 Gostom so na voljo spalnica z zakonsko posteljo, dnevni prostor s pomožnim ležiščem, kopalnica, klimatska naprava, brezplačen WiFi, nadkrito parkirno mesto in skupna letna kuhinja.
@@ -895,7 +950,14 @@ Gostom so na voljo spalnica z zakonsko posteljo, dnevni prostor s pomožnim lež
     <li>🚗 Nadkrito parkirišče</li>
     <li>🔌 Možnost polnjenja električnega vozila</li>
 </ul>
-        
+  </div>
+       <div class="olive-calendar"> 
+    <h4>📅 Razpoložljivost</h4> 
+    <iframe
+src="https://calendar.google.com/calendar/embed?src=92aababb69957b4b9f654bd5c4208ed1a8900374a8868380069f38db8a034a3a%40group.calendar.google.com&ctz=Europe%2FLjubljana&mode=MONTH&showTitle=0&showNav=0&showPrint=0&showTabs=0">
+</iframe>
+  </div> 
+</div>
 <div class="gallery olive-gallery"> 
  
     <a href="images/Olive1.JPG" data-lightbox="olive" data-title="Apartma Olive"> 
@@ -1057,43 +1119,7 @@ možna je uporaba mehke vode za čiščenje (ne pušča sledi vodnega kamna), up
     </div> 
 </section> 
 
-<!-- AVAILABILITY -->
-<section id="availability">
-    <h2>📅 Prosti termini</h2>
-<p class="highlight">
-🏖️ Na spodnjih koledarjih preverite razpoložljive termine za apartmaja Olive in Lavender. Če je želeni termin prost, nas kontaktirajte in z veseljem pripravimo ponudbo za vaše počitnice v Karigadorju.
-</p>
-    <div class="section">
 
-        <h3>🫒 Apartma Olive</h3>
-
-        <iframe
-    src="https://calendar.google.com/calendar/embed?src=92aababb69957b4b9f654bd5c4208ed1a8900374a8868380069f38db8a034a3a%40group.calendar.google.com&ctz=Europe%2FLjubljana&mode=MONTH&showTitle=0&showNav=0&showPrint=0&showTabs=0"
-    style="border:0;width:100%;height:600px;border-radius:12px;"
-    loading="lazy">
-</iframe>
-
-        <h3 style="margin-top:30px;">🪴 Apartma Lavender</h3>
-
-        <iframe
-    src="https://calendar.google.com/calendar/embed?src=802838fe1bf49fc6a4ea9427d69bcb15e09b5641c10f7f0350ebdf742dab60af%40group.calendar.google.com&ctz=Europe%2FLjubljana&mode=MONTH&showTitle=0&showNav=0&showPrint=0&showTabs=0"
-    style="border:0;width:100%;height:600px;border-radius:12px;"
-    loading="lazy">
-</iframe>
-
-        <p style="text-align:center;margin-top:20px;">
-            💬 Za rezervacijo ali povpraševanje nas kontaktirajte preko WhatsAppa.
-        </p>
-<p style="text-align:center;">
-    <a href="https://wa.me/38641776608?text=Pozdravljeni,%20zanima%20me%20rezervacija"
-       class="btn btn-secondary"
-       target="_blank"
-       rel="noopener noreferrer">
-       📱 Pošlji WhatsApp povpraševanje
-    </a>
-</p>
-    </div>
-</section>
     
 <!-- CONTACT -->
 <section id="contact">
