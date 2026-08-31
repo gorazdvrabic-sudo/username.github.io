@@ -762,12 +762,12 @@ header p {
 }
 
 .olive-text {
-    flex: 0 0 72%;
+    flex: 0 0 68%;
 }
 
 .olive-calendar {
-    flex: 0 0 28%;
-    min-width: 280px;
+    flex: 0 0 32%;
+    min-width: 300px;
     position: sticky;
     top: 90px;
     background: #f8fbff;
@@ -901,7 +901,6 @@ position: static;
         <li><a href="#apartments" onclick="toggleMenu()">Nastanitev</a></li>
         <li><a href="#about" onclick="toggleMenu()">Karigador</a></li>
         <li><a href="#distances" onclick="toggleMenu()">Lokacija in okolica</a></li>
-        <li><a href="#availability" onclick="toggleMenu()">📅 Prosti termini</a></li> 
         <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
     </ul>
 </nav>
@@ -950,9 +949,12 @@ Gostom so na voljo spalnica z zakonsko posteljo, dnevni prostor s pomožnim lež
     <li>🚗 Nadkrito parkirišče</li>
     <li>🔌 Možnost polnjenja električnega vozila</li>
 </ul>
-  </div>
+  </div>
        <div class="olive-calendar"> 
-    <h4>📅 Razpoložljivost</h4> 
+    <h4>📅 Razpoložljivost Apartma Olive</h4> 
+          <p style="text-align:center;font-size:0.9rem;margin-bottom:10px;color:#666;">
+📅 Zasedeni termini so označeni v koledarju.
+</p>
     <iframe
 src="https://calendar.google.com/calendar/embed?src=92aababb69957b4b9f654bd5c4208ed1a8900374a8868380069f38db8a034a3a%40group.calendar.google.com&ctz=Europe%2FLjubljana&mode=MONTH&showTitle=0&showNav=0&showPrint=0&showTabs=0">
 </iframe>
