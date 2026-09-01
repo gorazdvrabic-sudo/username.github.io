@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="sl">
 <head>
+    <link rel="preload" as="image" href="images/hero.png"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
     <link rel="alternate" hreflang="sl" href="https://gorazdvrabic-sudo.github.io/username.github.io/" />
     <link rel="alternate" hreflang="en" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_en.html" />
     <link rel="alternate" hreflang="de" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_de.html" />
@@ -21,7 +23,6 @@
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#003366">
     <link rel="canonical" href="https://gorazdvrabic-sudo.github.io/username.github.io/">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
     <style>
 
 * {
@@ -29,7 +30,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html {scroll-behavior: smooth;}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -503,6 +504,18 @@ footer a:focus {
 
 /* Mobile phones (480px and below) */
 @media (max-width: 480px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        right: 15px;
+        bottom: 15px;
+        animation: none;
+    }
+
+    .whatsapp-tooltip {
+        display: none;
+    }
+    
     header {
         padding: 40px 10px;
         margin-bottom: 15px;
@@ -753,12 +766,20 @@ header p {
   "@type":"LodgingBusiness",
   "name":"Villa Mare",
   "url":"https://gorazdvrabic-sudo.github.io/username.github.io/",
-  "image":"https://gorazdvrabic-sudo.github.io/username.github.io/images/hero.png",
   "telephone":"+38641776608",
   "email":"villamare.olive.lavender@gmail.com",
+  "priceRange":"€€",
+
+  "image":[
+    "https://gorazdvrabic-sudo.github.io/username.github.io/images/hero.png",
+    "https://gorazdvrabic-sudo.github.io/username.github.io/images/Olive1.JPG",
+    "https://gorazdvrabic-sudo.github.io/username.github.io/images/Lavander1.JPG"
+  ],
+
   "sameAs":[
     "https://maps.google.com/?q=45.3595613983202,13.56048904460079"
   ],
+
   "address":{
     "@type":"PostalAddress",
     "addressLocality":"Karigador",
@@ -815,7 +836,7 @@ header p {
 },
         {
   "@type":"Question",
-  "name":"Ali je možno parkiranje plovil?",
+  "name":"Ali je na voljo parkiranje plovil?",
   "acceptedAnswer":{
     "@type":"Answer",
     "text":"Gostom sta na voljo dve nadkriti parkirni mesti za plovila z možnostjo uporabe vode in elektrike."
@@ -1102,6 +1123,7 @@ možna je uporaba mehke vode za čiščenje (ne pušča sledi vodnega kamna), up
     style="border:0; border-radius:15px;"
     allowfullscreen=""
     loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
     title="Villa Mare lokacija na Google Maps">
 </iframe>
 
@@ -1128,6 +1150,8 @@ možna je uporaba mehke vode za čiščenje (ne pušča sledi vodnega kamna), up
         <p>Za informacije glede hišnih ljubljenčkov nas predhodno kontaktirajte.</p>
         <h3>Kdaj sta možna prihod in odhod?</h3>
         <p>Točne ure prihoda in odhoda se dogovorijo ob rezervaciji.</p>
+        <h3>Ali je na voljo parkiranje plovil?</h3>
+        <p>Gostom sta na voljo dve nadkriti parkirni mesti za plovila z možnostjo uporabe vode in elektrike.</p>
     </div>
 </section>
     
