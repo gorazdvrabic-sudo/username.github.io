@@ -744,72 +744,7 @@ header p {
     margin: 20px auto;
     cursor: pointer;
 }
-#availability iframe {
-    width: 100%;
-    height: 600px;
-    border-radius: 12px;
-}
-
-@media (max-width: 768px) {
-    #availability iframe {
-        height: 500px;
-    }
-}
-.olive-layout {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-}
-
-.olive-text {
-    flex: 0 0 68%;
-}
-
-.olive-calendar {
-    flex: 0 0 32%;
-    min-width: 300px;
-    position: sticky;
-    top: 90px;
-    background: #f8fbff;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.olive-calendar h4 {
-    margin-bottom: 12px;
-    color: #003366;
-    text-align: center;
-    font-size: 1.1rem;
-}
-
-.olive-calendar iframe {
-    width: 100%;
-    height: 420px;
-    border: 0;
-    border-radius: 12px;
-}
-
-@media (max-width: 768px) {
-    .olive-layout {
-        flex-direction: column;
-    }
-
-    .olive-text,
-    .olive-calendar {
-        flex: 1 1 100%;
-        width: 100%;
-    }
-
-    .olive-calendar iframe {
-        height: 500px;
-    }
-    .olive-calendar {
-position: static;
-}
-}
-
-        
+  
 </style>
     <title>Apartmaji Olive & Lavender | Karigador | Villa Mare | Istra Hrvaška</title>
     <script type="application/ld+json">
@@ -830,6 +765,38 @@ position: static;
 </script>
     <meta property="og:locale" content="sl_SI">
     <meta property="og:site_name" content="Villa Mare">
+    <script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+  {
+   "@type":"Question",
+   "name":"Kako daleč je morje od apartmajev?",
+   "acceptedAnswer":{
+    "@type":"Answer",
+    "text":"Apartmaja Olive in Lavender sta oddaljena približno 200 metrov od morja."
+   }
+  },
+  {
+   "@type":"Question",
+   "name":"Ali je zagotovljeno parkiranje?",
+   "acceptedAnswer":{
+    "@type":"Answer",
+    "text":"Gostom je na voljo brezplačno nadkrito parkiranje."
+   }
+  },
+  {
+   "@type":"Question",
+   "name":"Ali je na voljo WiFi?",
+   "acceptedAnswer":{
+    "@type":"Answer",
+    "text":"Da, v obeh apartmajih je na voljo brezplačen WiFi."
+   }
+  }
+ ]
+}
+</script>
 </head>
 
 <body>
@@ -842,26 +809,29 @@ position: static;
     <a href="index.html" class="active" title="Slovenščina">
         <img src="https://flagcdn.com/16x12/si.png"
              srcset="https://flagcdn.com/32x24/si.png 2x"
-             alt="Slovenščina">
+             alt="Slovenščina"
+             loading="lazy">
     </a>
 
     <a href="index_en.html" title="English">
         <img src="https://flagcdn.com/16x12/gb.png"
              srcset="https://flagcdn.com/32x24/gb.png 2x"
-             alt="English">        
+             alt="English"
+             loading="lazy">        
     </a>
 
     <a href="index_de.html" title="Deutsch">
                     <img src="https://flagcdn.com/16x12/de.png"
              srcset="https://flagcdn.com/32x24/de.png 2x"
-             alt="Deutsch"> 
+             alt="Deutsch"
+             loading="lazy"> 
     </a>
 
     <a href="index_it.html" title="Italiano">
                 <img src="https://flagcdn.com/16x12/it.png"
              srcset="https://flagcdn.com/32x24/it.png 2x"
-             alt="Italiano"></a>
-
+             alt="Italiano"
+             loading="lazy"></a>
 </div>
 <button class="menu-toggle" id="menuToggle" aria-label="Odpri menu">☰</button>
 
@@ -899,6 +869,7 @@ position: static;
     <ul>
         <li><a href="#services" onclick="toggleMenu()">Kaj ponujamo</a></li>
         <li><a href="#apartments" onclick="toggleMenu()">Nastanitev</a></li>
+        <li><a href="#parking" onclick="toggleMenu()">Parkiranje plovil</a></li>
         <li><a href="#about" onclick="toggleMenu()">Karigador</a></li>
         <li><a href="#distances" onclick="toggleMenu()">Lokacija in okolica</a></li>
         <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
@@ -934,8 +905,7 @@ position: static;
         <p class="highlight">
             🏖️ 200 m od morja • 👥 2–3 osebe • ❄️ Klima • 📶 WiFi
         </p>
- <div class="olive-layout"> 
-  <div class="olive-text">   <p>
+<p>
 Apartma Olive je prijeten apartma za 2 do 3 osebe, namenjen vsem, ki si želijo sproščenih počitnic ob morju v mirnem istrskem okolju. Le 200 metrov od plaže ponuja udobje, zasebnost in vse potrebno za brezskrben oddih.
 Po dnevu, preživetem na morju, raziskovanju istrskih mest ali kolesarjenju po obalnih poteh, se lahko sprostite v prijetno urejenih prostorih, pripravite večerjo v opremljeni kuhinji ali uživate v poletnih večerih na prostem.
 Gostom so na voljo spalnica z zakonsko posteljo, dnevni prostor s pomožnim ležiščem, kopalnica, klimatska naprava, brezplačen WiFi, nadkrito parkirno mesto in skupna letna kuhinja.
@@ -949,17 +919,6 @@ Gostom so na voljo spalnica z zakonsko posteljo, dnevni prostor s pomožnim lež
     <li>🚗 Nadkrito parkirišče</li>
     <li>🔌 Možnost polnjenja električnega vozila</li>
 </ul>
-  </div>
-       <div class="olive-calendar"> 
-    <h4>📅 Razpoložljivost Apartma Olive</h4> 
-          <p style="text-align:center;font-size:0.9rem;margin-bottom:10px;color:#666;">
-📅 Zasedeni termini so označeni v koledarju.
-</p>
-    <iframe
-src="https://calendar.google.com/calendar/embed?src=92aababb69957b4b9f654bd5c4208ed1a8900374a8868380069f38db8a034a3a%40group.calendar.google.com&ctz=Europe%2FLjubljana&mode=MONTH&showTitle=0&showNav=0&showPrint=0&showTabs=0">
-</iframe>
-  </div> 
-</div>
 <div class="gallery olive-gallery"> 
  
     <a href="images/Olive1.JPG" data-lightbox="olive" data-title="Apartma Olive"> 
@@ -1121,7 +1080,20 @@ možna je uporaba mehke vode za čiščenje (ne pušča sledi vodnega kamna), up
     </div> 
 </section> 
 
+<section id="faq">
+    <h2>Pogosta vprašanja</h2>
 
+    <div class="section">
+        <h3>Kako daleč je morje od apartmajev?</h3>
+        <p>Apartmaja Olive in Lavender sta oddaljena približno 200 metrov od morja.</p>
+
+        <h3>Ali je zagotovljeno parkiranje?</h3>
+        <p>Gostom je na voljo brezplačno nadkrito parkiranje.</p>
+
+        <h3>Ali je na voljo WiFi?</h3>
+        <p>Da, v obeh apartmajih je na voljo brezplačen WiFi.</p>
+    </div>
+</section>
     
 <!-- CONTACT -->
 <section id="contact">
