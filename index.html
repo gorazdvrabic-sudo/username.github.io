@@ -43,6 +43,7 @@
     }
     img{max-width:100%;display:block}
     a{text-decoration:none;color:inherit}
+    button{font:inherit}
     .container{
       width:min(var(--container), calc(100% - 32px));
       margin-inline:auto;
@@ -383,6 +384,55 @@
       object-fit:cover;
     }
 
+    .featured-gallery{
+      margin-top:18px;
+    }
+    .gallery-trigger{
+      display:block;
+      width:100%;
+      padding:0;
+      border:none;
+      background:transparent;
+      border-radius:20px;
+      overflow:hidden;
+      cursor:pointer;
+      box-shadow:0 18px 35px rgba(16,42,56,0.08);
+      border:1px solid var(--line);
+      position:relative;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .gallery-trigger:hover,
+    .gallery-trigger:focus-visible{
+      transform:translateY(-2px);
+      box-shadow:0 24px 40px rgba(16,42,56,0.12);
+      outline:none;
+    }
+    .gallery-trigger img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+    }
+    .gallery-trigger .trigger-label{
+      position:absolute;
+      left:16px;
+      right:16px;
+      bottom:16px;
+      padding:10px 12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      border-radius:12px;
+      background:rgba(16,42,56,0.72);
+      color:#fff;
+      font-size:0.76rem;
+      font-weight:700;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      backdrop-filter:blur(8px);
+    }
+
     .faq{
       display:grid;
       gap:18px;
@@ -447,6 +497,99 @@
       box-shadow:0 14px 30px rgba(16,42,56,0.08);
     }
 
+    .lightbox{
+      position:fixed;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none;
+      transition:opacity .2s ease, visibility .2s ease;
+      z-index:1000;
+    }
+    .lightbox.open{
+      opacity:1;
+      visibility:visible;
+      pointer-events:auto;
+    }
+    .lightbox-backdrop{
+      position:absolute;
+      inset:0;
+      background:rgba(8,18,25,0.8);
+      backdrop-filter:blur(8px);
+    }
+    .lightbox-dialog{
+      position:relative;
+      width:min(1100px, calc(100vw - 48px));
+      max-height:90vh;
+      display:grid;
+      grid-template-columns:auto minmax(0,1fr) auto;
+      align-items:center;
+      gap:18px;
+      z-index:1;
+    }
+    .lightbox-stage{
+      position:relative;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.15);
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 24px 60px rgba(0,0,0,0.28);
+    }
+    .lightbox-stage img{
+      display:block;
+      width:100%;
+      max-height:82vh;
+      object-fit:cover;
+      background:#0d2030;
+    }
+    .lightbox-caption {
+      position:absolute;
+      left:18px;
+      right:18px;
+      bottom:18px;
+      padding:10px 14px;
+      border-radius:12px;
+      background:rgba(9,22,29,0.7);
+      color:#fff;
+      font-size:0.85rem;
+      font-weight:600;
+      letter-spacing:0.04em;
+      backdrop-filter:blur(6px);
+    }
+    .lightbox-nav,
+    .lightbox-close{
+      border:none;
+      color:#fff;
+      background:rgba(255,255,255,0.12);
+      border:1px solid rgba(255,255,255,0.18);
+      border-radius:50%;
+      width:52px;
+      height:52px;
+      font-size:2rem;
+      line-height:1;
+      cursor:pointer;
+      transition:transform .2s ease, background .2s ease;
+    }
+    .lightbox-nav:hover,
+    .lightbox-close:hover,
+    .lightbox-nav:focus-visible,
+    .lightbox-close:focus-visible{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,0.18);
+      outline:none;
+    }
+    .lightbox-close{
+      position:absolute;
+      top:-16px;
+      right:-16px;
+      z-index:2;
+      width:44px;height:44px;font-size:1.7rem;
+    }
+
     footer{
       background:linear-gradient(135deg, #102a38 0%, #0d2030 100%);
       color:rgba(255,255,255,0.9);
@@ -486,6 +629,9 @@
       .topbar a{font-size:0.82rem}
       .panel,.card,.contact-box{padding:18px}
       .gallery img{height:200px}
+      .lightbox-dialog{grid-template-columns:1fr; gap:12px; width:min(100vw - 24px, 520px)}
+      .lightbox-nav{position:static; width:48px; height:48px; justify-self:center;}
+      .lightbox-stage img{max-height:68vh}
     }
   </style>
 </head>
@@ -592,6 +738,12 @@
             <li>Opremljena kuhinja in kopalnica</li>
             <li>Nadkrito parkirišče in polnjenje EV</li>
           </ul>
+          <div class="featured-gallery">
+            <button class="gallery-trigger" type="button" data-gallery="olive" data-start="0" aria-label="Odpri galerijo apartmaja Olive">
+              <img src="images/Olive1.JPG" alt="Apartma Olive" />
+              <span class="trigger-label">Odpri galerijo</span>
+            </button>
+          </div>
           <p style="margin-top:18px;">
             <a class="btn btn-primary" href="mailto:villamare.olive.lavender@gmail.com?subject=Apartma%20Olive">Pošlji povpraševanje</a>
           </p>
@@ -612,16 +764,16 @@
             <li>Skupen dnevni prostor z kuhinjo</li>
             <li>Udobno bivanje za družine in prijatelje</li>
           </ul>
+          <div class="featured-gallery">
+            <button class="gallery-trigger" type="button" data-gallery="lavender" data-start="0" aria-label="Odpri galerijo apartmaja Lavender">
+              <img src="images/Lavander1.JPG" alt="Apartma Lavender" />
+              <span class="trigger-label">Odpri galerijo</span>
+            </button>
+          </div>
           <p style="margin-top:18px;">
             <a class="btn btn-primary" href="mailto:villamare.olive.lavender@gmail.com?subject=Apartma%20Lavender">Pošlji povpraševanje</a>
           </p>
         </article>
-      </div>
-
-      <div class="gallery">
-        <a href="images/Olive1.JPG"><img src="images/Olive1.JPG" alt="Apartma Olive" /></a>
-        <a href="images/Olive2.JPG"><img src="images/Olive2.JPG" alt="Notranjost Olive" /></a>
-        <a href="images/Lavander1.JPG"><img src="images/Lavander1.JPG" alt="Apartma Lavender" /></a>
       </div>
     </section>
 
@@ -654,6 +806,12 @@
           <article class="card">
             <h3>🌅 Mirna lokacija</h3>
             <p>Karigador je tiho in prijazno letoviško naselje z dostopom do morja, sosednjimi vasmi in odličnimi možnostmi za sprostitev.</p>
+            <div class="featured-gallery">
+              <button class="gallery-trigger" type="button" data-gallery="karigador" data-start="0" aria-label="Odpri galerijo Karigadorja">
+                <img src="images/sl1.jpg" alt="Karigador" />
+                <span class="trigger-label">Odpri galerijo</span>
+              </button>
+            </div>
           </article>
           <article class="card">
             <h3>📍 Dobra povezanost</h3>
@@ -722,5 +880,107 @@
       <a href="https://wa.me/38641776608" target="_blank" rel="noreferrer">WhatsApp</a>
     </div>
   </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-close="true"></div>
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+      <button class="lightbox-close" type="button" aria-label="Zapri galerijo">×</button>
+      <button class="lightbox-nav" type="button" data-direction="prev" aria-label="Prejšnja slika">‹</button>
+      <div class="lightbox-stage">
+        <img id="lightbox-image" src="" alt="" />
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+      <button class="lightbox-nav" type="button" data-direction="next" aria-label="Naslednja slika">›</button>
+    </div>
+  </div>
+
+  <script>
+    const galleries = {
+      olive: [
+        { src: 'images/Olive1.JPG', alt: 'Apartma Olive 1', caption: 'Apartma Olive • 1/6' },
+        { src: 'images/Olive2.JPG', alt: 'Apartma Olive 2', caption: 'Apartma Olive • 2/6' },
+        { src: 'images/sl1.jpg', alt: 'Olive pogled 3', caption: 'Apartma Olive • 3/6' },
+        { src: 'images/sl2.jpg', alt: 'Olive pogled 4', caption: 'Apartma Olive • 4/6' },
+        { src: 'images/sl3.jpg', alt: 'Olive pogled 5', caption: 'Apartma Olive • 5/6' },
+        { src: 'images/sl4.jpg', alt: 'Olive pogled 6', caption: 'Apartma Olive • 6/6' }
+      ],
+      lavender: [
+        { src: 'images/Lavander1.JPG', alt: 'Apartma Lavender 1', caption: 'Apartma Lavender • 1/6' },
+        { src: 'images/sl2.jpg', alt: 'Lavender pogled 2', caption: 'Apartma Lavender • 2/6' },
+        { src: 'images/sl3.jpg', alt: 'Lavender pogled 3', caption: 'Apartma Lavender • 3/6' },
+        { src: 'images/sl4.jpg', alt: 'Lavender pogled 4', caption: 'Apartma Lavender • 4/6' },
+        { src: 'images/sl5.jpg', alt: 'Lavender pogled 5', caption: 'Apartma Lavender • 5/6' },
+        { src: 'images/sl6.jpg', alt: 'Lavender pogled 6', caption: 'Apartma Lavender • 6/6' }
+      ],
+      karigador: [
+        { src: 'images/sl1.jpg', alt: 'Karigador 1', caption: 'Karigador • 1/6' },
+        { src: 'images/sl2.jpg', alt: 'Karigador 2', caption: 'Karigador • 2/6' },
+        { src: 'images/sl3.jpg', alt: 'Karigador 3', caption: 'Karigador • 3/6' },
+        { src: 'images/sl4.jpg', alt: 'Karigador 4', caption: 'Karigador • 4/6' },
+        { src: 'images/sl5.jpg', alt: 'Karigador 5', caption: 'Karigador • 5/6' },
+        { src: 'images/sl6.jpg', alt: 'Karigador 6', caption: 'Karigador • 6/6' }
+      ]
+    };
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const navButtons = document.querySelectorAll('.lightbox-nav');
+    const closeButton = document.querySelector('.lightbox-close');
+    const backdrop = document.querySelector('.lightbox-backdrop');
+    let currentGallery = null;
+    let currentIndex = 0;
+
+    function openLightbox(galleryKey, index) {
+      currentGallery = galleries[galleryKey];
+      if (!currentGallery) return;
+      currentIndex = index;
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      renderSlide();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      currentGallery = null;
+    }
+
+    function renderSlide() {
+      if (!currentGallery) return;
+      const item = currentGallery[currentIndex];
+      lightboxImage.src = item.src;
+      lightboxImage.alt = item.alt;
+      lightboxCaption.textContent = item.caption;
+    }
+
+    function moveSlide(direction) {
+      if (!currentGallery) return;
+      currentIndex = (currentIndex + direction + currentGallery.length) % currentGallery.length;
+      renderSlide();
+    }
+
+    document.querySelectorAll('.gallery-trigger').forEach((button) => {
+      button.addEventListener('click', () => {
+        openLightbox(button.dataset.gallery, Number(button.dataset.start || 0));
+      });
+    });
+
+    navButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        moveSlide(button.dataset.direction === 'next' ? 1 : -1);
+      });
+    });
+
+    closeButton.addEventListener('click', closeLightbox);
+    backdrop.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', (event) => {
+      if (!lightbox.classList.contains('open')) return;
+      if (event.key === 'Escape') closeLightbox();
+      if (event.key === 'ArrowRight') moveSlide(1);
+      if (event.key === 'ArrowLeft') moveSlide(-1);
+    });
+  </script>
 </body>
 </html>
