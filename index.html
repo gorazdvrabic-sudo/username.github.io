@@ -412,6 +412,7 @@
       height:220px;
       object-fit:cover;
       display:block;
+      background:linear-gradient(135deg, rgba(16,42,56,0.08), rgba(201,169,112,0.10));
     }
     .gallery-trigger .trigger-label{
       position:absolute;
@@ -518,8 +519,8 @@
     .lightbox-backdrop{
       position:absolute;
       inset:0;
-      background:rgba(8,18,25,0.8);
-      backdrop-filter:blur(8px);
+      background:rgba(8,18,25,0.78);
+      backdrop-filter:blur(10px);
     }
     .lightbox-dialog{
       position:relative;
@@ -535,7 +536,7 @@
       position:relative;
       background:rgba(255,255,255,0.06);
       border:1px solid rgba(255,255,255,0.15);
-      border-radius:22px;
+      border-radius:24px;
       overflow:hidden;
       box-shadow:0 24px 60px rgba(0,0,0,0.28);
     }
@@ -553,12 +554,12 @@
       bottom:18px;
       padding:10px 14px;
       border-radius:12px;
-      background:rgba(9,22,29,0.7);
+      background:rgba(9,22,29,0.72);
       color:#fff;
-      font-size:0.85rem;
+      font-size:0.82rem;
       font-weight:600;
       letter-spacing:0.04em;
-      backdrop-filter:blur(6px);
+      backdrop-filter:blur(8px);
     }
     .lightbox-nav,
     .lightbox-close{
@@ -567,12 +568,13 @@
       background:rgba(255,255,255,0.12);
       border:1px solid rgba(255,255,255,0.18);
       border-radius:50%;
-      width:52px;
-      height:52px;
+      width:54px;
+      height:54px;
       font-size:2rem;
       line-height:1;
       cursor:pointer;
-      transition:transform .2s ease, background .2s ease;
+      transition:transform .2s ease, background .2s ease, box-shadow .2s ease;
+      box-shadow:0 12px 30px rgba(0,0,0,0.18);
     }
     .lightbox-nav:hover,
     .lightbox-close:hover,
@@ -740,7 +742,7 @@
           </ul>
           <div class="featured-gallery">
             <button class="gallery-trigger" type="button" data-gallery="olive" data-start="0" aria-label="Odpri galerijo apartmaja Olive">
-              <img src="images/Olive1.JPG" alt="Apartma Olive" />
+              <img src="images/Olive1.JPG" alt="Apartma Olive" loading="lazy" />
               <span class="trigger-label">Odpri galerijo</span>
             </button>
           </div>
@@ -766,7 +768,7 @@
           </ul>
           <div class="featured-gallery">
             <button class="gallery-trigger" type="button" data-gallery="lavender" data-start="0" aria-label="Odpri galerijo apartmaja Lavender">
-              <img src="images/Lavander1.JPG" alt="Apartma Lavender" />
+              <img src="images/Lavander1.JPG" alt="Apartma Lavender" loading="lazy" />
               <span class="trigger-label">Odpri galerijo</span>
             </button>
           </div>
@@ -808,7 +810,7 @@
             <p>Karigador je tiho in prijazno letoviško naselje z dostopom do morja, sosednjimi vasmi in odličnimi možnostmi za sprostitev.</p>
             <div class="featured-gallery">
               <button class="gallery-trigger" type="button" data-gallery="karigador" data-start="0" aria-label="Odpri galerijo Karigadorja">
-                <img src="images/sl1.jpg" alt="Karigador" />
+                <img src="images/sl1.jpg" alt="Karigador" loading="lazy" />
                 <span class="trigger-label">Odpri galerijo</span>
               </button>
             </div>
@@ -887,7 +889,7 @@
       <button class="lightbox-close" type="button" aria-label="Zapri galerijo">×</button>
       <button class="lightbox-nav" type="button" data-direction="prev" aria-label="Prejšnja slika">‹</button>
       <div class="lightbox-stage">
-        <img id="lightbox-image" src="" alt="" />
+        <img id="lightbox-image" src="" alt="" loading="lazy" />
         <div class="lightbox-caption" id="lightbox-caption"></div>
       </div>
       <button class="lightbox-nav" type="button" data-direction="next" aria-label="Naslednja slika">›</button>
@@ -899,18 +901,18 @@
       olive: [
         { src: 'images/Olive1.JPG', alt: 'Apartma Olive 1', caption: 'Apartma Olive • 1/6' },
         { src: 'images/Olive2.JPG', alt: 'Apartma Olive 2', caption: 'Apartma Olive • 2/6' },
-        { src: 'images/sl1.jpg', alt: 'Olive pogled 3', caption: 'Apartma Olive • 3/6' },
-        { src: 'images/sl2.jpg', alt: 'Olive pogled 4', caption: 'Apartma Olive • 4/6' },
-        { src: 'images/sl3.jpg', alt: 'Olive pogled 5', caption: 'Apartma Olive • 5/6' },
-        { src: 'images/sl4.jpg', alt: 'Olive pogled 6', caption: 'Apartma Olive • 6/6' }
+        { src: 'images/Olive3.JPG', alt: 'Apartma Olive 3', caption: 'Apartma Olive • 3/6' },
+        { src: 'images/Olive4.JPG', alt: 'Apartma Olive 4', caption: 'Apartma Olive • 4/6' },
+        { src: 'images/Olive5.JPG', alt: 'Apartma Olive 5', caption: 'Apartma Olive • 5/6' },
+        { src: 'images/Olive6.JPG', alt: 'Apartma Olive 6', caption: 'Apartma Olive • 6/6' }
       ],
       lavender: [
         { src: 'images/Lavander1.JPG', alt: 'Apartma Lavender 1', caption: 'Apartma Lavender • 1/6' },
-        { src: 'images/sl2.jpg', alt: 'Lavender pogled 2', caption: 'Apartma Lavender • 2/6' },
-        { src: 'images/sl3.jpg', alt: 'Lavender pogled 3', caption: 'Apartma Lavender • 3/6' },
-        { src: 'images/sl4.jpg', alt: 'Lavender pogled 4', caption: 'Apartma Lavender • 4/6' },
-        { src: 'images/sl5.jpg', alt: 'Lavender pogled 5', caption: 'Apartma Lavender • 5/6' },
-        { src: 'images/sl6.jpg', alt: 'Lavender pogled 6', caption: 'Apartma Lavender • 6/6' }
+        { src: 'images/Lavander2.JPG', alt: 'Apartma Lavender 2', caption: 'Apartma Lavender • 2/6' },
+        { src: 'images/Lavander3.JPG', alt: 'Apartma Lavender 3', caption: 'Apartma Lavender • 3/6' },
+        { src: 'images/Lavander4.JPG', alt: 'Apartma Lavender 4', caption: 'Apartma Lavender • 4/6' },
+        { src: 'images/Lavander5.JPG', alt: 'Apartma Lavender 5', caption: 'Apartma Lavender • 5/6' },
+        { src: 'images/Lavander6.JPG', alt: 'Apartma Lavender 6', caption: 'Apartma Lavender • 6/6' }
       ],
       karigador: [
         { src: 'images/sl1.jpg', alt: 'Karigador 1', caption: 'Karigador • 1/6' },
