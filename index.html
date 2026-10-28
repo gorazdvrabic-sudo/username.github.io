@@ -3,170 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Villa Mare - romantika, mediteranski stil in apartmaji Olive & Lavender v Karigadorju, Istra." />
-  <meta name="keywords" content="apartmaji, Istra, Hrvaška, Karigador, morje, počitnice, plaža, parkiranje plovil" />
-  <meta name="author" content="Gorazd Vrabič" />
-  <meta property="og:title" content="Villa Mare - Romantic Coastal Villa in Karigador" />
-  <meta property="og:description" content="Apartmaji Olive in Lavender ter parkirno mesto za plovila v Karigadorju, Istra. 200 m od morja." />
-  <meta property="og:image" content="https://gorazdvrabic-sudo.github.io/username.github.io/images/hero.png" />
-  <meta property="og:url" content="https://gorazdvrabic-sudo.github.io/username.github.io/" />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#2f4e4b" />
-  <link rel="canonical" href="https://gorazdvrabic-sudo.github.io/username.github.io/" />
-  <link rel="icon" type="image/png" href="images/favicon.png" />
-  <link rel="preload" as="image" href="images/hero.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <title>Villa Mare | Romantic Coastal Villa | Karigador</title>
+  <meta name="description" content="Villa Mare - apartmaji Olive in Lavender v Karigadorju, Istra." />
+  <title>Villa Mare | Apartmaji Olive & Lavender</title>
   <style>
     :root {
-      --bg: #f7f2ea;
-      --bg-soft: #f0e6dc;
-      --panel: rgba(255,255,255,0.84);
-      --panel-strong: rgba(255,255,255,0.96);
-      --ink: #1d2d2a;
-      --ink-soft: #586864;
-      --olive: #3d5d52;
-      --olive-deep: #26463d;
-      --sand: #e8d9ba;
-      --sand-deep: #c99963;
-      --sea: #6f8c8b;
-      --rose: #d7b0a7;
+      --navy: #0f2438;
+      --gold: #c8a76d;
+      --sand: #f5f1ea;
+      --text: #1d2a32;
+      --muted: #5a6976;
       --white: #fff;
-      --line: rgba(29,45,42,0.08);
-      --shadow: 0 28px 60px rgba(26, 46, 42, 0.12);
-      --radius: 30px;
-      --container: 1200px;
     }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', 'Segoe UI', sans-serif;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at top, rgba(215,176,167,0.15), transparent 20%),
-        linear-gradient(180deg, #f7f2ea 0%, #f4efe9 100%);
-      line-height: 1.7;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #f7f3ee 0%, #f3efe9 100%);
+      line-height: 1.6;
     }
-
     a { color: inherit; text-decoration: none; }
-    img { display: block; width: 100%; }
-    ul { list-style: none; }
-    p { color: var(--ink-soft); }
-    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', Georgia, serif; letter-spacing: -0.045em; line-height: 0.94; }
-
-    .container { width: min(var(--container), calc(100% - 32px)); margin: 0 auto; }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(25, 49, 47, 0.7);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .topbar-inner {
-      width: min(var(--container), calc(100% - 32px));
+    img { display: block; max-width: 100%; }
+    .container {
+      width: min(1100px, calc(100% - 32px));
       margin: 0 auto;
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
     }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--white);
-      font-size: 0.8rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, #f1daba, #d7a46d);
-      font-size: 1.25rem;
-      box-shadow: 0 12px 28px rgba(215,164,109,0.35);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .nav a {
-      color: rgba(255,255,255,0.82);
-      padding: 9px 12px;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      transition: 0.24s ease;
-    }
-
-    .nav a:hover,
-    .nav a:focus-visible {
-      background: rgba(255,255,255,0.08);
-      color: white;
-      outline: none;
-    }
-
-    .header {
-      position: relative;
-      min-height: 820px;
-      background:
-        linear-gradient(135deg, rgba(25, 49, 47, 0.72), rgba(72, 94, 90, 0.44)),
-        url('images/hero.png') center/cover no-repeat;
-      overflow: hidden;
-    }
-
-    .header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(247,242,234,0.96), rgba(247,242,234,0) 30%);
-    }
-
-    .header-inner {
-      position: relative;
-      z-index: 1;
-      width: min(var(--container), calc(100% - 32px));
-      margin: 0 auto;
-      padding: 54px 0 120px;
-      display: grid;
-      grid-template-columns: 1.28fr 0.72fr;
-      gap: 42px;
-      align-items: center;
-    }
-
-    .lang-switcher {
-      position: absolute;
-      top: 18px;
-      left: 18px;
-      z-index: 6;
+    .language-switcher {
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      z-index: 1200;
       display: flex;
       align-items: center;
       gap: 8px;
       padding: 8px 10px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
       backdrop-filter: blur(10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
-
-    .lang-switcher a {
+    .language-switcher a {
       width: 36px;
       height: 36px;
       display: inline-flex;
@@ -176,883 +54,617 @@
       overflow: hidden;
       border: 2px solid transparent;
       background: rgba(255,255,255,0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
-
-    .lang-switcher a:hover,
-    .lang-switcher a:focus-visible {
+    .language-switcher a:hover,
+    .language-switcher a:focus-visible {
       transform: translateY(-1px) scale(1.04);
-      box-shadow: 0 10px 18px rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.9);
       outline: none;
     }
-
-    .lang-switcher a.active {
-      border-color: rgba(255,255,255,0.95);
+    .language-switcher a.active {
+      border-color: rgba(255,255,255,1);
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.2);
     }
-
-    .lang-switcher img {
+    .language-switcher img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
-
-    .hero-copy {
-      color: white;
-      max-width: 700px;
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 36, 56, 0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
     }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 9px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.14);
-      color: rgba(255,255,255,0.92);
-      font-size: 0.68rem;
-      letter-spacing: 0.17em;
-      text-transform: uppercase;
-      margin-bottom: 22px;
-    }
-
-    .hero-copy h1 {
-      color: white;
-      font-size: clamp(3.2rem, 6vw, 6rem);
-      line-height: 0.94;
-      margin-bottom: 18px;
-      text-shadow: 0 12px 34px rgba(0,0,0,0.18);
-    }
-
-    .hero-subtitle {
-      color: rgba(255,255,255,0.93);
-      font-size: clamp(1.12rem, 2vw, 1.52rem);
-      max-width: 600px;
-      margin-bottom: 26px;
-    }
-
-    .meta-row {
+    .topbar nav {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-      margin: 12px 0 28px;
+      padding: 16px 0;
     }
-
-    .meta-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 14px;
+    .topbar a {
+      color: rgba(255,255,255,0.9);
+      padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.18);
-      color: rgba(255,255,255,0.96);
-      font-size: 0.88rem;
+      transition: background 0.2s ease;
     }
-
+    .topbar a:hover,
+    .topbar a:focus-visible {
+      background: rgba(255,255,255,0.08);
+      outline: none;
+    }
+    .hero {
+      position: relative;
+      min-height: 630px;
+      background: linear-gradient(120deg, rgba(15,36,56,0.75), rgba(13,52,71,0.5)), url('images/hero.png') center/cover no-repeat;
+      display: grid;
+      place-items: center;
+    }
+    .hero-inner {
+      width: min(1100px, calc(100% - 32px));
+      padding: 100px 0 72px;
+      color: var(--white);
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      margin-bottom: 18px;
+    }
+    h1, h2, h3 {
+      font-family: Georgia, 'Times New Roman', serif;
+      line-height: 1.05;
+      margin: 0 0 16px;
+      color: var(--navy);
+    }
+    .hero h1 {
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      color: var(--white);
+      margin-bottom: 18px;
+      text-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    }
+    .hero p {
+      color: rgba(255,255,255,0.92);
+      font-size: 1.15rem;
+      margin: 0 0 22px;
+      max-width: 720px;
+    }
     .cta-row {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      align-items: center;
+      margin-top: 18px;
     }
-
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      padding: 16px 24px;
+      padding: 15px 22px;
       border-radius: 14px;
       font-weight: 700;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border: 1px solid transparent;
-      box-shadow: 0 18px 28px rgba(25,49,47,0.14);
+      transition: transform 0.2s ease;
     }
-
     .btn:hover,
     .btn:focus-visible {
       transform: translateY(-2px);
       outline: none;
     }
-
     .btn-primary {
-      background: linear-gradient(135deg, #f2dcc1, #dca874);
-      color: var(--olive-deep);
+      background: linear-gradient(135deg, var(--gold), #b48d4d);
+      color: var(--navy);
+      box-shadow: 0 18px 32px rgba(196, 160, 101, 0.3);
     }
-
     .btn-secondary {
-      background: rgba(255,255,255,0.05);
-      border-color: rgba(255,255,255,0.18);
-      color: white;
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.18);
     }
-
-    .hero-panel {
+    .hero-card {
       justify-self: end;
       width: min(100%, 360px);
-      padding: 26px 22px;
-      border-radius: 28px;
       background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.18);
-      backdrop-filter: blur(14px);
-      box-shadow: 0 22px 44px rgba(12,26,25,0.16);
-      color: white;
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 18px 42px rgba(0,0,0,0.18);
     }
-
-    .mini-label {
-      color: rgba(255,255,255,0.72);
-      font-size: 0.68rem;
-      letter-spacing: 0.16em;
+    .hero-card .label {
+      color: rgba(255,255,255,0.73);
       text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.68rem;
       margin-bottom: 10px;
     }
-
-    .hero-panel h3 {
-      color: white;
-      font-size: clamp(2rem, 3vw, 2.7rem);
-      line-height: 0.95;
-      margin-bottom: 12px;
+    .hero-card h3 {
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      color: var(--white);
+      margin-bottom: 14px;
     }
-
-    .hero-panel ul {
+    .hero-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       display: grid;
-      gap: 14px;
-      margin-top: 18px;
+      gap: 12px;
     }
-
-    .hero-panel li {
+    .hero-card li {
       display: flex;
       align-items: center;
       gap: 12px;
       color: rgba(255,255,255,0.92);
     }
-
-    .check {
+    .dot {
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: linear-gradient(180deg, #f3d7ab, #dcb168);
-      box-shadow: 0 0 0 7px rgba(220,177,104,0.12);
+      background: linear-gradient(180deg, #f3d49a, #d9a95d);
+      box-shadow: 0 0 0 7px rgba(217,169,93,0.12);
       flex-shrink: 0;
     }
-
-    .stats-strip {
-      width: min(var(--container), calc(100% - 32px));
-      margin: -54px auto 40px;
+    .stats {
+      width: min(1100px, calc(100% - 32px));
+      margin: -34px auto 0;
       display: grid;
-      grid-template-columns: repeat(4, minmax(0,1fr));
-      gap: 18px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
       position: relative;
-      z-index: 3;
+      z-index: 2;
     }
-
     .stat {
-      background: rgba(255,255,255,0.9);
-      border: 1px solid rgba(29,45,42,0.06);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      text-align: center;
+      background: rgba(255,255,255,0.92);
+      box-shadow: 0 20px 48px rgba(15,36,56,0.1);
+      border: 1px solid rgba(15,36,56,0.06);
+      border-radius: 20px;
       padding: 22px 18px;
+      text-align: center;
     }
-
     .stat strong {
       display: block;
-      color: var(--olive-deep);
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2rem, 2.6vw, 2.7rem);
-      letter-spacing: -0.04em;
-      line-height: 1;
-      margin-bottom: 4px;
+      font-size: clamp(2rem, 2vw, 2.5rem);
+      color: var(--navy);
+      font-family: Georgia, 'Times New Roman', serif;
     }
-
     .stat span {
-      color: var(--ink-soft);
+      color: var(--muted);
       font-size: 0.9rem;
     }
-
-    main { padding-bottom: 80px; }
-    section { margin-top: 70px; }
-
+    main {
+      padding: 52px 0 80px;
+    }
+    section {
+      margin-top: 54px;
+    }
     .intro {
-      max-width: 920px;
-      margin: 0 auto 28px;
+      max-width: 820px;
+      margin: 0 auto 30px;
       text-align: center;
     }
-
     .intro h2 {
-      color: var(--olive-deep);
-      font-size: clamp(2.7rem, 5vw, 4.5rem);
-      margin-bottom: 12px;
-      line-height: 0.96;
+      font-size: clamp(2.3rem, 4vw, 3.8rem);
+      margin-bottom: 10px;
     }
-
     .intro p {
-      color: var(--ink-soft);
-      font-size: 1.04rem;
+      color: var(--muted);
+      margin: 0;
+      font-size: 1.02rem;
     }
-
     .panel {
-      background: rgba(255,255,255,0.82);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 28px;
-      overflow: hidden;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(15,36,56,0.06);
+      border-radius: 28px;
+      box-shadow: 0 22px 54px rgba(15,36,56,0.08);
+      padding: 26px;
     }
-
-    .feature-banner {
-      background: linear-gradient(135deg, rgba(229,214,189,0.9), rgba(255,255,255,0.92));
-      border: 1px solid rgba(185,132,92,0.24);
-      border-radius: 22px;
+    .highlight {
+      background: linear-gradient(135deg, rgba(241,230,215,0.9), rgba(255,255,255,0.9));
+      border: 1px solid rgba(180,141,77,0.25);
+      border-radius: 18px;
       padding: 18px 20px;
       text-align: center;
-      color: var(--olive-deep);
       font-weight: 700;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
+      color: var(--navy);
     }
-
-    .feature-grid,
-    .cards-grid,
-    .contact-grid,
-    .location-grid {
+    .card-grid {
       display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 22px;
     }
-
-    .feature-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    .cards-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    .contact-grid { grid-template-columns: 1.05fr 0.95fr; }
-    .location-grid { grid-template-columns: 1fr; }
-
-    .feature {
-      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(246,239,229,0.95));
-      border: 1px solid rgba(29,45,42,0.06);
+    .card {
+      background: linear-gradient(180deg, #fff, #faf7f3);
+      border: 1px solid rgba(15,36,56,0.06);
       border-radius: 22px;
-      padding: 22px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+      padding: 22px;
     }
-
-    .feature strong {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--olive-deep);
-      font-size: 1.1rem;
+    .card h3 {
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin-bottom: 10px;
     }
-
-    .feature-icon {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      border-radius: 14px;
-      background: linear-gradient(135deg, rgba(215,176,167,0.18), rgba(111,140,139,0.14));
-      font-size: 1.2rem;
-    }
-
-    .feature p {
-      color: var(--ink-soft);
-      font-size: 0.96rem;
-    }
-
-    .listing-card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(247,239,228,0.92));
-      border: 1px solid rgba(29,45,42,0.06);
-      border-radius: 28px;
-      box-shadow: 0 14px 28px rgba(29,45,42,0.05);
-      padding: 24px;
-    }
-
-    .listing-card h3 {
-      color: var(--olive-deep);
-      font-size: clamp(2.4rem, 3vw, 3.2rem);
-      margin-bottom: 12px;
-      line-height: 1;
-    }
-
-    .photo-button {
-      appearance: none;
-      background: none;
-      border: 0;
-      width: 100%;
-      padding: 0;
-      cursor: pointer;
-      display: block;
-      margin: 14px 0 18px;
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 18px 30px rgba(29,45,42,0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .photo-button:hover,
-    .photo-button:focus-visible {
-      transform: translateY(-2px);
-      box-shadow: 0 22px 38px rgba(29,45,42,0.12);
-      outline: none;
-    }
-
-    .photo-button img {
-      width: 100%;
-      height: 340px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .badge-row {
+    .badges {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin: 14px 0 18px;
+      margin: 12px 0 16px;
     }
-
     .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 12px;
+      display: inline-block;
+      background: rgba(30,125,138,0.08);
+      color: var(--navy);
+      border: 1px solid rgba(30,125,138,0.12);
       border-radius: 999px;
-      background: rgba(61,93,82,0.08);
-      border: 1px solid rgba(61,93,82,0.12);
-      color: var(--olive-deep);
-      font-size: 0.76rem;
+      font-size: 0.78rem;
       font-weight: 700;
+      padding: 8px 12px;
     }
-
-    .listing-card p {
-      margin-bottom: 16px;
+    .card p,
+    .card li,
+    .faq-item p,
+    .contact-box p {
+      color: var(--muted);
     }
-
-    .listing-card ul {
-      list-style: disc;
+    .card ul {
       padding-left: 18px;
-      color: var(--ink-soft);
+      margin: 16px 0 0;
       display: grid;
-      gap: 9px;
-      margin: 16px 0 22px;
+      gap: 8px;
     }
-
-    .listing-card li::marker { color: var(--sand-deep); }
-
-    .gallery-panel {
-      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(249,243,234,0.94));
-      border: 1px solid rgba(29,45,42,0.06);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      padding: 24px;
-    }
-
-    .gallery-panel h3 {
-      color: var(--olive-deep);
-      font-size: clamp(2.3rem, 3vw, 3rem);
-      margin-bottom: 10px;
-      line-height: 1;
-    }
-
-    .country-photo-button {
-      appearance: none;
-      border: 0;
-      background: none;
-      width: 100%;
-      cursor: pointer;
-      padding: 0;
-      display: block;
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 18px 30px rgba(29,45,42,0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      margin-top: 18px;
-    }
-
-    .country-photo-button:hover,
-    .country-photo-button:focus-visible {
-      transform: translateY(-2px);
-      box-shadow: 0 22px 34px rgba(29,45,42,0.12);
-      outline: none;
-    }
-
-    .country-photo-button img {
-      width: 100%;
-      height: 440px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .faq {
+    .gallery {
+      margin-top: 22px;
       display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
     }
-
-    .faq-item {
-      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(247,239,228,0.95));
-      border: 1px solid rgba(29,45,42,0.06);
-      border-radius: 20px;
-      padding: 20px 22px;
+    .gallery a {
+      display: block;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(15,36,56,0.08);
+      box-shadow: 0 12px 26px rgba(15,36,56,0.08);
     }
-
-    .faq-item h4 {
-      color: var(--olive-deep);
-      font-size: 1.35rem;
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .faq {
+      display: grid;
+      gap: 16px;
+    }
+    .faq-item {
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(247,242,234,0.9));
+      border: 1px solid rgba(15,36,56,0.06);
+      border-radius: 20px;
+      padding: 22px;
+    }
+    .faq-item h3 {
+      font-size: clamp(1.6rem, 2vw, 2rem);
       margin-bottom: 8px;
     }
-
-    .faq-item p {
-      color: var(--ink-soft);
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 22px;
     }
-
-    .contact-card,
-    .location-box {
-      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(247,239,228,0.96));
-      border: 1px solid rgba(29,45,42,0.06);
-      border-radius: 28px;
-      box-shadow: 0 14px 28px rgba(29,45,42,0.06);
+    .contact-box {
+      background: linear-gradient(180deg, #fff, #f6f3ee);
+      border: 1px solid rgba(15,36,56,0.06);
+      border-radius: 24px;
       padding: 26px;
     }
-
-    .contact-card h3,
-    .location-box h3 {
-      color: var(--olive-deep);
-      font-size: clamp(2.4rem, 3vw, 3.2rem);
-      margin-bottom: 12px;
-      line-height: 1;
-    }
-
     .contact-list {
       display: grid;
       gap: 14px;
-      margin-top: 20px;
+      margin-top: 18px;
     }
-
     .contact-item {
       display: flex;
-      align-items: flex-start;
       gap: 12px;
+      align-items: flex-start;
     }
-
-    .contact-icon {
+    .contact-item .icon {
       width: 42px;
       height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(200,167,109,0.2), rgba(30,125,138,0.15));
       display: grid;
       place-items: center;
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(215,176,167,0.18), rgba(111,140,139,0.12));
+      font-size: 1.2rem;
       flex-shrink: 0;
     }
-
     .contact-item strong {
       display: block;
-      color: var(--olive-deep);
+      color: var(--navy);
       margin-bottom: 2px;
     }
-
-    .contact-item a,
-    .contact-item span {
-      color: var(--ink-soft);
-    }
-
-    .map-frame {
+    .map {
       width: 100%;
-      min-height: 310px;
+      min-height: 280px;
       border: 0;
-      border-radius: 20px;
-      box-shadow: 0 18px 34px rgba(29,45,42,0.08);
+      border-radius: 18px;
       margin-top: 12px;
     }
-
     footer {
-      margin-top: 64px;
-      background: linear-gradient(135deg, #203831, #1c3631 65%);
+      margin-top: 56px;
+      background: linear-gradient(135deg, #102939, #0f1d2a 70%);
       color: rgba(255,255,255,0.9);
-      padding: 36px 0 52px;
+      padding: 30px 0 50px;
     }
-
     .footer-inner {
-      width: min(var(--container), calc(100% - 32px));
+      width: min(1100px, calc(100% - 32px));
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      gap: 18px;
+      gap: 12px;
       flex-wrap: wrap;
     }
-
-    .footer-inner a { color: #e8f4f0; }
-
-    .menu-toggle {
-      display: none;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.16);
-      color: white;
-      border-radius: 12px;
-      padding: 8px 12px;
-      font-size: 1.5rem;
-      cursor: pointer;
+    .footer-inner a {
+      color: #d6f1ff;
     }
-
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(18, 29, 27, 0.82);
-      display: none;
-      place-items: center;
-      z-index: 100;
-      padding: 24px;
-    }
-
-    .modal.open { display: grid; }
-
-    .modal-box {
-      width: min(980px, 100%);
-      background: rgba(255,255,255,0.96);
-      border: 1px solid rgba(29,45,42,0.08);
-      border-radius: 28px;
-      box-shadow: 0 28px 70px rgba(10,18,17,0.26);
-      overflow: hidden;
-    }
-
-    .modal-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 20px 12px;
-      border-bottom: 1px solid rgba(29,45,42,0.06);
-      background: rgba(247,242,234,0.9);
-    }
-
-    .modal-top h4 {
-      color: var(--olive-deep);
-      font-size: 2rem;
-      line-height: 1;
-    }
-
-    .close-btn,
-    .nav-btn {
-      appearance: none;
-      border: 0;
-      background: rgba(29,45,42,0.06);
-      color: var(--olive-deep);
-      border-radius: 12px;
-      width: 42px;
-      height: 42px;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-
-    .modal-content {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-      padding: 18px 18px 22px;
-    }
-
-    .modal-image {
-      border-radius: 18px;
-      overflow: hidden;
-      background: #e9e0d3;
-      max-height: 68vh;
-    }
-
-    .modal-image img {
-      width: 100%;
-      height: 68vh;
-      object-fit: cover;
-      display: block;
-    }
-
-    .modal-controls {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .nav-btn-group {
-      display: flex;
-      gap: 8px;
-    }
-
-    .index-pill {
-      color: var(--ink-soft);
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
     @media (max-width: 960px) {
-      .header-inner {
+      .hero-inner,
+      .card-grid,
+      .contact-grid,
+      .gallery,
+      .stats {
         grid-template-columns: 1fr;
-        padding-top: 96px;
       }
-
-      .hero-panel {
+      .hero-inner {
+        padding-top: 110px;
+      }
+      .hero-card {
         justify-self: start;
       }
-
-      .stats-strip,
-      .feature-grid,
-      .cards-grid,
-      .contact-grid { grid-template-columns: 1fr; }
-
-      .nav { display: none; }
-
-      .menu-toggle {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .topbar-inner nav.open {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        padding: 8px 0 16px;
+      .topbar nav {
+        justify-content: flex-start;
       }
     }
-
     @media (max-width: 620px) {
-      .header { min-height: 700px; }
-      .cta-row { flex-direction: column; align-items: stretch; }
-      .btn { width: 100%; }
-      .meta-row { flex-direction: column; align-items: flex-start; }
-      .panel, .listing-card, .gallery-panel, .contact-card, .location-box { padding: 20px; }
-      .photo-button img, .country-photo-button img { height: 260px; }
-      .modal-image img { height: 52vh; }
+      .language-switcher {
+        top: 10px;
+        left: 10px;
+      }
+      .hero {
+        min-height: 560px;
+      }
+      .cta-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn {
+        width: 100%;
+      }
+      .topbar nav {
+        gap: 6px;
+        padding: 12px 0;
+      }
+      .topbar a {
+        font-size: 0.9rem;
+      }
+      .card, .panel, .contact-box {
+        padding: 18px;
+      }
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <div class="lang-switcher" aria-label="Language selector">
-      <a href="index.html" class="active" title="Slovenščina"><img src="https://flagcdn.com/16x12/si.png" srcset="https://flagcdn.com/32x24/si.png 2x" alt="Slovenščina" /></a>
-      <a href="index_en.html" title="English"><img src="https://flagcdn.com/16x12/gb.png" srcset="https://flagcdn.com/32x24/gb.png 2x" alt="English" /></a>
-      <a href="index_de.html" title="Deutsch"><img src="https://flagcdn.com/16x12/de.png" srcset="https://flagcdn.com/32x24/de.png 2x" alt="Deutsch" /></a>
-      <a href="index_it.html" title="Italiano"><img src="https://flagcdn.com/16x12/it.png" srcset="https://flagcdn.com/32x24/it.png 2x" alt="Italiano" /></a>
-    </div>
+  <div class="language-switcher" aria-label="Jezikovni izbor">
+    <a href="index.html" class="active" title="Slovenščina"><img src="https://flagcdn.com/16x12/si.png" srcset="https://flagcdn.com/32x24/si.png 2x" alt="Slovenščina" loading="lazy" /></a>
+    <a href="index_en.html" title="English"><img src="https://flagcdn.com/16x12/gb.png" srcset="https://flagcdn.com/32x24/gb.png 2x" alt="English" loading="lazy" /></a>
+    <a href="index_de.html" title="Deutsch"><img src="https://flagcdn.com/16x12/de.png" srcset="https://flagcdn.com/32x24/de.png 2x" alt="Deutsch" loading="lazy" /></a>
+    <a href="index_it.html" title="Italiano"><img src="https://flagcdn.com/16x12/it.png" srcset="https://flagcdn.com/32x24/it.png 2x" alt="Italiano" loading="lazy" /></a>
+  </div>
 
-    <div class="topbar">
-      <div class="topbar-inner">
-        <div class="brand">
-          <div class="brand-mark">🏖</div>
-          <span>Villa Mare</span>
-        </div>
-        <button class="menu-toggle" id="menuToggle" aria-label="Odpri menu">☰</button>
-        <nav class="nav" id="mainNav" aria-label="Glavna navigacija">
-          <a href="#about">O nas</a>
-          <a href="#apartments">Apartmaji</a>
-          <a href="#karigador">Karigador</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Kontakt</a>
-        </nav>
-      </div>
-    </div>
+  <div class="topbar">
+    <nav aria-label="Glavna navigacija">
+      <a href="#services">Kaj ponujamo</a>
+      <a href="#apartments">Apartmaji</a>
+      <a href="#parking">Parkiranje</a>
+      <a href="#location">Lokacija</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </div>
 
-    <div class="header-inner">
-      <div class="hero-copy">
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
         <div class="eyebrow">Istra • Karigador</div>
-        <h1>Počitnice, ki jih ne boste želeli nikoli končati</h1>
-        <p class="hero-subtitle">Apartmaji Olive &amp; Lavender v srčnem mediteranskem kotičku, le 200 metrov od morja. Za mirne, intimne in prijetne počitnice skupaj.</p>
-
-        <div class="meta-row">
-          <span class="meta-pill">🌊 200 m od plaže</span>
-          <span class="meta-pill">🚗 Brezplačno parkiranje</span>
-          <span class="meta-pill">📶 Wi‑Fi</span>
-        </div>
-
+        <h1>Počitnice ob morju, ki se jih ne boste želeli končati.</h1>
+        <p>Apartmaji Olive &amp; Lavender v mirni, elegantni lokaciji le 200 metrov od plaže — za sproščeno, udobno in premium bivanje.</p>
         <div class="cta-row">
-          <a href="https://wa.me/38641776608?text=Pozdravljeni,%20zanima%20me%20rezervacija" class="btn btn-primary" target="_blank" rel="noopener noreferrer">💬 Preveri proste termine</a>
-          <a href="#contact" class="btn btn-secondary">📩 Kontakt</a>
+          <a class="btn btn-primary" href="https://wa.me/38641776608?text=Pozdravljeni,%20zanima%20me%20rezervacija" target="_blank" rel="noopener noreferrer">💬 Preveri proste termine</a>
+          <a class="btn btn-secondary" href="#contact">📩 Kontakt</a>
         </div>
       </div>
 
-      <aside class="hero-panel" aria-label="Povzetek ponudbe">
-        <div class="mini-label">Romantic Coastal Villa</div>
-        <h3>Toplina, tišina in morski dih</h3>
+      <aside class="hero-card" aria-label="Povzetek ponudbe">
+        <div class="label">Zato so naši gosti vračajoči</div>
+        <h3>Mir, elegance in udobje</h3>
         <ul>
-          <li><span class="check"></span>Prijazna in mirna okolica</li>
-          <li><span class="check"></span>2 skrbno opremljena apartmaja</li>
-          <li><span class="check"></span>Parkiranje za avto in plovilo</li>
-          <li><span class="check"></span>Idealno za pare, družine in odmore</li>
+          <li><span class="dot"></span>Prijazna in mirna lokacija</li>
+          <li><span class="dot"></span>Opremljeni apartmaji za 2–4 osebe</li>
+          <li><span class="dot"></span>Parkiranje za vozila in plovila</li>
+          <li><span class="dot"></span>Prilagojene aktivnosti po želji</li>
         </ul>
       </aside>
     </div>
   </header>
 
-  <div class="stats-strip">
-    <div class="stat">
-      <strong>200 m</strong>
-      <span>do morja</span>
-    </div>
-    <div class="stat">
-      <strong>2</strong>
-      <span>apartmaja</span>
-    </div>
-    <div class="stat">
-      <strong>4+</strong>
-      <span>osebe v Lavender</span>
-    </div>
-    <div class="stat">
-      <strong>24/7</strong>
-      <span>rezervacije</span>
-    </div>
+  <div class="stats container">
+    <div class="stat"><strong>200 m</strong><span>do plaže</span></div>
+    <div class="stat"><strong>2</strong><span>apartmaja</span></div>
+    <div class="stat"><strong>4+</strong><span>osebe v Lavender</span></div>
+    <div class="stat"><strong>24/7</strong><span>rezervacije</span></div>
   </div>
 
   <main class="container">
-    <section id="about">
+    <section id="services">
       <div class="intro">
-        <h2>Vas pozdravlja mirna obalna vila v Istri</h2>
-        <p>Villa Mare združuje mediteransko toplino, eleganco in senco istrske obale. Ustvarjena je za tiste, ki cenijo sproščeno življenje ob morju, prijetne večere in intimno, a stilno bivanje.</p>
+        <h2>Naj vaše počitnice postanejo nepozabno doživetje</h2>
+        <p>V Villa Mare združujemo udobje, mirno okolje in osebno pozornost ter pomagamo gostom organizirati izlete, aktivne počitnice in posebne trenutke ob morju.</p>
       </div>
-
       <div class="panel">
-        <div class="feature-banner">🌊 Izleti po Istri • ✅ Mirna lokacija • 🍽️ Lokalni okus • ❤️ Romantični dopust</div>
-        <div class="feature-grid">
-          <div class="feature">
-            <strong><span class="feature-icon">🌅</span> Romantičen dopust</strong>
-            <p>Idealno za pare, ki želijo intimno, sproščeno in idilično bivanje ob morju z občutkom zasebnosti in udobja.</p>
-          </div>
-          <div class="feature">
-            <strong><span class="feature-icon">🍽️</span> Lokalni okus</strong>
-            <p>Tradicija, istrski sokovi, domače jedi in prijetni večeri z lokalnim značajem v središču vašega počitniškega življenja.</p>
-          </div>
-          <div class="feature">
-            <strong><span class="feature-icon">🚤</span> Aktivni počitnic</strong>
-            <p>Najem SUP-a, plovil in koles ter organizirani izleti po Istri in Brionih za tiste, ki se radi razgibajo ob morju.</p>
-          </div>
-          <div class="feature">
-            <strong><span class="feature-icon">🧭</span> Osebna pomoč</strong>
-            <p>Z veseljem vam priporočimo najboljše plaže, lokacije in aktivnosti, da bo vaš dopust izpolnjen do vključno zadnjega dneva.</p>
-          </div>
+        <div class="highlight">🌊 Najem SUP-a, plovila in koles • 🚤 Izleti po Istri in Brionih • 🍷 Tradicionalna istrska večerja • 🎉 Gostom prilagojena doživetja</div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Aktiven dopust</h3>
+            <p>Najam SUP-a, plovil in koles ter organizacija izletov po Istri in Brionih za tiste, ki radi aktivno raziskujejo okolico.</p>
+          </article>
+          <article class="card">
+            <h3>Lokalni okus</h3>
+            <p>Tradicionalne istrske večerje z gostitelji, lokalni jedi in prijetni družabni trenutki, ki dodajo osebni pečat vašemu bivanju.</p>
+          </article>
+          <article class="card">
+            <h3>Družinske počitnice</h3>
+            <p>Mirna lokacija, udobna soba in prostori, ki omogočajo sproščeno počitniško atmosfero za vse generacije.</p>
+          </article>
+          <article class="card">
+            <h3>Prilagojena pomoč</h3>
+            <p>Na voljo so namigi, priporočila in organizacija aktivnosti po vaših željah, da bo vaš dopust preživet po meri.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="apartments">
-      <div class="intro">
-        <h2>Izberite svoj idealni apartma</h2>
-      </div>
-
-      <div class="cards-grid">
-        <article class="listing-card">
+      <div class="intro"><h2>Udobna nastanitev po meri</h2></div>
+      <div class="card-grid">
+        <article class="card">
           <h3>🫒 Apartma Olive</h3>
-          <button class="photo-button" type="button" data-gallery="olive" aria-label="Odpri galerijo apartmaja Olive">
-            <img src="images/Olive1.JPG" alt="Apartma Olive" loading="lazy" />
-          </button>
-
-          <div class="badge-row">
+          <div class="badges">
             <span class="badge">🏖️ 200 m do morja</span>
             <span class="badge">👥 2–3 osebe</span>
             <span class="badge">❄️ Klima</span>
             <span class="badge">📶 Wi‑Fi</span>
           </div>
-
-          <p>Prijeten, svetel in miren apartma za 2–3 osebe, idealen za pare ali manjše družine, ki iščejo sproščene počitnice ob morju v tihem istrskem okolju.</p>
+          <p>Prijeten, svetel in miren apartma za 2–3 osebe, idealen za pare ali manjše družine, ki iščejo sproščene počitnice ob morju.</p>
           <ul>
             <li>Spalnica z zakonsko posteljo</li>
             <li>Dnevni prostor s pomožnim ležiščem</li>
             <li>Opremljena kuhinja in kopalnica</li>
             <li>Nadkrito parkirišče in možnost polnjenja EV</li>
           </ul>
-          <a href="mailto:villamare.olive.lavender@gmail.com?subject=Povpraševanje za Apartma Olive" class="btn btn-primary">Pošlji povpraševanje</a>
+          <p><a class="btn btn-primary" href="mailto:villamare.olive.lavender@gmail.com?subject=Povpraševanje%20za%20Apartma%20Olive">Pošlji povpraševanje</a></p>
         </article>
 
-        <article class="listing-card">
+        <article class="card">
           <h3>🪴 Apartma Lavender</h3>
-          <button class="photo-button" type="button" data-gallery="lavender" aria-label="Odpri galerijo apartmaja Lavender">
-            <img src="images/Lavander1.JPG" alt="Apartma Lavender" loading="lazy" />
-          </button>
-
-          <div class="badge-row">
+          <div class="badges">
             <span class="badge">🏖️ 200 m do morja</span>
             <span class="badge">👥 Do 4 osebe</span>
             <span class="badge">❄️ Klima</span>
             <span class="badge">📶 Wi‑Fi</span>
           </div>
-
-          <p>Sodobno in prosto opremljen apartma za do 4 osebe z večjo spalnico, dodatnim ležiščem in prijetnim dnevnim prostorom za sproščene večere po dopustu.</p>
+          <p>Sodobno in prosto opremljen apartma za do 4 osebe z večjo spalnico, dodatnim ležiščem in prijetnim dnevnim prostorom.</p>
           <ul>
             <li>Večja spalnica z zakonsko posteljo</li>
             <li>Manjša spalnica z dvema posteljama</li>
             <li>Skupen dnevni prostor z kuhinjo</li>
             <li>Udobno bivanje za družino ali prijatelje</li>
           </ul>
-          <a href="mailto:villamare.olive.lavender@gmail.com?subject=Povpraševanje za Apartma Lavender" class="btn btn-primary">Pošlji povpraševanje</a>
+          <p><a class="btn btn-primary" href="mailto:villamare.olive.lavender@gmail.com?subject=Povpraševanje%20za%20Apartma%20Lavender">Pošlji povpraševanje</a></p>
         </article>
+      </div>
+
+      <div class="gallery" aria-label="Galerija apartmajev">
+        <a href="images/Olive1.JPG" data-lightbox="villa" data-title="Apartma Olive"><img src="images/Olive1.JPG" alt="Apartma Olive" loading="lazy" /></a>
+        <a href="images/Olive2.JPG" data-lightbox="villa" data-title="Notranjost Olive"><img src="images/Olive2.JPG" alt="Notranjost Olive" loading="lazy" /></a>
+        <a href="images/Lavander1.JPG" data-lightbox="villa" data-title="Apartma Lavender"><img src="images/Lavander1.JPG" alt="Apartma Lavender" loading="lazy" /></a>
       </div>
     </section>
 
-    <section id="karigador">
-      <div class="gallery-panel">
-        <div class="intro" style="margin-bottom:16px;">
-          <h2>Obiščite okolico Karigadorja</h2>
-          <p>Tiho ribiško in obalno okolje z možnostmi za sprehode, sončne dneve, izlete in prijetne večere ob morju.</p>
+    <section id="parking">
+      <div class="panel">
+        <div class="intro"><h2>Parkiranje za vozila in plovila</h2></div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>🚗 Brezplačno parkiranje</h3>
+            <p>Gostom je na voljo brezplačno nadkrito parkirišče za vozila, kar olajša prihod in odhod brez dodatnih skrbi.</p>
+          </article>
+          <article class="card">
+            <h3>🛶 Parkiranje plovil</h3>
+            <p>Na voljo so dve nadkriti parkirni mesti za plovila z možnostjo uporabe vode in elektrike, idealne za goste, ki pridejo z lastnim plovilom.</p>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <button class="country-photo-button" type="button" data-gallery="karigador" aria-label="Odpri galerijo Karigadorja">
-          <img src="images/sl1.jpg" alt="Karigador okolica" loading="lazy" />
-        </button>
+    <section id="location">
+      <div class="panel">
+        <div class="intro"><h2>Karigador in okolica</h2></div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>🌅 Mirna lokacija</h3>
+            <p>Karigador je tiho in prijazno letoviško naselje z dostopom do morja, sosednjimi vasmi in odličnimi možnostmi za sproščanje.</p>
+          </article>
+          <article class="card">
+            <h3>📍 Dobra povezanost</h3>
+            <p>Približno 200 m od plaže, blizu mestnih centrov, obalnih poti in znanih istrskih znamenitosti, kot so Brioni, Rovinj in Pula.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <section id="faq">
-      <div class="intro">
-        <h2>Pogosta vprašanja</h2>
-      </div>
-
+      <div class="intro"><h2>Pogosta vprašanja</h2></div>
       <div class="faq">
         <div class="faq-item">
-          <h4>Kako daleč je morje od apartmajev?</h4>
+          <h3>Kako daleč je morje od apartmajev?</h3>
           <p>Apartmaja Olive in Lavender sta oddaljena približno 200 metrov od morja.</p>
         </div>
         <div class="faq-item">
-          <h4>Ali je zagotovljeno parkiranje?</h4>
-          <p>Da, gostom je na voljo brezplačno nadkrito parkiranje, tudi za plovila.</p>
+          <h3>Ali je zagotovljeno parkiranje?</h3>
+          <p>Da, gostom je na voljo brezplačno nadkrito parkiranje.</p>
         </div>
         <div class="faq-item">
-          <h4>Ali so na voljo dodatne aktivnosti?</h4>
-          <p>Da, lahko organiziramo najem plovil, koles, SUP-a in priporočamo najlepše izlete po Istri.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Ali je mesto primerno za romantični dopust?</h4>
-          <p>Da. Mirna lokacija, tišina, pogled na morje in intimna atmosfera naredijo Villa Mare idealno izbiro za romantične počitnice.</p>
+          <h3>Ali je na voljo Wi‑Fi?</h3>
+          <p>Da, v obeh apartmajih je brezplačen Wi‑Fi.</p>
         </div>
       </div>
     </section>
 
     <section id="contact">
       <div class="contact-grid">
-        <div class="contact-card">
+        <div class="contact-box">
           <h3>Kontaktirajte nas</h3>
           <p>Za rezervacije, dodatne informacije ali osebne predloge nas kontaktirajte. Rada vam bomo pomagali pri iskanju idealnega dopusta.</p>
-
           <div class="contact-list">
             <div class="contact-item">
-              <div class="contact-icon">📞</div>
-              <div>
-                <strong>Telefon</strong>
-                <a href="tel:+38641776608">+386 41 776 608</a>
-              </div>
+              <div class="icon">📞</div>
+              <div><strong>Telefon</strong><a href="tel:+38641776608">+386 41 776 608</a></div>
             </div>
             <div class="contact-item">
-              <div class="contact-icon">✉️</div>
-              <div>
-                <strong>E‑pošta</strong>
-                <a href="mailto:villamare.olive.lavender@gmail.com">villamare.olive.lavender@gmail.com</a>
-              </div>
+              <div class="icon">✉️</div>
+              <div><strong>E-pošta</strong><a href="mailto:villamare.olive.lavender@gmail.com">villamare.olive.lavender@gmail.com</a></div>
             </div>
             <div class="contact-item">
-              <div class="contact-icon">📍</div>
-              <div>
-                <strong>Lokacija</strong>
-                <span>Karigador, Istra, Hrvaška</span>
-              </div>
+              <div class="icon">💬</div>
+              <div><strong>WhatsApp</strong><a href="https://wa.me/38641776608" target="_blank" rel="noopener noreferrer">Sporočite nam</a></div>
             </div>
           </div>
         </div>
 
-        <div class="location-box">
+        <div class="contact-box">
           <h3>Lokacija</h3>
-          <iframe class="map-frame" title="Mapa lokacije Villa Mare" src="https://www.google.com/maps?q=45.3595613983202,13.56048904460079&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p>Karigador, Istra, Hrvaška</p>
+          <iframe class="map" src="https://www.google.com/maps?q=45.3595613983202,13.56048904460079&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Villa Mare lokacija"></iframe>
         </div>
       </div>
     </section>
@@ -1060,151 +672,10 @@
 
   <footer>
     <div class="footer-inner">
-      <div>© 2025 Villa Mare • Apartmaji Olive &amp; Lavender</div>
-      <div>
-        <a href="index_en.html">English</a>
-        •
-        <a href="index_de.html">Deutsch</a>
-        •
-        <a href="index_it.html">Italiano</a>
-        •
-        <a href="https://wa.me/38641776608">WhatsApp</a>
-      </div>
+      <span>© Villa Mare</span>
+      <span><a href="mailto:villamare.olive.lavender@gmail.com">villamare.olive.lavender@gmail.com</a></span>
+      <span><a href="https://wa.me/38641776608" target="_blank" rel="noopener noreferrer">WhatsApp</a></span>
     </div>
   </footer>
-
-  <div class="modal" id="galleryModal" aria-hidden="true">
-    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
-      <div class="modal-top">
-        <h4 id="galleryTitle">Galeri</h4>
-        <button type="button" class="close-btn" id="closeModal" aria-label="Zapri galerijo">×</button>
-      </div>
-      <div class="modal-content">
-        <div class="modal-image">
-          <img id="modalImage" src="" alt="" />
-        </div>
-        <div class="modal-controls">
-          <div class="nav-btn-group">
-            <button type="button" class="nav-btn" id="prevBtn" aria-label="Prejšnja slika">‹</button>
-            <button type="button" class="nav-btn" id="nextBtn" aria-label="Naslednja slika">›</button>
-          </div>
-          <div class="index-pill" id="galleryIndex">1 / 1</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mainNav = document.getElementById('mainNav');
-
-    if (menuToggle && mainNav) {
-      menuToggle.addEventListener('click', () => {
-        mainNav.classList.toggle('open');
-      });
-
-      mainNav.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => mainNav.classList.remove('open'));
-      });
-    }
-
-    const galleryData = {
-      olive: [
-        'images/Olive1.JPG',
-        'images/Olive1.JPG',
-        'images/Parking1.JPG',
-        'images/sl1.jpg',
-        'images/sl2.jpg',
-        'images/sl3.jpg'
-      ],
-      lavender: [
-        'images/Lavander1.JPG',
-        'images/Lavander1.JPG',
-        'images/sl4.jpg',
-        'images/sl5.jpg',
-        'images/sl6.jpg',
-        'images/sl7.jpg'
-      ],
-      karigador: [
-        'images/sl1.jpg',
-        'images/sl2.jpg',
-        'images/sl3.jpg',
-        'images/sl4.jpg',
-        'images/sl5.jpg',
-        'images/sl6.jpg'
-      ]
-    };
-
-    const modal = document.getElementById('galleryModal');
-    const modalImage = document.getElementById('modalImage');
-    const galleryTitle = document.getElementById('galleryTitle');
-    const galleryIndex = document.getElementById('galleryIndex');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const closeBtn = document.getElementById('closeModal');
-
-    let galleryKey = 'olive';
-    let activeIndex = 0;
-
-    function openGallery(key) {
-      galleryKey = key;
-      activeIndex = 0;
-      updateGallery();
-      modal.classList.add('open');
-      modal.setAttribute('aria-hidden', 'false');
-    }
-
-    function updateGallery() {
-      const images = galleryData[galleryKey] || [];
-      if (!images.length) return;
-
-      const title = galleryKey === 'olive' ? 'Apartma Olive' : galleryKey === 'lavender' ? 'Apartma Lavender' : 'Karigador';
-      galleryTitle.textContent = title;
-      modalImage.src = images[activeIndex];
-      modalImage.alt = title + ' slika ' + (activeIndex + 1);
-      galleryIndex.textContent = (activeIndex + 1) + ' / ' + images.length;
-    }
-
-    function prevImage() {
-      const images = galleryData[galleryKey] || [];
-      activeIndex = (activeIndex - 1 + images.length) % images.length;
-      updateGallery();
-    }
-
-    function nextImage() {
-      const images = galleryData[galleryKey] || [];
-      activeIndex = (activeIndex + 1) % images.length;
-      updateGallery();
-    }
-
-    document.querySelectorAll('[data-gallery]').forEach((button) => {
-      button.addEventListener('click', () => openGallery(button.dataset.gallery));
-    });
-
-    prevBtn.addEventListener('click', prevImage);
-    nextBtn.addEventListener('click', nextImage);
-    closeBtn.addEventListener('click', () => {
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden', 'true');
-    });
-
-    modal.addEventListener('click', (event) => {
-      if (event.target === modal) {
-        modal.classList.remove('open');
-        modal.setAttribute('aria-hidden', 'true');
-      }
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (!modal.classList.contains('open')) return;
-      if (event.key === 'Escape') {
-        modal.classList.remove('open');
-        modal.setAttribute('aria-hidden', 'true');
-      }
-      if (event.key === 'ArrowLeft') prevImage();
-      if (event.key === 'ArrowRight') nextImage();
-    });
-  </script>
 </body>
 </html>
