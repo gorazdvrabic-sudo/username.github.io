@@ -897,6 +897,21 @@
   </div>
 
   <script>
+    const FALLBACK_IMAGE = 'images/hero.png';
+
+    function applyImageFallback(imgElement) {
+      imgElement.onerror = function () {
+        if (this.dataset.fallbackApplied === 'true') return;
+        this.dataset.fallbackApplied = 'true';
+        this.src = FALLBACK_IMAGE;
+        this.alt = 'Slika bo dodana kmalu';
+      };
+    }
+
+    document.querySelectorAll('img').forEach((img) => {
+      applyImageFallback(img);
+    });
+
     const galleries = {
       olive: [
         { src: 'images/Olive1.JPG', alt: 'Apartma Olive 1', caption: 'Apartma Olive • 1/6' },
@@ -954,6 +969,7 @@
       lightboxImage.src = item.src;
       lightboxImage.alt = item.alt;
       lightboxCaption.textContent = item.caption;
+      applyImageFallback(lightboxImage);
     }
 
     function moveSlide(direction) {
