@@ -1,1219 +1,1067 @@
 <!DOCTYPE html>
 <html lang="sl">
 <head>
-    <link rel="preload" as="image" href="images/hero.png"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
-    <link rel="alternate" hreflang="sl" href="https://gorazdvrabic-sudo.github.io/username.github.io/" />
-    <link rel="alternate" hreflang="en" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_en.html" />
-    <link rel="alternate" hreflang="de" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_de.html" />
-    <link rel="alternate" hreflang="it" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_it.html" />
-    <link rel="alternate" hreflang="x-default" href="https://gorazdvrabic-sudo.github.io/username.github.io/" />
-    <meta name="google-site-verification" content="fwHM_7fyEpTrrwfujnOjNGwZO0SyUm45sjhN6zcDlNs" />
-    <meta charset="UTF-8">
-    <meta name="robots" content="index,follow">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Villa Mare - Apartmaji Olive in Lavender ter parkirno mesto za plovila v Karigadorju, Istra. Mirna lokacija 200 m od morja, idealno za družinske počitnice in navtični turizem.">
-    <meta name="keywords" content="apartmaji, Istra, Hrvaška, Karigador, morje, počitnice, plaža, parkiranje plovil">
-    <meta name="author" content="Gorazd Vrabič">
-    <meta property="og:title" content="Villa Mare - Apartmaji in Parkiranje v Karigadorju">
-    <meta property="og:description" content="Apartmaji Olive in Lavender ter parkirno mesto za plovila v Karigadorju, Istra. 200 m od morja.">
-    <meta property="og:image" content="https://gorazdvrabic-sudo.github.io/username.github.io/images/hero.png">
-    <meta property="og:url" content="https://gorazdvrabic-sudo.github.io/username.github.io/">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#003366">
-    <link rel="canonical" href="https://gorazdvrabic-sudo.github.io/username.github.io/">
-    <style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html {scroll-behavior: smooth;}
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
-}
-
-/* HEADER */
-header {
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.45),
-            rgba(0,0,0,0.45)
-        ),
-        url('images/hero.png');
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    color: white;
-    text-align: center;
-
-    padding: 50px 20px;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    margin-bottom: 20px;
-
-    position: relative;
-}
-
-header h1 {
-    font-size: 2.8em;
-    margin-bottom: 8px;
-    text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
-}
-
-header .tagline {
-    font-size: 1.1em;
-    opacity: 0.95;
-}
-    .header-subtitle {
-    margin-top: 8px;
-    font-size: 1.05em;
-    font-weight: 500;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-}
-    .language-switcher {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 300;
-
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(6px);
-    padding: 6px 8px;
-    border-radius: 10px;
-}
-
-.language-switcher a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    margin-right: 4px;
-    transition: transform 0.25s ease;
-    display: inline-block;
-}
-
-.language-switcher a:hover {
-    transform: scale(1.15);
-}
-
-.language-switcher a.active {
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 8px rgba(255,255,255,1));
-}
-
-.language-switcher img {
-    width: 32px !important;
-    height: 24px !important;
-    max-width: none !important;
-    min-height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: inline-block !important;
-    border-radius: 3px;
-    object-fit: cover;
-    vertical-align: middle;
-}
-
-.language-switcher a.active img {
-    border: 2px solid white;
-    box-shadow: 0 0 8px rgba(255,255,255,0.8);
-}
-
-.language-switcher img:hover {
-    transform: none;
-}
-
-.hero-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-
-    margin-top: 15px;
-    padding: 12px 24px;
-
-    background: #25D366;
-    color: white;
-    text-decoration: none;
-
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 1.05em;
-
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
-}
-
-
-.hero-btn:hover {
-    background: #1ea952;
-    transform: translateY(-2px);
-    color: white;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.45);
-}
-
-/* HAMBURGER MENU */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.8em;
-    cursor: pointer;
-    padding: 10px 15px;
-    position: absolute;
-    right: 10px;
-    top: 12px;
-    z-index: 101;
-}
-
-.menu-toggle:focus {
-    outline: 2px solid #66ccff;
-}
-
-/* NAVIGATION */
-nav {
-    background-color: #002244;
-    padding: 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    width: 100%;
-}
-
-nav li {
-    margin: 0;
-}
-
-nav a {
-    display: block;
-    color: white;
-    padding: 15px 25px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-weight: 500;
-}
-
-nav a:hover,
-nav a:focus {
-    background-color: #003366;
-    outline: none;
-}
-
-/* CONTAINER */
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* HEADINGS */
-h2 {
-    color: #003366;
-    font-size: 1.8em;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #0077cc;
-}
-
-h3 {
-    color: #005599;
-    font-size: 1.3em;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-p {
-    margin-bottom: 15px;
-    font-size: 1em;
-}
-
-/* IMAGES */
-img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    min-height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    margin: 20px auto;
-    padding: 0;
-    transition: transform 0.3s ease;
-    display: block;
-    object-fit: cover;
-    visibility: visible;
-}
-
-img:hover {
-    transform: scale(1.02);
-}
-
-/* SECTIONS */
-.section {
-    background: white;
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-.section:hover {
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-}
-
-/* LISTS */
-ul, ol {
-    margin-left: 20px;
-    margin-bottom: 15px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-/* BUTTONS */
-.btn {
-    display: inline-block;
-    background-color: #0077cc;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 8px;
-    margin-top: 20px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
-    min-width: 44px;
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn:hover,
-.btn:focus {
-    background-color: #005599;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 119, 204, 0.4);
-    outline: none;
-}
-
-.btn-primary {
-    background-color: #0077cc;
-}
-
-.btn-secondary {
-    background-color: #28a745;
-}
-
-.btn-secondary:hover,
-.btn-secondary:focus {
-    background-color: #218838;
-}
-
-/* CONTACT SECTION */
-.contact-info {
-    background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
-    padding: 25px;
-    border-radius: 12px;
-    border-left: 5px solid #0077cc;
-    margin: 20px 0;
-}
-
-.contact-info p {
-    margin-bottom: 10px;
-    font-size: 1.05em;
-}
-
-.contact-info a {
-    color: #0077cc;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-info a:hover,
-.contact-info a:focus {
-    text-decoration: underline;
-    outline: none;
-}
-
-/* MAPS */
-iframe {
-    width: 100%;
-    max-width: 800px;
-    height: 400px;
-    border-radius: 12px;
-    display: block;
-    margin: 20px auto;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* FOOTER */
-footer {
-    background: linear-gradient(135deg, #003366 0%, #002244 100%);
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 50px;
-    box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
-}
-
-footer p {
-    margin-bottom: 5px;
-}
-
-footer a {
-    color: #66ccff;
-    text-decoration: none;
-}
-
-footer a:hover,
-footer a:focus {
-    text-decoration: underline;
-    outline: none;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-}
-
-.gallery img {
-    width: 250px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-
-
-/* HIGHLIGHTS */
-.highlight {
-    background: #fff8d6;
-    padding: 14px 18px;
-    border-left: 5px solid #f0b400;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.8;
-}
-/* STORITVE */
-#services ul {
-    margin-bottom: 0;
-}
-
-#services li {
-    margin-bottom: 4px;
-    line-height: 1.4;
-}
-/* ===== RESPONSIVE DESIGN ===== */
-
-/* Tablets (768px and below) */
-@media (max-width: 768px) {
-    header {
-        padding: 45px 15px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Villa Mare - Apartmaji Olive in Lavender v Karigadorju na Istri. Mirna lokacija, 200 m od morja, brezplačno parkiranje in prilagojena gostom doživetja.">
+  <meta name="keywords" content="apartmaji, Istra, Hrvaška, Karigador, morje, počitnice, plaža, parkiranje plovil">
+  <meta name="author" content="Gorazd Vrabič">
+  <meta property="og:title" content="Villa Mare - Apartmaji Olive & Lavender">
+  <meta property="og:description" content="Apartmaji Olive in Lavender ter parkirno mesto za plovila v Karigadorju, Istra. 200 m od morja.">
+  <meta property="og:image" content="https://gorazdvrabic-sudo.github.io/username.github.io/images/hero.png">
+  <meta property="og:url" content="https://gorazdvrabic-sudo.github.io/username.github.io/">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a7ea8">
+  <link rel="canonical" href="https://gorazdvrabic-sudo.github.io/username.github.io/">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preload" as="image" href="images/hero.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+  <title>Apartmaji Olive & Lavender | Karigador | Villa Mare | Istra Hrvaška</title>
+  <style>
+    :root {
+      --sky: #eaf7ff;
+      --sea: #0a7ea8;
+      --sea-deep: #074d68;
+      --sand: #f7f0e6;
+      --sun: #f6b94d;
+      --success: #1cb77e;
+      --danger: #e25c4c;
+      --ink: #1d2b36;
+      --muted: #5d6f7f;
+      --panel: #ffffff;
+      --shadow: 0 18px 40px rgba(9, 42, 58, 0.12);
+      --radius: 22px;
     }
 
-    header h1 {
-        font-size: 1.8em;
-    }
-    
-    header .tagline {
-        font-size: 0.95em;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    nav ul {
-        flex-direction: column;
-    }
-    
-    nav li {
-        width: 100%;
-    }
-    
-    nav a {
-        padding: 12px 20px;
-        font-size: 0.95em;
-    }
-    
-    h2 {
-        font-size: 1.5em;
+    html {
+      scroll-behavior: smooth;
     }
 
-    h3 {
-        font-size: 1.15em;
-    }
-    
-    .section {
-        padding: 20px;
-    }
-    
-    iframe {
-        height: 300px;
-    }
-
-    .container {
-        padding: 0 15px;
-    }
-
-    p {
-        font-size: 0.95em;
-    }
-
-    .btn {
-        padding: 10px 25px;
-        font-size: 0.95em;
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, #f5fbff 0%, #f9f7f2 100%);
+      color: var(--ink);
+      line-height: 1.7;
     }
 
     img {
-        max-width: 100%;
-        width: 100% !important;
-        height: auto !important;
-    }
-}
-
-/* Mobile phones (480px and below) */
-@media (max-width: 480px) {
-    .whatsapp-float {
-        width: 55px;
-        height: 55px;
-        right: 15px;
-        bottom: 15px;
-        animation: none;
+      max-width: 100%;
+      display: block;
     }
 
-    .whatsapp-tooltip {
-        display: none;
-    }
-    
-    header {
-        padding: 40px 10px;
-        margin-bottom: 15px;
-        position: relative;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    header h1 {
-        font-size: 2em;
-        margin-bottom: 5px;
-    }
-    
-
-
-    header .tagline {
-    font-size: 1em;
-}
-
-.header-subtitle {
-    font-size: 0.9em;
-}
-
-header p {
-    margin-top: 5px;
-}
-.language-switcher {
-    top: 12px;
-    left: 12px;
-}
-
-.language-switcher a {
-    font-size: 1.2rem;
-    margin-right: 5px;
-}
-    /* HAMBURGER MENU ON MOBILE */
-    .menu-toggle {
-        display: block;
+    ul {
+      list-style: none;
     }
 
-    nav {
-        margin-bottom: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        flex-direction: column;
-    }
-
-    nav.open {
-        max-height: 500px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    nav li {
-        width: 100%;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    nav a {
-        padding: 12px 15px;
-        font-size: 0.85em;
-    }
-
-    h2 {
-        font-size: 1.2em;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    h3 {
-        font-size: 1em;
-        margin-top: 12px;
-    }
-    
-    .section {
-        padding: 12px;
-        margin-bottom: 15px;
-    }
-    
     .container {
-        padding: 0 8px;
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
     }
 
-    iframe {
-        height: 200px;
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(6, 48, 64, 0.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    img {
-        max-width: 100% !important;
-        width: 100% !important;
-        height: auto !important;
-        margin: 15px 0 !important;
-        padding: 0 !important;
-        display: block !important;
+    .topbar-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 70px;
+      gap: 18px;
     }
 
-    p {
-        font-size: 0.85em;
-        margin-bottom: 10px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      font-weight: 700;
+      letter-spacing: 0.02em;
     }
 
-    ul, ol {
-        margin-left: 12px;
-        font-size: 0.85em;
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #7ad9ff, #1490b6);
+      display: grid;
+      place-items: center;
+      font-size: 1.3rem;
+      box-shadow: 0 10px 24px rgba(20, 144, 182, 0.35);
     }
 
-    li {
-        margin-bottom: 5px;
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: rgba(255, 255, 255, 0.9);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      transition: 0.25s ease;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      outline: none;
+    }
+
+    .header {
+      background:
+        linear-gradient(135deg, rgba(5, 30, 40, 0.72), rgba(8, 76, 99, 0.68)),
+        url('images/hero.png') center/cover no-repeat;
+      min-height: 720px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 120px;
+      background: linear-gradient(to top, rgba(245, 251, 255, 0.7), rgba(245, 251, 255, 0));
+    }
+
+    .hero {
+      position: relative;
+      z-index: 1;
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 120px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      color: #fff;
+      max-width: 680px;
+    }
+
+    .lang-switcher {
+      position: absolute;
+      top: 26px;
+      left: 26px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 999px;
+      padding: 7px 10px;
+      backdrop-filter: blur(10px);
+      z-index: 3;
+    }
+
+    .lang-switcher a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 2px solid transparent;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .lang-switcher a:hover,
+    .lang-switcher a:focus-visible {
+      transform: translateY(-1px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(255,255,255,0.15);
+      outline: none;
+    }
+
+    .lang-switcher a.active {
+      border-color: rgba(255,255,255,0.9);
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.2);
+    }
+
+    .lang-switcher img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.06);
+      border-radius: 999px;
+      padding: 8px 14px;
+      margin-bottom: 18px;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 5rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 18px;
+      text-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-tagline {
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      color: rgba(255,255,255,0.92);
+      margin-bottom: 22px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 18px 0 28px;
+    }
+
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #fff;
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
     }
 
     .btn {
-        padding: 9px 18px;
-        font-size: 0.85em;
-        margin-top: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: none;
+      border-radius: 14px;
+      padding: 16px 24px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s ease;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
     }
 
-    .contact-info {
-        padding: 15px;
-        font-size: 0.85em;
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+      outline: none;
     }
 
-    .contact-info p {
-        font-size: 0.9em;
-        margin-bottom: 6px;
+    .btn-primary {
+      background: linear-gradient(135deg, #22c55e, #1aa36d);
+      color: white;
     }
 
-    .highlight {
-        padding: 10px;
-        font-size: 0.85em;
+    .btn-secondary {
+      background: rgba(255,255,255,0.14);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.22);
+    }
+
+    .hero-card {
+      justify-self: end;
+      width: min(100%, 360px);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(16px);
+      border-radius: 28px;
+      padding: 22px;
+      color: #fff;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+    }
+
+    .mini-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 10px;
+    }
+
+    .hero-card h3 {
+      font-size: clamp(1.5rem, 2.2vw, 2rem);
+      margin-bottom: 12px;
+    }
+
+    .hero-card ul {
+      display: grid;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .hero-card li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .bullet {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #7fe9a7, #24b86f);
+      box-shadow: 0 0 0 6px rgba(36,184,111,0.12);
+    }
+
+    .stats-strip {
+      width: min(1120px, calc(100% - 32px));
+      margin: -54px auto 40px;
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(10,126,168,0.08);
+      box-shadow: var(--shadow);
+      border-radius: 22px;
+      padding: 22px 18px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: clamp(1.5rem, 2vw, 2.2rem);
+      color: var(--sea-deep);
+      margin-bottom: 6px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    main {
+      padding-bottom: 80px;
+    }
+
+    section {
+      margin-top: 46px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 840px;
+      margin: 0 auto 28px;
+    }
+
+    .intro h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 12px;
+      color: var(--sea-deep);
+    }
+
+    .intro p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .section-card {
+      background: var(--panel);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(11, 79, 108, 0.06);
+      padding: 28px;
+      overflow: hidden;
+    }
+
+    .feature-banner {
+      background: linear-gradient(135deg, #f5fbff, #fff9eb);
+      border-left: 4px solid var(--sun);
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin-bottom: 20px;
+      color: var(--ink);
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 20px;
+    }
+
+    .feature-grid .feature {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 18px 18px 16px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #ffffff, #f6fbff);
+      border: 1px solid rgba(15, 94, 128, 0.08);
+    }
+
+    .feature strong {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.08rem;
+      color: var(--sea-deep);
+    }
+
+    .feature-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #dff7ff, #bfe7f9);
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .listing-card {
+      padding: 24px;
+      background: linear-gradient(180deg, #ffffff, #f8fbfe);
+      border-radius: 22px;
+      border: 1px solid rgba(13, 91, 124, 0.09);
+      box-shadow: 0 10px 26px rgba(8, 40, 54, 0.05);
+    }
+
+    .listing-card h3 {
+      font-size: 1.8rem;
+      color: var(--sea-deep);
+      margin-bottom: 10px;
+    }
+
+    .listing-card .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 14px 0 18px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(10,126,168,0.08);
+      color: var(--sea-deep);
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
+    .listing-card ul {
+      display: grid;
+      gap: 12px;
+      margin: 18px 0;
+      padding-left: 10px;
+      list-style: disc;
+      color: var(--muted);
+    }
+
+    .listing-card li::marker {
+      color: var(--sea);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .gallery a {
+      display: block;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(8, 40, 54, 0.08);
+      border: 1px solid rgba(14, 96, 128, 0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .gallery a:hover,
+    .gallery a:focus-visible {
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .faq {
+      display: grid;
+      gap: 18px;
+    }
+
+    .faq-item {
+      background: linear-gradient(180deg, #ffffff, #f7fbfe);
+      border: 1px solid rgba(14, 96, 128, 0.08);
+      border-radius: 18px;
+      padding: 18px 20px;
+    }
+
+    .faq-item h4 {
+      color: var(--sea-deep);
+      margin-bottom: 8px;
+      font-size: 1.12rem;
+    }
+
+    .faq-item p {
+      color: var(--muted);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .contact-card {
+      padding: 26px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #eefbff 0%, #f8f9ff 100%);
+      border: 1px solid rgba(10,126,168,0.08);
+    }
+
+    .contact-card h3 {
+      font-size: 1.9rem;
+      color: var(--sea-deep);
+      margin-bottom: 12px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--ink);
+    }
+
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: #dff7ff;
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item a,
+    .contact-item span {
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .location-box {
+      padding: 26px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #ffffff, #f5fbff);
+      border: 1px solid rgba(10,126,168,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .map-frame {
+      width: 100%;
+      min-height: 260px;
+      border: 0;
+      border-radius: 18px;
+      box-shadow: 0 10px 24px rgba(8, 40, 54, 0.08);
     }
 
     footer {
-        padding: 15px 10px;
-        margin-top: 20px;
+      background: linear-gradient(135deg, #062f3f, #0b4563 80%);
+      color: rgba(255,255,255,0.9);
+      padding: 36px 0 60px;
+      margin-top: 50px;
     }
 
-    footer p {
-        font-size: 0.8em;
-        margin-bottom: 2px;
-    }
-}
-
-/* Large screens (1200px and above) */
-@media (min-width: 1200px) {
-    .container {
-        padding: 0 40px;
+    .footer-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
-    header {
-        padding: 60px 30px;
+    .footer-inner a {
+      color: #a9efff;
     }
 
-    header h1 {
-        font-size: 3.2em;
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: white;
+      border-radius: 12px;
+      padding: 8px 12px;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
-    .header-subtitle {
-        font-size: 1.1em;
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 84px;
+      }
+
+      .hero-card {
+        justify-self: start;
+      }
+
+      .stats-strip,
+      .feature-grid,
+      .card-grid,
+      .contact-grid,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-strip {
+        margin-top: 18px;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .topbar nav.open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0 18px;
+      }
     }
 
-    nav a {
-        padding: 18px 30px;
+    @media (max-width: 620px) {
+      .header {
+        min-height: 640px;
+      }
+
+      .hero {
+        padding-bottom: 90px;
+      }
+
+      .lang-switcher {
+        left: 16px;
+        top: 18px;
+      }
+
+      .section-card,
+      .listing-card,
+      .contact-card,
+      .location-box {
+        padding: 20px;
+      }
+
+      .cta-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .brand span {
+        display: none;
+      }
+
+      .hero-meta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
-}
-
-.whatsapp-float { 
- position: fixed; 
- right: 25px; 
- bottom: 25px; 
- width: 65px; 
- height: 65px; 
- border-radius: 50%; 
- background: #25D366; 
- display:flex; 
- align-items:center; 
- justify-content:center; 
- text-decoration:none; 
- box-shadow:0 4px 15px rgba(0,0,0,.3); 
- z-index:9999; 
- animation:pulse 2s infinite; 
-} 
- 
-.whatsapp-float:hover { 
- transform:scale(1.1); 
-} 
-.whatsapp-tooltip {
-    position: fixed;
-    bottom: 95px;
-    right: 25px;
-    background: white;
-    color: #333;
-    padding: 10px 14px;
-    border-radius: 12px;
-    font-size: 14px;
-    font-weight: 600;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
-    z-index: 9998;
-    animation: tooltipBounce 2s infinite;
-}
-
-@keyframes tooltipBounce {
-    0% {
-        transform: translateY(0);
-    }
-
-    25% {
-        transform: translateY(-4px);
-    }
-
-    50% {
-        transform: translateY(0);
-    }
-
-    75% {
-        transform: translateY(-2px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-@keyframes pulse { 
- 0% {box-shadow:0 0 0 0 rgba(37,211,102,.7);}  
- 70% {box-shadow:0 0 0 20px rgba(37,211,102,0);}  
- 100% {box-shadow:0 0 0 0 rgba(37,211,102,0);}  
-} 
-.gallery-note { text-align:center; color:#777; margin-top:6px; font-size:0.85rem;font-style: italic; } 
-
-.olive-gallery img,
-.lavender-gallery img,
-.parking-gallery img,
-.okolica-gallery img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    cursor: pointer;
-}
-  
-</style>
-    <title>Apartmaji Olive & Lavender | Karigador | Villa Mare | Istra Hrvaška</title>
-    <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"LodgingBusiness",
-  "name":"Villa Mare",
-  "url":"https://gorazdvrabic-sudo.github.io/username.github.io/",
-  "telephone":"+38641776608",
-  "email":"villamare.olive.lavender@gmail.com",
-  "priceRange":"€€",
-
-  "image":[
-    "https://gorazdvrabic-sudo.github.io/username.github.io/images/hero.png",
-    "https://gorazdvrabic-sudo.github.io/username.github.io/images/Olive1.JPG",
-    "https://gorazdvrabic-sudo.github.io/username.github.io/images/Lavander1.JPG"
-  ],
-
-  "sameAs":[
-    "https://maps.google.com/?q=45.3595613983202,13.56048904460079"
-  ],
-
-  "address":{
-    "@type":"PostalAddress",
-    "addressLocality":"Karigador",
-    "addressCountry":"HR"
-  }
-}
-</script>
-    <meta property="og:locale" content="sl_SI">
-    <meta property="og:site_name" content="Villa Mare">
-    <script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"FAQPage",
- "mainEntity":[
+  </style>
+  <script type="application/ld+json">
   {
-   "@type":"Question",
-   "name":"Kako daleč je morje od apartmajev?",
-   "acceptedAnswer":{
-    "@type":"Answer",
-    "text":"Apartmaja Olive in Lavender sta oddaljena približno 200 metrov od morja."
-   }
-  },
-  {
-   "@type":"Question",
-   "name":"Ali je zagotovljeno parkiranje?",
-   "acceptedAnswer":{
-    "@type":"Answer",
-    "text":"Gostom je na voljo brezplačno nadkrito parkiranje."
-   }
-  },
-  {
-   "@type":"Question",
-   "name":"Ali je na voljo WiFi?",
-   "acceptedAnswer":{
-    "@type":"Answer",
-    "text":"Da, v obeh apartmajih je na voljo brezplačen WiFi."
-   }
-  },
-    {
-  "@type":"Question",
-  "name":"Ali so hišni ljubljenčki dovoljeni?",
-  "acceptedAnswer":{
-    "@type":"Answer",
-    "text":"Za informacije glede hišnih ljubljenčkov nas predhodno kontaktirajte."
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Villa Mare",
+    "url": "https://gorazdvrabic-sudo.github.io/username.github.io/",
+    "telephone": "+38641776608",
+    "email": "villamare.olive.lavender@gmail.com",
+    "priceRange": "€€",
+    "image": [
+      "https://gorazdvrabic-sudo.github.io/username.github.io/images/hero.png",
+      "https://gorazdvrabic-sudo.github.io/username.github.io/images/Olive1.JPG",
+      "https://gorazdvrabic-sudo.github.io/username.github.io/images/Lavander1.JPG"
+    ],
+    "sameAs": [
+      "https://maps.google.com/?q=45.3595613983202,13.56048904460079"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Karigador",
+      "addressCountry": "HR"
+    }
   }
-},
-{
-  "@type":"Question",
-  "name":"Kdaj sta možna prihod in odhod?",
-  "acceptedAnswer":{
-    "@type":"Answer",
-    "text":"Točne ure prihoda in odhoda se dogovorijo ob rezervaciji."
-  }
-},
-        {
-  "@type":"Question",
-  "name":"Ali je na voljo parkiranje plovil?",
-  "acceptedAnswer":{
-    "@type":"Answer",
-    "text":"Gostom sta na voljo dve nadkriti parkirni mesti za plovila z možnostjo uporabe vode in elektrike."
-  }
-}
- ]
-}
-</script>
+  </script>
 </head>
-
 <body>
-
-<!-- HEADER -->
-<header>
-
-<div class="language-switcher">
-
-    <a href="index.html" class="active" title="Slovenščina">
-        <img src="https://flagcdn.com/16x12/si.png"
-             srcset="https://flagcdn.com/32x24/si.png 2x"
-             alt="Slovenščina"
-             loading="lazy">
-    </a>
-
-    <a href="index_en.html" title="English">
-        <img src="https://flagcdn.com/16x12/gb.png"
-             srcset="https://flagcdn.com/32x24/gb.png 2x"
-             alt="English"
-             loading="lazy">        
-    </a>
-
-    <a href="index_de.html" title="Deutsch">
-                    <img src="https://flagcdn.com/16x12/de.png"
-             srcset="https://flagcdn.com/32x24/de.png 2x"
-             alt="Deutsch"
-             loading="lazy"> 
-    </a>
-
-    <a href="index_it.html" title="Italiano">
-                <img src="https://flagcdn.com/16x12/it.png"
-             srcset="https://flagcdn.com/32x24/it.png 2x"
-             alt="Italiano"
-             loading="lazy"></a>
-</div>
-<button class="menu-toggle" id="menuToggle" aria-label="Odpri menu">☰</button>
-
-
-<h1>🏖️ Villa Mare</h1>
-
-    <p class="tagline">
-        Apartmaji Olive & Lavender
-    </p>
-
-    <p class="header-subtitle">
-        Karigador, Istra • 200 m od morja • Mirna lokacija • Brezplačno parkiranje
-    </p>
-   <a href="https://wa.me/38641776608?text=Pozdravljeni,%20zanima%20me%20rezervacija"
-   class="hero-btn"
-   target="_blank"
-   rel="noopener noreferrer">
-
-    <svg xmlns="http://www.w3.org/2000/svg"
-         width="22"
-         height="22"
-         viewBox="0 0 32 32"
-         fill="white">
-
-        <path d="M16 3C8.82 3 3 8.73 3 15.8c0 2.54.75 5 2.16 7.11L3.75 29l6.3-1.64A13.19 13.19 0 0 0 16 28.6c7.18 0 13-5.73 13-12.8S23.18 3 16 3zm0 23.4c-1.88 0-3.72-.49-5.36-1.42l-.38-.22-3.74.97 1-3.61-.24-.37a10.5 10.5 0 0 1-1.64-5.65C5.64 10.3 10.3 5.8 16 5.8s10.36 4.5 10.36 10.3S21.7 26.4 16 26.4zm5.72-7.1c-.31-.15-1.84-.9-2.13-1s-.5-.15-.71.15-.81 1-1 1.18-.34.22-.65.07c-.31-.15-1.3-.47-2.47-1.5-.91-.81-1.52-1.8-1.69-2.1s-.02-.46.13-.6c.13-.13.3-.34.45-.5.15-.16.2-.28.3-.47.1-.18.05-.34-.02-.47-.08-.15-.71-1.7-.97-2.33-.25-.6-.51-.52-.71-.53h-.61c-.2 0-.52.08-.79.38-.27.3-1.04 1.02-1.04 2.49s1.07 2.88 1.22 3.08c.15.2 2.09 3.16 5.05 4.43.71.3 1.26.48 1.69.61.71.22 1.35.19 1.86.11.57-.09 1.84-.75 2.1-1.48.26-.73.26-1.35.18-1.48-.08-.13-.29-.21-.6-.36z"/>
-    </svg>
-
-    Preveri proste termine
-
-</a>
-</header>
-
-<!-- NAVIGATION -->
-<nav role="navigation" aria-label="Glavna navigacija" id="navMenu">
-    <ul>
-        <li><a href="#services" onclick="toggleMenu()">Kaj ponujamo</a></li>
-        <li><a href="#apartments" onclick="toggleMenu()">Nastanitev</a></li>
-        <li><a href="#parking" onclick="toggleMenu()">Parkiranje plovil</a></li>
-        <li><a href="#about" onclick="toggleMenu()">Karigador</a></li>
-        <li><a href="#distances" onclick="toggleMenu()">Lokacija in okolica</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
-    </ul>
-</nav>
-
-<div class="container">
-
-<!-- SERVICES -->
-<section id="services">
-    <h2>Naj vaše počitnice pri nas postanejo nepozabno doživetje!</h2>
-
-<div class="section">
-
-    <div class="highlight">
-        🌊 Najem SUP-a, plovila in koles • 🚤 Izleti po Istri in Brionih • 🍷 Tradicionalna istrska večerja z gostitelji • 🎉 Gostom prilagojena doživetja
+  <header class="header">
+    <div class="lang-switcher" aria-label="Language selector">
+      <a href="index.html" class="active" title="Slovenščina"><img src="https://flagcdn.com/16x12/si.png" srcset="https://flagcdn.com/32x24/si.png 2x" alt="Slovenščina" loading="lazy"></a>
+      <a href="index_en.html" title="English"><img src="https://flagcdn.com/16x12/gb.png" srcset="https://flagcdn.com/32x24/gb.png 2x" alt="English" loading="lazy"></a>
+      <a href="index_de.html" title="Deutsch"><img src="https://flagcdn.com/16x12/de.png" srcset="https://flagcdn.com/32x24/de.png 2x" alt="Deutsch" loading="lazy"></a>
+      <a href="index_it.html" title="Italiano"><img src="https://flagcdn.com/16x12/it.png" srcset="https://flagcdn.com/32x24/it.png 2x" alt="Italiano" loading="lazy"></a>
     </div>
-    <p>
-        Poleg udobne nastanitve v apartmajih Olive in Lavender, lahko našim gostom pomagamo organizirati številna doživetja ter aktivnosti, prilagojene njihovim željam. Na voljo so najem SUP-a, plovila in koles, 
-        organizacija izletov po Istri, obisk Brionov, športne aktivnosti, tradicionalna istrska večerja z gostitelji ter številne druge aktivnosti po dogovoru.
-    </p>
 
-</div>
-</section>
-
-    
-<!-- APARTMENTS -->
-<section id="apartments">
-    <h2>Apartmaji</h2>
-    
-    <div class="section">
-        <h3>🫒 Apartma Olive</h3>
-        <p class="highlight">
-            🏖️ 200 m od morja • 👥 2–3 osebe • ❄️ Klima • 📶 WiFi
-        </p>
-<p>
-Apartma Olive je prijeten apartma za 2 do 3 osebe, namenjen vsem, ki si želijo sproščenih počitnic ob morju v mirnem istrskem okolju. Le 200 metrov od plaže ponuja udobje, zasebnost in vse potrebno za brezskrben oddih.
-Po dnevu, preživetem na morju, raziskovanju istrskih mest ali kolesarjenju po obalnih poteh, se lahko sprostite v prijetno urejenih prostorih, pripravite večerjo v opremljeni kuhinji ali uživate v poletnih večerih na prostem.
-Gostom so na voljo spalnica z zakonsko posteljo, dnevni prostor s pomožnim ležiščem, kopalnica, klimatska naprava, brezplačen WiFi, nadkrito parkirno mesto in skupna letna kuhinja.
-</p>
-<ul>
-    <li>👥 Do 3 osebe</li>
-    <li>❄️ Klimatska naprava</li>
-    <li>📶 Brezplačen WiFi</li>
-    <li>🛏️ Spalnica z zakonsko posteljo</li>
-    <li>🍳 Opremljena kuhinja</li>
-    <li>🚗 Nadkrito parkirišče</li>
-    <li>🔌 Možnost polnjenja električnega vozila</li>
-</ul>
-<div class="gallery olive-gallery"> 
- 
-    <a href="images/Olive1.JPG" data-lightbox="olive" data-title="Apartma Olive"> 
-        <img src="images/Olive1.JPG" alt="Apartma Olive" loading="lazy"> 
-    </a> 
- 
-    <a href="images/Olive2.JPG" data-lightbox="olive" style="display:none;"></a> 
-    <a href="images/Olive3.JPG" data-lightbox="olive" style="display:none;"></a> 
-    <a href="images/Olive4.JPG" data-lightbox="olive" style="display:none;"></a> 
-    <a href="images/Olive5.JPG" data-lightbox="olive" style="display:none;"></a> 
-    <a href="images/Olive6.JPG" data-lightbox="olive" style="display:none;"></a> 
-    <a href="images/Olive7.JPG" data-lightbox="olive" style="display:none;"></a> 
- 
-</div> 
- 
-<p class="gallery-note">📸 Oglejte si celotno galerijo.</p>  
-   <a href="mailto:villamare.olive.lavender@gmail.com?subject=Povpraševanje za Apartma Olive" class="btn btn-primary">Pošlji povpraševanje</a> 
- 
-</div> 
- 
-<div class="section"> 
-   
-        <h3>🪴 Apartma Lavender</h3>
-    <p class="highlight">
-    🏖️ 200 m od morja • 👥 Do 4 osebe • ❄️ Klima • 📶 WiFi
-</p>
-        <p>
-Apartma Lavender je prijeten in sodobno opremljen apartma za do 4 osebe.
-Nahaja se v mirnem delu Karigadorja, le približno 200 metrov od morja.
-Gostom so na voljo večja spalnica z zakonsko posteljo, manjša spalnica z dvema posteljama, 
-skupen dnevni prostor z opremljeno kuhinjo,
-kopalnica, klimatizirani prostori, brezplačen WiFi ter nadkrito parkirno mesto.
-Apartma je odlična izbira za pare, družine in vse, ki si želijo sproščenih
-počitnic ob morju v prijetnem istrskem okolju. Gostom je na voljo tudi skupna 
-letna kuhinja, ki si jo lahko delijo z ostalimi gosti.
-</p>
-
-<ul>
-    <li>👥 Do 4 osebe</li>
-    <li>❄️ Klimatska naprava</li>
-    <li>📶 Brezplačen WiFi</li>
-    <li>🛏️ 2 Spalnici</li>
-    <li>🚗 Nadkrito parkirišče, opcijsko z električno polnilnico za avto</li>
-</ul>
-        <div class="gallery lavender-gallery"> 
- 
-<a href="images/Lavander1.JPG" data-lightbox="lavender" data-title="Apartma Lavender"> 
-    <img src="images/Lavander1.JPG" alt="Apartma Lavender" loading="lazy"> 
-</a> 
- 
-<a href="images/Lavander2.JPG" data-lightbox="lavender" style="display:none;"></a> 
-<a href="images/Lavander3.JPG" data-lightbox="lavender" style="display:none;"></a> 
-<a href="images/Lavander4.JPG" data-lightbox="lavender" style="display:none;"></a> 
-<a href="images/Lavander5.JPG" data-lightbox="lavender" style="display:none;"></a> 
-<a href="images/Lavander6.JPG" data-lightbox="lavender" style="display:none;"></a> 
-<a href="images/Lavander7.JPG" data-lightbox="lavender" style="display:none;"></a> 
- 
-</div> 
-<p class="gallery-note">
-    📸 Oglejte si celotno galerijo.
-</p>
-        <a href="mailto:villamare.olive.lavender@gmail.com?subject=Povpraševanje za Apartma Lavender" class="btn btn-primary">Pošlji povpraševanje</a>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-mark">🏖️</div>
+          <span>Villa Mare</span>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Odpri menu">☰</button>
+        <nav class="nav" id="mainNav" aria-label="Glavna navigacija">
+          <a href="#services">Kaj ponujamo</a>
+          <a href="#apartments">Apartmaji</a>
+          <a href="#parking">Parkiranje</a>
+          <a href="#location">Lokacija</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Kontakt</a>
+        </nav>
+      </div>
     </div>
-</section>
 
-<!-- PARKING -->
-<section id="parking">
-    <div class="section">   
-        <h2>🚤 Parkirno mesto za plovila</h2>
-        <p class="highlight">
-🚤 Višina 2,8 m • 📏 Dolžina do 4,5 m • 💧 Voda za pranje plovila • 🔌 Električna polnilnica
-</p>
-<p>2 parkirni mesti pod nadstreškom sta namenjeni našim gostom, vendar je možno najeti parkirni mesti tudi izven sezone. Parkirni mesti sta varovani in pod videonadzorom,
-možna je uporaba mehke vode za čiščenje (ne pušča sledi vodnega kamna), uporabe elektrike in priklopa vozila na električno polnilnico. </p>
-        <div class="gallery parking-gallery"> 
- 
-<a href="images/Parking1.JPG" data-lightbox="parking" data-title="Parkirno mesto za plovila"> 
-    <img src="images/Parking1.JPG" alt="Parkirno mesto za plovila" loading="lazy"> 
-</a> 
- 
-<a href="images/Parking2.JPG" data-lightbox="parking" style="display:none;"></a> 
-<a href="images/Parking3.JPG" data-lightbox="parking" style="display:none;"></a> 
-<a href="images/Parking4.JPG" data-lightbox="parking" style="display:none;"></a> 
-<a href="images/Parking5.JPG" data-lightbox="parking" style="display:none;"></a> 
-<a href="images/Parking6.JPG" data-lightbox="parking" style="display:none;"></a> 
-<a href="images/Parking7.JPG" data-lightbox="parking" style="display:none;"></a> 
- 
-</div> 
- 
-<p class="gallery-note">📸 Oglejte si celotno galerijo.</p> 
-        <a href="mailto:villamare.olive.lavender@gmail.com?subject=Povpraševanje za Parkirno mesto" class="btn btn-secondary">Pošlji povpraševanje</a>
+    <div class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Istra • Karigador</div>
+        <h1>Počitnice ob morju, ki se jih ne boste želeli končati.</h1>
+        <p class="hero-tagline">Apartmaji Olive &amp; Lavender v mirni lokaciji, 200 m od plaže, z udobjem za družine, pare in popotnike.</p>
+
+        <div class="hero-meta">
+          <span class="meta-pill">🌊 200 m od morja</span>
+          <span class="meta-pill">🚗 Brezplačno parkiranje</span>
+          <span class="meta-pill">📶 Wi‑Fi</span>
+        </div>
+
+        <div class="cta-row">
+          <a href="https://wa.me/38641776608?text=Pozdravljeni,%20zanima%20me%20rezervacija" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            <span>💬</span> Preveri proste termine
+          </a>
+          <a href="#contact" class="btn btn-secondary">📩 Kontakt</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Povzetek ponudbe">
+        <div class="mini-title">Zato so naši gosti vračajoči</div>
+        <h3>Mir, udobje in dostopnost</h3>
+        <ul>
+          <li><span class="bullet"></span>Prijazna lokacija za sproščene počitnice</li>
+          <li><span class="bullet"></span>Opremljeni apartmaji za 2–4 osebe</li>
+          <li><span class="bullet"></span>Parkiranje za vozila in plovila</li>
+          <li><span class="bullet"></span>Prilagojene aktivnosti po želji gostov</li>
+        </ul>
+      </aside>
     </div>
-</section>
+  </header>
 
-
-    
-<!-- ABOUT -->
-<section id="about">
-    <h2>O Karigadorju</h2>
-     
-    <div class="section">
-        <p class="highlight"> 
-🏖️ 200 m do plaže • 🌊 Čisto morje • 👨‍👩‍👧‍👦 Idealno za družine • 🚴 Kolesarske poti • 🍷 Istrska kulinarika • 🌅 Čudoviti sončni zahodi 
-</p>
-        <p>
-            Karigador je mirna ribiška vasica na zahodni obali Istre, med Novigradom in Umagom. Znan je po čistem morju, urejenih plažah, čudovitih sončnih zahodih in sproščenem mediteranskem vzdušju.
-            Kraj je idealen za družinske počitnice, kolesarjenje, sprehode ob obali, plavanje in raziskovanje istrskih mest. V bližini se nahajajo Novigrad, Umag, vodni park Istralandia, številne kolesarske poti ter odlične istrske gostilne z lokalnimi specialitetami.
-            Naši nastanitvi Olive & Lavender se nahajajta le nekaj korakov od morja in predstavljajo odlično izhodišče za sproščujoče počitnice v osrčju Istre.
-        </p>
-        <div class="gallery okolica-gallery"> 
- 
-    <a href="images/sl1.jpg" data-lightbox="okolica" data-title="Karigador in okolica"> 
-        <img src="images/sl1.jpg" alt="Karigador in okolica" loading="lazy"> 
-    </a> 
- 
-    <a href="images/sl2.jpg" data-lightbox="okolica" style="display:none;"></a> 
-    <a href="images/sl3.jpg" data-lightbox="okolica" style="display:none;"></a> 
-    <a href="images/sl4.jpg" data-lightbox="okolica" style="display:none;"></a> 
-    <a href="images/sl5.jpg" data-lightbox="okolica" style="display:none;"></a> 
-    <a href="images/sl6.jpg" data-lightbox="okolica" style="display:none;"></a> 
-    <a href="images/sl7.jpg" data-lightbox="okolica" style="display:none;"></a> 
- 
-</div> 
- 
-<p class="gallery-note">📸 Oglejte si celotno galerijo.</p> 
-
-<p>Karigador je manjša in mirna ribiška vasica na zahodni obali hrvaške Istre, med Novigradom in Umagom. Zaradi svoje odlične lege ob morju, urejenih plaž in sproščenega mediteranskega vzdušja velja za priljubljeno destinacijo za družinske počitnice, pare ter ljubitelje aktivnega oddiha. Obiskovalce navdušujejo čisto morje, slikoviti sončni zahodi in prijetna obalna promenada, ki povezuje okoliške kraje.</p>
-<p>V neposredni bližini Karigadorja se nahaja zgodovinska Dajla, znana predvsem po nekdanjem benediktinskem samostanu in cerkvi sv. Janeza Krstnika. Ta del Istre odraža bogato kulturno dediščino, ki se prepleta z dolgo tradicijo ribištva, oljkarstva in vinogradništva. Obiskovalci lahko raziskujejo številne lokalne znamenitosti ter uživajo v pristnem istrskem načinu življenja.</p>
-<p>Le nekaj minut vožnje stran se nahaja Novigrad, eno najlepših obalnih mest v Istri. Njegovo zgodovinsko mestno jedro, kamnite ulice, mestno obzidje in številne restavracije ustvarjajo edinstveno mediteransko vzdušje. Na severu je oddaljen tudi Umag, znan po teniškem turnirju ATP Croatia Open, sodobni marini in bogatem poletnem dogajanju.</p>
-<p>Karigador je odlično izhodišče za raziskovanje notranjosti Istre. Med najbolj priljubljenimi izleti so obisk srednjeveškega Grožnjana, slikovitega Motovuna in znamenite Jame Baredine. Družine z otroki pogosto obiščejo tudi vodni park Istralandia, ki velja za eno najbolj priljubljenih turističnih atrakcij v regiji.</p>
-<p>Ljubitelji kulinarike bodo v okolici našli vrhunske istrske konobe, vinske kleti in oljkarje, kjer lahko okušajo priznana istrska vina, ekstra deviško oljčno olje, pršut, sire in druge lokalne specialitete. Številne kolesarske in pohodniške poti vodijo skozi oljčne nasade, vinograde in slikovite istrske vasi ter ponujajo čudovite razglede na Jadransko morje.</p>
-<p>Apartmaja Olive in Lavender v kraju Karigador sta od morja oddaljena le približno 200 metrov in predstavljata odlično izbiro za vse, ki iščejo mirno nastanitev v Istri. Kombinacija bližine plaže, naravnih lepot, kulturnih znamenitosti in vrhunske gastronomije ustvarja idealne pogoje za sproščene in nepozabne počitnice na hrvaški obali.</p>
-     </div> 
-</section>
-
-<!-- DISTANCES -->
-<section id="distances"> 
-    <h2>📍 Lokacija in okolica</h2> 
-    <div class="section"> 
-        <ul> 
-            <li><strong>Plaža Karigador:</strong> 200 m, <strong>Restavracija in Beach Bar:</strong> 400 m</li> 
-            <li><strong>Turistična mesta Novigrad:</strong> 6 km, <strong>Umag:</strong> 8 km, <strong>Grožnjan:</strong> 33 km, <strong>Motovun:</strong> 35 km</li> 
-            <li><strong>Trgovina:</strong> 100 m</li> 
-            <li><strong>Vodni park ISTRALANDIA:</strong> 9 km, <strong>Športno-adrenalinski center:</strong> 1,5 km</li> 
-            <li><strong>Letališče PULA:</strong> 77 km</li> 
-            <li><strong>Jama Baredine:</strong> 25 km</li> 
-        </ul> 
- 
-        <h3>Lokacija Villa Mare</h3> 
-        <p>Preglejte natančno lokacijo na Google Maps:</p> 
- 
-        <iframe
-    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d649.168951635514!2d13.560734655337107!3d45.359502761162375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2ssi!4v1787574757067"
-    style="border:0; border-radius:15px;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    title="Villa Mare lokacija na Google Maps">
-</iframe>
-
- 
-        <p style="text-align:center;"> 
-            <a href="https://maps.google.com/?q=45.3595613983202,13.56048904460079" class="btn" target="_blank" rel="noopener noreferrer"> 
-                Odpri v Google Maps 
-            </a> 
-        </p> 
-    </div> 
-</section> 
-
-<section id="faq">
-    <h2>Pogosta vprašanja</h2>
-
-    <div class="section">
-        <h3>Kako daleč je morje od apartmajev?</h3>
-        <p>Apartmaja Olive in Lavender sta oddaljena približno 200 metrov od morja.</p>
-        <h3>Ali je zagotovljeno parkiranje?</h3>
-        <p>Gostom je na voljo brezplačno nadkrito parkiranje.</p>
-        <h3>Ali je na voljo WiFi?</h3>
-        <p>Da, v obeh apartmajih je na voljo brezplačen WiFi.</p>
-        <h3>Ali so hišni ljubljenčki dovoljeni?</h3>
-        <p>Za informacije glede hišnih ljubljenčkov nas predhodno kontaktirajte.</p>
-        <h3>Kdaj sta možna prihod in odhod?</h3>
-        <p>Točne ure prihoda in odhoda se dogovorijo ob rezervaciji.</p>
-        <h3>Ali je na voljo parkiranje plovil?</h3>
-        <p>Gostom sta na voljo dve nadkriti parkirni mesti za plovila z možnostjo uporabe vode in elektrike.</p>
+  <div class="stats-strip">
+    <div class="stat">
+      <strong>200 m</strong>
+      <span>do plaže</span>
     </div>
-</section>
-    
-<!-- CONTACT -->
-<section id="contact">
-    <h2>Kontakt in Rezervacija</h2>
-    <div class="contact-info">
-        <p><strong>👤 Villa Mare</strong></p>
-        <p>📞 <strong>Telefon:</strong> <a href="tel:+38641776608">+386 41 77 66 08</a></p>
-        <p>✉️ <strong>E-pošta:</strong> <a href="mailto:villamare.olive.lavender@gmail.com">villamare.olive.lavender@gmail.com</a></p>
-        <p style="margin-top: 20px; font-size: 0.95em;">💬 Kontaktiraj nas za dodatne informacije, cene in razpoložljivost!</p>
+    <div class="stat">
+      <strong>2</strong>
+      <span>prijetna apartmaja</span>
     </div>
-</section>
+    <div class="stat">
+      <strong>4+</strong>
+      <span>osebe v Lavander</span>
+    </div>
+    <div class="stat">
+      <strong>24/7</strong>
+      <span>na voljo za rezervacije</span>
+    </div>
+  </div>
 
-</div>
+  <main class="container">
+    <section id="services">
+      <div class="intro">
+        <h2>Naj vaše počitnice postanejo nepozabno doživetje</h2>
+        <p>V Villa Mare združujemo udobje, mirno okolje in osebno pozornost. Poleg nastanitve vam pomagamo organizirati izlete, aktivne počitnice in preproste, a kvalitetne trenutke ob morju.</p>
+      </div>
 
-<!-- FOOTER -->
-<footer>
-    <p><strong>Villa Mare, Karigador</strong></p>
-    <p>200 m od morja • Istra, Hrvaška</p>
-    <p style="margin-top: 15px; font-size: 0.9em;">© 2025-<script>document.write(new Date().getFullYear())</script> Villa Mare. All rights reserved.
-</p>
-    <p style="font-size: 0.85em; opacity: 0.8;">Ustvarjeno s ❤️ za nepozabne počitnice</p>
-</footer>
+      <div class="section-card">
+        <div class="feature-banner">🌊 Najem SUP-a, plovila in koles • 🚤 Izleti po Istri in Brionih • 🍷 Tradicionalna istrska večerja • 🎉 Gostom prilagojena doživetja</div>
 
-<script>
-// Hamburger Menu Toggle
-const menuToggle = document.getElementById('menuToggle');
-const navMenu = document.getElementById('navMenu');
+        <div class="feature-grid">
+          <div class="feature">
+            <strong><span class="feature-icon">🏄</span> Aktiven dopust</strong>
+            <p>Najam SUP-a, plovil in koles ter organizacija izletov po Istri in Brionih za tiste, ki radi aktivno raziskujejo okolico.</p>
+          </div>
+          <div class="feature">
+            <strong><span class="feature-icon">🍽️</span> Lokalni okus</strong>
+            <p>Tradicionalne istrske večerje z gostitelji, lokalni jedi in prijetni družabni trenutki, ki dodajo osebni pečat vašemu bivanju.</p>
+          </div>
+          <div class="feature">
+            <strong><span class="feature-icon">👨‍👩‍👧‍👦</span> Družinske počitnice</strong>
+            <p>Mirna lokacija, udobna soba in prostori, ki omogočajo sproščeno počitniško atmosfero za vse generacije.</p>
+          </div>
+          <div class="feature">
+            <strong><span class="feature-icon">🧭</span> Prilagojena pomoč</strong>
+            <p>Na voljo so namigi, priporočila in organizacija aktivnosti po vaših željah, da bo vaš dopust preživet po meri.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-menuToggle.addEventListener('click', toggleMenu);
+    <section id="apartments">
+      <div class="intro">
+        <h2>Udobna nastanitev po meri</h2>
+      </div>
 
-function toggleMenu() {
-    navMenu.classList.toggle('open');
-}
+      <div class="card-grid">
+        <article class="listing-card">
+          <h3>🫒 Apartma Olive</h3>
+          <div class="badge-row">
+            <span class="badge">🏖️ 200 m do morja</span>
+            <span class="badge">👥 2–3 osebe</span>
+            <span class="badge">❄️ Klima</span>
+            <span class="badge">📶 Wi‑Fi</span>
+          </div>
+          <p>Prijeten, svetel in miren apartma za 2–3 osebe, idealen za pare ali manjše družine, ki iščejo sproščene počitnice ob morju v tihem istrskem okolju.</p>
+          <ul>
+            <li>Spalnica z zakonsko posteljo</li>
+            <li>Dnevni prostor s pomožnim ležiščem</li>
+            <li>Opremljena kuhinja in kopalnica</li>
+            <li>Nadkrito parkirišče in možnost polnjenja EV</li>
+          </ul>
+          <a href="mailto:villamare.olive.lavender@gmail.com?subject=Povpraševanje za Apartma Olive" class="btn btn-primary">Pošlji povpraševanje</a>
+        </article>
 
-// Close menu when clicking on a link
-const navLinks = navMenu.querySelectorAll('a');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-    });
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
-<div class="whatsapp-tooltip">
-    🏖️ Preveri proste termine preko WhatsAppa
-</div>
-<a href="https://wa.me/38641776608?text=Pozdravljeni,%20zanima%20me%20rezervacija" 
-class="whatsapp-float" target="_blank" rel="noopener noreferrer"> 
-<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 32 32" fill="white"> 
-<path d="M19.11 17.21c-.27-.14-1.58-.78-1.83-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.85 1.04-.15.18-.31.2-.58.07-.27-.14-1.13-.42-2.16-1.35-.8-.71-1.34-1.59-1.49-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.31.4-.47.13-.15.18-.27.27-.45.09-.18.04-.34-.02-.47-.07-.14-.6-1.45-.82-1.99-.22-.53-.44-.46-.6-.47h-.51c-.18 0-.47.07-.71.34s-.94.92-.94 2.24.96 2.59 1.09 2.77c.13.18 1.87 2.86 4.54 4.01.63.27 1.13.43 1.51.55.64.2 1.22.17 1.68.1.51-.08 1.58-.65 1.8-1.27.22-.63.22-1.17.16-1.28-.07-.11-.25-.18-.52-.31z"/> 
-</svg> 
-</a> 
+        <article class="listing-card">
+          <h3>🪴 Apartma Lavender</h3>
+          <div class="badge-row">
+            <span class="badge">🏖️ 200 m do morja</span>
+            <span class="badge">👥 Do 4 osebe</span>
+            <span class="badge">❄️ Klima</span>
+            <span class="badge">📶 Wi‑Fi</span>
+          </div>
+          <p>Sodobno in prosto opremljen apartma za do 4 osebe z večjo spalnico, dodatnim ležiščem in prijetnim dnevnim prostorom za sproščene večere po dopustu.</p>
+          <ul>
+            <li>Večja spalnica z zakonsko posteljo</li>
+            <li>Manjša spalnica z dvema posteljama</li>
+            <li>Skupen dnevni prostor z kuhinjo</li>
+            <li>Udobno bivanje za družino ali prijatelje</li>
+          </ul>
+          <a href="mailto:villamare.olive.lavender@gmail.com?subject=Povpraševanje za Apartma Lavender" class="btn btn-primary">Pošlji povpraševanje</a>
+        </article>
+      </div>
 
-<script>
-setTimeout(() => {
-    const tooltip = document.querySelector('.whatsapp-tooltip');
-    if (tooltip) {
-        tooltip.style.display = 'none';
+      <div class="gallery" aria-label="Galerija apartmajev">
+        <a href="images/Olive1.JPG" data-lightbox="villa" data-title="Apartma Olive">
+          <img src="images/Olive1.JPG" alt="Apartma Olive" loading="lazy">
+        </a>
+        <a href="images/Olive2.JPG" data-lightbox="villa" data-title="Notranjost Olive">
+          <img src="images/Olive2.JPG" alt="Notranjost apartmaja Olive" loading="lazy">
+        </a>
+        <a href="images/Lavander1.JPG" data-lightbox="villa" data-title="Apartma Lavender">
+          <img src="images/Lavander1.JPG" alt="Apartma Lavender" loading="lazy">
+        </a>
+        <a href="images/Olive3.JPG" data-lightbox="villa" data-title="Apartma Olive">
+          <img src="images/Olive3.JPG" alt="Apartma Olive druga slika" loading="lazy">
+        </a>
+        <a href="images/Olive4.JPG" data-lightbox="villa" data-title="Prostori Olive">
+          <img src="images/Olive4.JPG" alt="Prostor apartmaja Olive" loading="lazy">
+        </a>
+        <a href="images/Olive5.JPG" data-lightbox="villa" data-title="Dnevni prostor Olive">
+          <img src="images/Olive5.JPG" alt="Dnevni prostor apartmaja Olive" loading="lazy">
+        </a>
+      </div>
+    </section>
+
+    <section id="parking">
+      <div class="section-card">
+        <div class="intro">
+          <h2>Parkiranje za vozila in plovila</h2>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature">
+            <strong><span class="feature-icon">🚗</span> Brezplačno parkiranje</strong>
+            <p>Gostom je na voljo brezplačno nadkrito parkirišče za vozila, kar olajša prihod in odhod brez dodatnih skrbi.</p>
+          </div>
+          <div class="feature">
+            <strong><span class="feature-icon">🛶</span> Parkiranje plovil</strong>
+            <p>Na voljo so dve nadkriti parkirni mesti za plovila z možnostjo uporabe vode in elektrike, idealne za goste, ki pridejo z lastnim plovilom.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="location">
+      <div class="section-card">
+        <div class="intro">
+          <h2>Karigador in okolica</h2>
+        </div>
+        <div class="feature-grid">
+          <div class="feature">
+            <strong><span class="feature-icon">🌅</span> Mirna lokacija</strong>
+            <p>Karigador je tiho in prijazno letoviško naselje z dostopom do morja, sosednjimi vasmi in odličnimi možnostmi za sproščanje.</p>
+          </div>
+          <div class="feature">
+            <strong><span class="feature-icon">📍</span> Dobra povezanost</strong>
+            <p>Približno 200 m od plaže, blizu mestnih centrov, obalnih poti in znanih istrskih znamenitosti, kot so Brioni, Rovinj in Pula.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="intro">
+        <h2>Pogosta vprašanja</h2>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item">
+          <h4>Kako daleč je morje od apartmajev?</h4>
+          <p>Apartmaja Olive in Lavender sta oddaljena približno 200 metrov od morja.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Ali je zagotovljeno parkiranje?</h4>
+          <p>Da, gostom je na voljo brezplačno nadkrito parkiranje.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Ali je na voljo Wi‑Fi?</h4>
+          <p>Da, v obeh apartmajih je brezplačen Wi‑Fi.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Ali so hišni ljubljenčki dovoljeni?</h4>
+          <p>Za informacije glede hišnih ljubljenčkov nas predhodno kontaktirajte.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Kdaj sta možna prihod in odhod?</h4>
+          <p>Točne ure prihoda in odhoda se dogovorijo ob rezervaciji.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Kontaktirajte nas</h3>
+          <p>Za rezervacije, dodatne informacije ali osebne predloge nas kontaktirajte. Rada vam bomo pomagali pri iskanju idealnega dopusta.</p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <strong>Telefon</strong><br>
+                <a href="tel:+38641776608">+386 41 776 608</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <strong>E‑pošta</strong><br>
+                <a href="mailto:villamare.olive.lavender@gmail.com">villamare.olive.lavender@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <strong>Lokacija</strong><br>
+                <span>Karigador, Istra, Hrvaška</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="location-box">
+          <h3>Lokacija</h3>
+          <iframe class="map-frame" title="Mapa lokacije Villa Mare" src="https://www.google.com/maps?q=45.3595613983202,13.56048904460079&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2025 Villa Mare • Apartmaji Olive &amp; Lavender</div>
+      <div><a href="#contact">Rezervacije</a> • <a href="https://wa.me/38641776608">WhatsApp</a></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('open');
+      });
+
+      mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mainNav.classList.remove('open'));
+      });
     }
-}, 8000);
-</script>    
+  </script>
 </body>
 </html>
