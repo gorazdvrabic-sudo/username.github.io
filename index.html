@@ -1,71 +1,63 @@
 <!DOCTYPE html>
 <html lang="sl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Villa Mare - Apartmaji Olive in Lavender v Karigadorju na Istri. Mirna lokacija, 200 m od morja, brezplačno parkiranje in prilagojena gostom doživetja.">
-  <meta name="keywords" content="apartmaji, Istra, Hrvaška, Karigador, morje, počitnice, plaža, parkiranje plovil">
-  <meta name="author" content="Gorazd Vrabič">
-  <meta property="og:title" content="Villa Mare - Apartmaji Olive & Lavender">
-  <meta property="og:description" content="Apartmaji Olive in Lavender ter parkirno mesto za plovila v Karigadorju, Istra. 200 m od morja.">
-  <meta property="og:image" content="https://gorazdvrabic-sudo.github.io/username.github.io/images/hero.png">
-  <meta property="og:url" content="https://gorazdvrabic-sudo.github.io/username.github.io/">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#0a7ea8">
-  <link rel="canonical" href="https://gorazdvrabic-sudo.github.io/username.github.io/">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="preload" as="image" href="images/hero.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
-  <title>Apartmaji Olive & Lavender | Karigador | Villa Mare | Istra Hrvaška</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Villa Mare - Apartmaji Olive in Lavender v Karigadorju, Istra. Mirna lokacija 200 m od morja, luksuzno, udobno in primerno za družinske počitnice." />
+  <meta name="keywords" content="apartmaji, Istra, Hrvaška, Karigador, morje, počitnice, plaža, parkiranje plovil" />
+  <meta name="author" content="Gorazd Vrabič" />
+  <meta property="og:title" content="Villa Mare - Premium apartmaji v Karigadorju" />
+  <meta property="og:description" content="Apartmaji Olive in Lavender ter parkirno mesto za plovila v Karigadorju, Istra. 200 m od morja." />
+  <meta property="og:image" content="https://gorazdvrabic-sudo.github.io/username.github.io/images/hero.png" />
+  <meta property="og:url" content="https://gorazdvrabic-sudo.github.io/username.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0f2438" />
+  <link rel="canonical" href="https://gorazdvrabic-sudo.github.io/username.github.io/" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="preload" as="image" href="images/hero.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <title>Apartmaji Olive &amp; Lavender | Karigador | Villa Mare | Istra Hrvaška</title>
   <style>
     :root {
-      --sky: #eaf7ff;
-      --sea: #0a7ea8;
-      --sea-deep: #074d68;
-      --sand: #f7f0e6;
-      --sun: #f6b94d;
-      --success: #1cb77e;
-      --danger: #e25c4c;
-      --ink: #1d2b36;
-      --muted: #5d6f7f;
-      --panel: #ffffff;
-      --shadow: 0 18px 40px rgba(9, 42, 58, 0.12);
-      --radius: 22px;
+      --bg: #f6f1ea;
+      --bg-soft: #f2efe9;
+      --sand: #e8d7be;
+      --sand-soft: #f1e6d7;
+      --gold: #c8a76d;
+      --gold-strong: #b48d4d;
+      --ink: #17242f;
+      --ink-soft: #465a66;
+      --navy: #0f2438;
+      --navy-2: #183b4d;
+      --teal: #1e7d8a;
+      --white: #ffffff;
+      --shadow: 0 24px 60px rgba(14, 35, 48, 0.12);
+      --radius: 26px;
+      --radius-sm: 18px;
+      --container: 1180px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(180deg, #f5fbff 0%, #f9f7f2 100%);
+      font-family: 'Inter', 'Segoe UI', sans-serif;
       color: var(--ink);
+      background:
+        radial-gradient(circle at top, rgba(200, 167, 109, 0.14), transparent 26%),
+        linear-gradient(180deg, #f5f2eb 0%, #f6f1ea 100%);
       line-height: 1.7;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    ul {
-      list-style: none;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+    p { color: var(--ink-soft); }
 
     .container {
-      width: min(1120px, calc(100% - 32px));
+      width: min(var(--container), calc(100% - 32px));
       margin: 0 auto;
     }
 
@@ -73,137 +65,133 @@
       position: sticky;
       top: 0;
       z-index: 40;
-      background: rgba(6, 48, 64, 0.85);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(15, 36, 56, 0.78);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .topbar-inner {
-      width: min(1120px, calc(100% - 32px));
+      width: min(var(--container), calc(100% - 32px));
       margin: 0 auto;
+      min-height: 74px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 70px;
       gap: 18px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
-      color: white;
+      gap: 12px;
+      color: var(--white);
       font-weight: 700;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
     }
 
     .brand-mark {
       width: 42px;
       height: 42px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #7ad9ff, #1490b6);
+      border-radius: 14px;
       display: grid;
       place-items: center;
       font-size: 1.3rem;
-      box-shadow: 0 10px 24px rgba(20, 144, 182, 0.35);
+      background: linear-gradient(135deg, rgba(200,167,109,0.9), rgba(180,141,77,0.8));
+      box-shadow: 0 12px 28px rgba(180,141,77,0.3);
     }
 
     .nav {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       flex-wrap: wrap;
     }
 
     .nav a {
-      color: rgba(255, 255, 255, 0.9);
+      color: rgba(255,255,255,0.82);
+      font-size: 0.92rem;
       padding: 10px 14px;
       border-radius: 999px;
-      font-size: 0.95rem;
-      transition: 0.25s ease;
+      transition: 0.2s ease;
     }
 
     .nav a:hover,
     .nav a:focus-visible {
-      background: rgba(255, 255, 255, 0.08);
-      color: #fff;
+      background: rgba(255,255,255,0.08);
+      color: white;
       outline: none;
     }
 
     .header {
+      position: relative;
+      min-height: 780px;
       background:
-        linear-gradient(135deg, rgba(5, 30, 40, 0.72), rgba(8, 76, 99, 0.68)),
+        linear-gradient(120deg, rgba(15,36,56,0.8), rgba(13,52,71,0.5)),
         url('images/hero.png') center/cover no-repeat;
-      min-height: 720px;
+      overflow: hidden;
       display: flex;
       align-items: center;
-      position: relative;
-      overflow: hidden;
     }
 
-    .header::after {
+    .header::before {
       content: "";
       position: absolute;
-      inset: auto 0 0 0;
-      height: 120px;
-      background: linear-gradient(to top, rgba(245, 251, 255, 0.7), rgba(245, 251, 255, 0));
+      inset: 0;
+      background: linear-gradient(to top, rgba(246,241,234,0.9), rgba(246,241,234,0) 28%);
     }
 
-    .hero {
+    .header-inner {
       position: relative;
       z-index: 1;
-      width: min(1120px, calc(100% - 32px));
+      width: min(var(--container), calc(100% - 32px));
       margin: 0 auto;
-      padding: 56px 0 120px;
+      padding: 44px 0 110px;
       display: grid;
       grid-template-columns: 1.25fr 0.75fr;
-      gap: 34px;
+      gap: 40px;
       align-items: center;
-    }
-
-    .hero-copy {
-      color: #fff;
-      max-width: 680px;
     }
 
     .lang-switcher {
       position: absolute;
-      top: 26px;
-      left: 26px;
+      top: 15px;
+      left: 18px;
+      z-index: 5;
       display: flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(8px);
       border-radius: 999px;
-      padding: 7px 10px;
-      backdrop-filter: blur(10px);
-      z-index: 3;
+      padding: 8px 10px;
     }
 
     .lang-switcher a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
       width: 36px;
       height: 36px;
       border-radius: 50%;
       overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border: 2px solid transparent;
       background: rgba(255,255,255,0.08);
+      border: 2px solid transparent;
     }
 
     .lang-switcher a:hover,
     .lang-switcher a:focus-visible {
-      transform: translateY(-1px) scale(1.05);
-      box-shadow: 0 8px 20px rgba(255,255,255,0.15);
+      transform: translateY(-1px) scale(1.04);
+      box-shadow: 0 8px 20px rgba(255,255,255,0.18);
       outline: none;
     }
 
     .lang-switcher a.active {
-      border-color: rgba(255,255,255,0.9);
-      box-shadow: 0 0 0 2px rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.94);
     }
 
     .lang-switcher img {
@@ -212,39 +200,52 @@
       object-fit: cover;
     }
 
+    .hero-copy {
+      color: var(--white);
+      max-width: 700px;
+    }
+
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(255,255,255,0.06);
-      border-radius: 999px;
+      gap: 10px;
       padding: 8px 14px;
-      margin-bottom: 18px;
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: rgba(255,255,255,0.9);
-    }
-
-    h1 {
-      font-size: clamp(2.4rem, 5vw, 5rem);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-      margin-bottom: 18px;
-      text-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
-    }
-
-    .hero-tagline {
-      font-size: clamp(1.1rem, 2vw, 1.5rem);
-      color: rgba(255,255,255,0.92);
       margin-bottom: 22px;
     }
 
-    .hero-meta {
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: -0.03em;
+      line-height: 0.94;
+      color: var(--ink);
+    }
+
+    .hero-copy h1 {
+      color: var(--white);
+      font-size: clamp(3.3rem, 6vw, 6rem);
+      margin-bottom: 18px;
+      text-shadow: 0 10px 28px rgba(0,0,0,0.15);
+      line-height: 0.96;
+    }
+
+    .hero-subtitle {
+      color: rgba(255,255,255,0.9);
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      margin-bottom: 22px;
+      max-width: 560px;
+    }
+
+    .meta-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
       margin: 18px 0 28px;
     }
 
@@ -252,18 +253,18 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.18);
-      color: #fff;
-      padding: 9px 14px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.96);
       border-radius: 999px;
-      font-size: 0.92rem;
+      padding: 9px 14px;
+      font-size: 0.9rem;
     }
 
     .cta-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 14px;
       align-items: center;
     }
 
@@ -272,13 +273,12 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      border: none;
       border-radius: 14px;
-      padding: 16px 24px;
+      padding: 16px 22px;
       font-weight: 700;
-      cursor: pointer;
-      transition: 0.25s ease;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid transparent;
+      box-shadow: 0 18px 30px rgba(13, 34, 44, 0.12);
     }
 
     .btn:hover,
@@ -288,90 +288,96 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #22c55e, #1aa36d);
-      color: white;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-strong) 100%);
+      color: var(--navy);
+      box-shadow: 0 18px 32px rgba(196, 160, 101, 0.35);
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
       color: white;
-      border: 1px solid rgba(255,255,255,0.22);
+      border-color: rgba(255,255,255,0.18);
     }
 
-    .hero-card {
+    .hero-panel {
       justify-self: end;
       width: min(100%, 360px);
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.18);
       backdrop-filter: blur(16px);
-      border-radius: 28px;
-      padding: 22px;
-      color: #fff;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+      color: white;
     }
 
-    .mini-title {
-      font-size: 0.75rem;
+    .mini-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: rgba(255,255,255,0.7);
+      color: rgba(255,255,255,0.72);
       margin-bottom: 10px;
     }
 
-    .hero-card h3 {
-      font-size: clamp(1.5rem, 2.2vw, 2rem);
-      margin-bottom: 12px;
+    .hero-panel h3 {
+      font-size: clamp(2rem, 3vw, 2.5rem);
+      color: white;
+      margin-bottom: 10px;
+      line-height: 1;
     }
 
-    .hero-card ul {
+    .hero-panel ul {
       display: grid;
-      gap: 10px;
-      margin-top: 20px;
+      gap: 14px;
+      margin-top: 18px;
     }
 
-    .hero-card li {
+    .hero-panel li {
       display: flex;
       align-items: center;
-      gap: 10px;
-      color: rgba(255,255,255,0.92);
+      gap: 12px;
+      color: rgba(255,255,255,0.9);
     }
 
-    .bullet {
+    .check {
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: linear-gradient(180deg, #7fe9a7, #24b86f);
-      box-shadow: 0 0 0 6px rgba(36,184,111,0.12);
+      background: linear-gradient(180deg, #f3d49a, #d9a95d);
+      box-shadow: 0 0 0 7px rgba(217,169,93,0.12);
+      flex-shrink: 0;
     }
 
     .stats-strip {
-      width: min(1120px, calc(100% - 32px));
-      margin: -54px auto 40px;
+      width: min(var(--container), calc(100% - 32px));
+      margin: -52px auto 36px;
       position: relative;
-      z-index: 3;
+      z-index: 2;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(0,1fr));
       gap: 18px;
     }
 
     .stat {
-      background: rgba(255,255,255,0.92);
-      border: 1px solid rgba(10,126,168,0.08);
-      box-shadow: var(--shadow);
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(15,36,56,0.06);
       border-radius: 22px;
-      padding: 22px 18px;
+      padding: 24px 18px;
       text-align: center;
+      box-shadow: var(--shadow);
     }
 
     .stat strong {
       display: block;
-      font-size: clamp(1.5rem, 2vw, 2.2rem);
-      color: var(--sea-deep);
-      margin-bottom: 6px;
+      font-size: clamp(1.8rem, 2vw, 2.5rem);
+      color: var(--navy);
+      margin-bottom: 4px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: -0.04em;
     }
 
     .stat span {
-      color: var(--muted);
+      color: var(--ink-soft);
       font-size: 0.9rem;
     }
 
@@ -380,152 +386,159 @@
     }
 
     section {
-      margin-top: 46px;
+      margin-top: 62px;
     }
 
     .intro {
+      max-width: 860px;
+      margin: 0 auto 26px;
       text-align: center;
-      max-width: 840px;
-      margin: 0 auto 28px;
     }
 
     .intro h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      color: var(--navy);
       margin-bottom: 12px;
-      color: var(--sea-deep);
+      line-height: 0.98;
     }
 
     .intro p {
-      color: var(--muted);
-      font-size: 1.05rem;
+      color: var(--ink-soft);
+      font-size: 1.04rem;
     }
 
-    .section-card {
-      background: var(--panel);
+    .panel {
+      background: rgba(255,255,255,0.86);
+      border: 1px solid rgba(15,36,56,0.06);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      border: 1px solid rgba(11, 79, 108, 0.06);
       padding: 28px;
       overflow: hidden;
     }
 
     .feature-banner {
-      background: linear-gradient(135deg, #f5fbff, #fff9eb);
-      border-left: 4px solid var(--sun);
-      border-radius: 18px;
-      padding: 16px 18px;
-      margin-bottom: 20px;
-      color: var(--ink);
-      font-weight: 600;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(241,230,215,0.9), rgba(255,255,255,0.9));
+      border: 1px solid rgba(180,141,77,0.25);
+      padding: 20px 22px;
       text-align: center;
+      color: var(--navy);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      margin-bottom: 24px;
     }
 
-    .feature-grid {
+    .feature-grid,
+    .cards-grid,
+    .contact-grid,
+    .gallery {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 22px;
-      margin-top: 20px;
     }
 
-    .feature-grid .feature {
+    .feature-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .cards-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .contact-grid { grid-template-columns: 1.05fr 0.95fr; }
+
+    .feature {
+      background: linear-gradient(180deg, #ffffff, #f9f6f2);
+      border: 1px solid rgba(15,36,56,0.06);
+      border-radius: 22px;
+      padding: 22px 20px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      padding: 18px 18px 16px;
-      border-radius: 18px;
-      background: linear-gradient(180deg, #ffffff, #f6fbff);
-      border: 1px solid rgba(15, 94, 128, 0.08);
+      gap: 12px;
     }
 
     .feature strong {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-size: 1.08rem;
-      color: var(--sea-deep);
+      gap: 12px;
+      color: var(--navy);
+      font-size: 1.12rem;
     }
 
     .feature-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #dff7ff, #bfe7f9);
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(200,167,109,0.17), rgba(30,125,138,0.12));
       display: grid;
       place-items: center;
       font-size: 1.2rem;
     }
 
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
+    .feature p {
+      font-size: 0.98rem;
+      color: var(--ink-soft);
     }
 
     .listing-card {
-      padding: 24px;
-      background: linear-gradient(180deg, #ffffff, #f8fbfe);
-      border-radius: 22px;
-      border: 1px solid rgba(13, 91, 124, 0.09);
-      box-shadow: 0 10px 26px rgba(8, 40, 54, 0.05);
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(247,243,236,0.9));
+      border: 1px solid rgba(15,36,56,0.06);
+      border-radius: 24px;
+      box-shadow: 0 12px 26px rgba(15,36,56,0.05);
+      padding: 26px 24px;
     }
 
     .listing-card h3 {
-      font-size: 1.8rem;
-      color: var(--sea-deep);
-      margin-bottom: 10px;
+      font-size: clamp(2.2rem, 3vw, 3rem);
+      color: var(--navy);
+      margin-bottom: 12px;
+      line-height: 1;
     }
 
-    .listing-card .badge-row {
+    .badge-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
       margin: 14px 0 18px;
     }
 
     .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      background: rgba(30,125,138,0.08);
+      color: var(--navy);
+      border: 1px solid rgba(30,125,138,0.12);
+      font-size: 0.78rem;
+      font-weight: 700;
       padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(10,126,168,0.08);
-      color: var(--sea-deep);
-      font-size: 0.84rem;
-      font-weight: 600;
+    }
+
+    .listing-card p {
+      margin-bottom: 14px;
     }
 
     .listing-card ul {
-      display: grid;
-      gap: 12px;
-      margin: 18px 0;
-      padding-left: 10px;
       list-style: disc;
-      color: var(--muted);
+      padding-left: 18px;
+      color: var(--ink-soft);
+      display: grid;
+      gap: 9px;
+      margin: 18px 0 20px;
     }
 
     .listing-card li::marker {
-      color: var(--sea);
+      color: var(--gold);
     }
 
     .gallery {
-      display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 18px;
+      margin-top: 22px;
     }
 
     .gallery a {
       display: block;
       overflow: hidden;
-      border-radius: 18px;
-      box-shadow: 0 8px 20px rgba(8, 40, 54, 0.08);
-      border: 1px solid rgba(14, 96, 128, 0.08);
-      transition: transform 0.2s ease;
+      border-radius: 20px;
+      box-shadow: 0 10px 22px rgba(15,36,56,0.08);
+      border: 1px solid rgba(15,36,56,0.06);
+      transition: transform 0.22s ease;
     }
 
     .gallery a:hover,
     .gallery a:focus-visible {
-      transform: translateY(-3px);
+      transform: translateY(-2px);
       outline: none;
     }
 
@@ -541,114 +554,107 @@
     }
 
     .faq-item {
-      background: linear-gradient(180deg, #ffffff, #f7fbfe);
-      border: 1px solid rgba(14, 96, 128, 0.08);
-      border-radius: 18px;
-      padding: 18px 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.97), rgba(247,242,234,0.85));
+      border: 1px solid rgba(15,36,56,0.06);
+      border-radius: 20px;
+      padding: 20px 22px;
     }
 
     .faq-item h4 {
-      color: var(--sea-deep);
+      color: var(--navy);
       margin-bottom: 8px;
-      font-size: 1.12rem;
+      font-size: 1.3rem;
+      line-height: 1.1;
     }
 
     .faq-item p {
-      color: var(--muted);
+      color: var(--ink-soft);
     }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 22px;
-      align-items: stretch;
-    }
-
-    .contact-card {
+    .contact-card,
+    .location-box {
+      background: linear-gradient(180deg, #ffffff, #f6f3ee);
+      border: 1px solid rgba(15,36,56,0.06);
+      border-radius: 24px;
+      box-shadow: 0 12px 26px rgba(15,36,56,0.05);
       padding: 26px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #eefbff 0%, #f8f9ff 100%);
-      border: 1px solid rgba(10,126,168,0.08);
     }
 
-    .contact-card h3 {
-      font-size: 1.9rem;
-      color: var(--sea-deep);
+    .contact-card h3,
+    .location-box h3 {
+      color: var(--navy);
+      font-size: clamp(2.2rem, 3vw, 3rem);
       margin-bottom: 12px;
+      line-height: 1;
     }
 
     .contact-list {
       display: grid;
       gap: 14px;
-      margin-top: 18px;
+      margin-top: 20px;
     }
 
     .contact-item {
       display: flex;
-      gap: 12px;
       align-items: flex-start;
-      color: var(--ink);
+      gap: 12px;
     }
 
     .contact-icon {
       width: 42px;
       height: 42px;
       border-radius: 12px;
-      background: #dff7ff;
+      background: linear-gradient(135deg, rgba(200,167,109,0.2), rgba(30,125,138,0.15));
       display: grid;
       place-items: center;
       font-size: 1.2rem;
       flex-shrink: 0;
     }
 
-    .contact-item a,
-    .contact-item span {
-      color: var(--muted);
-      line-height: 1.5;
+    .contact-item strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 2px;
     }
 
-    .location-box {
-      padding: 26px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #ffffff, #f5fbff);
-      border: 1px solid rgba(10,126,168,0.1);
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
+    .contact-item a,
+    .contact-item span {
+      color: var(--ink-soft);
     }
 
     .map-frame {
       width: 100%;
-      min-height: 260px;
+      min-height: 310px;
       border: 0;
       border-radius: 18px;
-      box-shadow: 0 10px 24px rgba(8, 40, 54, 0.08);
+      box-shadow: 0 14px 30px rgba(15,36,56,0.08);
+      margin-top: 12px;
     }
 
     footer {
-      background: linear-gradient(135deg, #062f3f, #0b4563 80%);
+      margin-top: 64px;
+      background: linear-gradient(135deg, #102939, #0d1d2a 70%);
       color: rgba(255,255,255,0.9);
-      padding: 36px 0 60px;
-      margin-top: 50px;
+      padding: 34px 0 52px;
     }
 
     .footer-inner {
-      width: min(1120px, calc(100% - 32px));
+      width: min(var(--container), calc(100% - 32px));
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      gap: 18px;
+      gap: 16px;
       flex-wrap: wrap;
     }
 
     .footer-inner a {
-      color: #a9efff;
+      color: #d6f1ff;
     }
 
     .menu-toggle {
       display: none;
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.25);
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.06);
       color: white;
       border-radius: 12px;
       padding: 8px 12px;
@@ -656,26 +662,22 @@
       cursor: pointer;
     }
 
-    @media (max-width: 900px) {
-      .hero {
+    @media (max-width: 960px) {
+      .header-inner {
         grid-template-columns: 1fr;
-        padding-top: 84px;
+        padding-top: 74px;
       }
 
-      .hero-card {
+      .hero-panel {
         justify-self: start;
       }
 
       .stats-strip,
       .feature-grid,
-      .card-grid,
+      .cards-grid,
       .contact-grid,
       .gallery {
         grid-template-columns: 1fr;
-      }
-
-      .stats-strip {
-        margin-top: 18px;
       }
 
       .nav {
@@ -688,33 +690,26 @@
         justify-content: center;
       }
 
-      .topbar nav.open {
+      .topbar-inner nav.open {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
         padding: 10px 0 18px;
+      }
+
+      .topbar-inner {
+        flex-wrap: wrap;
       }
     }
 
     @media (max-width: 620px) {
       .header {
-        min-height: 640px;
+        min-height: 680px;
       }
 
-      .hero {
-        padding-bottom: 90px;
-      }
-
-      .lang-switcher {
-        left: 16px;
-        top: 18px;
-      }
-
-      .section-card,
-      .listing-card,
-      .contact-card,
-      .location-box {
-        padding: 20px;
+      .hero-copy h1 {
+        font-size: 3rem;
       }
 
       .cta-row {
@@ -726,11 +721,18 @@
         width: 100%;
       }
 
-      .brand span {
-        display: none;
+      .stats-strip {
+        margin-top: 12px;
       }
 
-      .hero-meta {
+      .panel,
+      .listing-card,
+      .contact-card,
+      .location-box {
+        padding: 20px;
+      }
+
+      .meta-row {
         flex-direction: column;
         align-items: flex-start;
       }
@@ -764,16 +766,16 @@
 <body>
   <header class="header">
     <div class="lang-switcher" aria-label="Language selector">
-      <a href="index.html" class="active" title="Slovenščina"><img src="https://flagcdn.com/16x12/si.png" srcset="https://flagcdn.com/32x24/si.png 2x" alt="Slovenščina" loading="lazy"></a>
-      <a href="index_en.html" title="English"><img src="https://flagcdn.com/16x12/gb.png" srcset="https://flagcdn.com/32x24/gb.png 2x" alt="English" loading="lazy"></a>
-      <a href="index_de.html" title="Deutsch"><img src="https://flagcdn.com/16x12/de.png" srcset="https://flagcdn.com/32x24/de.png 2x" alt="Deutsch" loading="lazy"></a>
-      <a href="index_it.html" title="Italiano"><img src="https://flagcdn.com/16x12/it.png" srcset="https://flagcdn.com/32x24/it.png 2x" alt="Italiano" loading="lazy"></a>
+      <a href="index.html" class="active" title="Slovenščina"><img src="https://flagcdn.com/16x12/si.png" srcset="https://flagcdn.com/32x24/si.png 2x" alt="Slovenščina" loading="lazy" /></a>
+      <a href="index_en.html" title="English"><img src="https://flagcdn.com/16x12/gb.png" srcset="https://flagcdn.com/32x24/gb.png 2x" alt="English" loading="lazy" /></a>
+      <a href="index_de.html" title="Deutsch"><img src="https://flagcdn.com/16x12/de.png" srcset="https://flagcdn.com/32x24/de.png 2x" alt="Deutsch" loading="lazy" /></a>
+      <a href="index_it.html" title="Italiano"><img src="https://flagcdn.com/16x12/it.png" srcset="https://flagcdn.com/32x24/it.png 2x" alt="Italiano" loading="lazy" /></a>
     </div>
 
     <div class="topbar">
       <div class="topbar-inner">
         <div class="brand">
-          <div class="brand-mark">🏖️</div>
+          <div class="brand-mark">🏖</div>
           <span>Villa Mare</span>
         </div>
         <button class="menu-toggle" id="menuToggle" aria-label="Odpri menu">☰</button>
@@ -788,34 +790,32 @@
       </div>
     </div>
 
-    <div class="hero">
+    <div class="header-inner">
       <div class="hero-copy">
         <div class="eyebrow">Istra • Karigador</div>
         <h1>Počitnice ob morju, ki se jih ne boste želeli končati.</h1>
-        <p class="hero-tagline">Apartmaji Olive &amp; Lavender v mirni lokaciji, 200 m od plaže, z udobjem za družine, pare in popotnike.</p>
+        <p class="hero-subtitle">Apartmaji Olive &amp; Lavender v mirni, elegantni lokaciji le 200 metrov od plaže — za sproščeno, udobno in premium bivanje.</p>
 
-        <div class="hero-meta">
+        <div class="meta-row">
           <span class="meta-pill">🌊 200 m od morja</span>
           <span class="meta-pill">🚗 Brezplačno parkiranje</span>
           <span class="meta-pill">📶 Wi‑Fi</span>
         </div>
 
         <div class="cta-row">
-          <a href="https://wa.me/38641776608?text=Pozdravljeni,%20zanima%20me%20rezervacija" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-            <span>💬</span> Preveri proste termine
-          </a>
+          <a href="https://wa.me/38641776608?text=Pozdravljeni,%20zanima%20me%20rezervacija" class="btn btn-primary" target="_blank" rel="noopener noreferrer">💬 Preveri proste termine</a>
           <a href="#contact" class="btn btn-secondary">📩 Kontakt</a>
         </div>
       </div>
 
-      <aside class="hero-card" aria-label="Povzetek ponudbe">
-        <div class="mini-title">Zato so naši gosti vračajoči</div>
-        <h3>Mir, udobje in dostopnost</h3>
+      <aside class="hero-panel" aria-label="Povzetek ponudbe">
+        <div class="mini-label">Zato so naši gosti vračajoči</div>
+        <h3>Mir, elegance in udobje</h3>
         <ul>
-          <li><span class="bullet"></span>Prijazna lokacija za sproščene počitnice</li>
-          <li><span class="bullet"></span>Opremljeni apartmaji za 2–4 osebe</li>
-          <li><span class="bullet"></span>Parkiranje za vozila in plovila</li>
-          <li><span class="bullet"></span>Prilagojene aktivnosti po želji gostov</li>
+          <li><span class="check"></span>Prijazna in mirna lokacija</li>
+          <li><span class="check"></span>Opremljeni apartmaji za 2–4 osebe</li>
+          <li><span class="check"></span>Parkiranje za vozila in plovila</li>
+          <li><span class="check"></span>Prilagojene aktivnosti po želji</li>
         </ul>
       </aside>
     </div>
@@ -828,15 +828,15 @@
     </div>
     <div class="stat">
       <strong>2</strong>
-      <span>prijetna apartmaja</span>
+      <span>apartmaja</span>
     </div>
     <div class="stat">
       <strong>4+</strong>
-      <span>osebe v Lavander</span>
+      <span>osebe v Lavender</span>
     </div>
     <div class="stat">
       <strong>24/7</strong>
-      <span>na voljo za rezervacije</span>
+      <span>rezervacije</span>
     </div>
   </div>
 
@@ -844,10 +844,10 @@
     <section id="services">
       <div class="intro">
         <h2>Naj vaše počitnice postanejo nepozabno doživetje</h2>
-        <p>V Villa Mare združujemo udobje, mirno okolje in osebno pozornost. Poleg nastanitve vam pomagamo organizirati izlete, aktivne počitnice in preproste, a kvalitetne trenutke ob morju.</p>
+        <p>V Villa Mare združujemo udobje, mirno okolje in osebno pozornost ter pomagamo gostom organizirati izlete, aktivne počitnice in posebne trenutke ob morju.</p>
       </div>
 
-      <div class="section-card">
+      <div class="panel">
         <div class="feature-banner">🌊 Najem SUP-a, plovila in koles • 🚤 Izleti po Istri in Brionih • 🍷 Tradicionalna istrska večerja • 🎉 Gostom prilagojena doživetja</div>
 
         <div class="feature-grid">
@@ -876,7 +876,7 @@
         <h2>Udobna nastanitev po meri</h2>
       </div>
 
-      <div class="card-grid">
+      <div class="cards-grid">
         <article class="listing-card">
           <h3>🫒 Apartma Olive</h3>
           <div class="badge-row">
@@ -915,29 +915,17 @@
       </div>
 
       <div class="gallery" aria-label="Galerija apartmajev">
-        <a href="images/Olive1.JPG" data-lightbox="villa" data-title="Apartma Olive">
-          <img src="images/Olive1.JPG" alt="Apartma Olive" loading="lazy">
-        </a>
-        <a href="images/Olive2.JPG" data-lightbox="villa" data-title="Notranjost Olive">
-          <img src="images/Olive2.JPG" alt="Notranjost apartmaja Olive" loading="lazy">
-        </a>
-        <a href="images/Lavander1.JPG" data-lightbox="villa" data-title="Apartma Lavender">
-          <img src="images/Lavander1.JPG" alt="Apartma Lavender" loading="lazy">
-        </a>
-        <a href="images/Olive3.JPG" data-lightbox="villa" data-title="Apartma Olive">
-          <img src="images/Olive3.JPG" alt="Apartma Olive druga slika" loading="lazy">
-        </a>
-        <a href="images/Olive4.JPG" data-lightbox="villa" data-title="Prostori Olive">
-          <img src="images/Olive4.JPG" alt="Prostor apartmaja Olive" loading="lazy">
-        </a>
-        <a href="images/Olive5.JPG" data-lightbox="villa" data-title="Dnevni prostor Olive">
-          <img src="images/Olive5.JPG" alt="Dnevni prostor apartmaja Olive" loading="lazy">
-        </a>
+        <a href="images/Olive1.JPG" data-lightbox="villa" data-title="Apartma Olive"><img src="images/Olive1.JPG" alt="Apartma Olive" loading="lazy" /></a>
+        <a href="images/Olive2.JPG" data-lightbox="villa" data-title="Notranjost Olive"><img src="images/Olive2.JPG" alt="Notranjost apartmaja Olive" loading="lazy" /></a>
+        <a href="images/Lavander1.JPG" data-lightbox="villa" data-title="Apartma Lavender"><img src="images/Lavander1.JPG" alt="Apartma Lavender" loading="lazy" /></a>
+        <a href="images/Olive3.JPG" data-lightbox="villa" data-title="Apartma Olive"><img src="images/Olive3.JPG" alt="Apartma Olive druga slika" loading="lazy" /></a>
+        <a href="images/Olive4.JPG" data-lightbox="villa" data-title="Prostori Olive"><img src="images/Olive4.JPG" alt="Prostor apartmaja Olive" loading="lazy" /></a>
+        <a href="images/Olive5.JPG" data-lightbox="villa" data-title="Dnevni prostor Olive"><img src="images/Olive5.JPG" alt="Dnevni prostor apartmaja Olive" loading="lazy" /></a>
       </div>
     </section>
 
     <section id="parking">
-      <div class="section-card">
+      <div class="panel">
         <div class="intro">
           <h2>Parkiranje za vozila in plovila</h2>
         </div>
@@ -956,7 +944,7 @@
     </section>
 
     <section id="location">
-      <div class="section-card">
+      <div class="panel">
         <div class="intro">
           <h2>Karigador in okolica</h2>
         </div>
@@ -1012,21 +1000,21 @@
             <div class="contact-item">
               <div class="contact-icon">📞</div>
               <div>
-                <strong>Telefon</strong><br>
+                <strong>Telefon</strong>
                 <a href="tel:+38641776608">+386 41 776 608</a>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-icon">✉️</div>
               <div>
-                <strong>E‑pošta</strong><br>
+                <strong>E‑pošta</strong>
                 <a href="mailto:villamare.olive.lavender@gmail.com">villamare.olive.lavender@gmail.com</a>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-icon">📍</div>
               <div>
-                <strong>Lokacija</strong><br>
+                <strong>Lokacija</strong>
                 <span>Karigador, Istra, Hrvaška</span>
               </div>
             </div>
@@ -1058,7 +1046,7 @@
         mainNav.classList.toggle('open');
       });
 
-      mainNav.querySelectorAll('a').forEach(link => {
+      mainNav.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', () => mainNav.classList.remove('open'));
       });
     }
