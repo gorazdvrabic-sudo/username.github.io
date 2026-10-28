@@ -116,10 +116,16 @@
 
     .hero{
       position:relative;
-      min-height:660px;
-      background:
+      height:62vh;
+      min-height:520px;
+      background-color:#152c39;
+      background-image:
         linear-gradient(120deg, rgba(19,36,44,0.72), rgba(12,29,36,0.52)),
-        url("images/hero.png") center/cover no-repeat;
+        url("images/hero.png");
+      background-position:center center;
+      background-repeat:no-repeat;
+      background-size:cover;
+      -webkit-background-size:cover;
       display:grid;place-items:center;
       overflow:hidden;
     }
@@ -153,6 +159,7 @@
     }
     h1,h2,h3{
       font-family:var(--heading);
+      font-weight:500;
       color:var(--navy);
       line-height:0.98;
       margin:0 0 12px;
@@ -626,7 +633,10 @@
       .lang-switcher{
         top:12px;left:12px;padding:7px 8px;
       }
-      .hero{min-height:560px}
+      .hero{
+        min-height:440px;
+        height:52vh;
+      }
       .cta-row{flex-direction:column;align-items:stretch}
       .btn{width:100%}
       .topbar nav{gap:4px;padding:12px 0}
@@ -979,5 +989,59 @@
       const set = gallerySets[currentGalleryKey];
       modalTitle.textContent = set.title;
       modalImage.src = set.images[currentIndex];
-      modalImage.alt = set.title + ' ' + (currentIndex +*
-
+      modalImage.alt = set.title + ' ' + (currentIndex + 1);
+
+      modalThumbs.innerHTML = '';
+      set.images.forEach((src, idx) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'gallery-modal__thumb' + (idx === currentIndex ? ' is-active' : '');
+        button.setAttribute('aria-label', 'Open image ' + (idx + 1));
+        button.innerHTML = '<img src="' + src + '" alt="' + set.title + ' ' + (idx + 1) + '" />';
+        button.addEventListener('click', () => {
+          currentIndex = idx;
+          renderGallery();
+        });
+        modalThumbs.appendChild(button);
+      });
+    }
+
+    document.querySelectorAll('.gallery-trigger').forEach(button => {
+      button.addEventListener('click', () => openGallery(button.dataset.gallery));
+    });
+
+    prevBtn.addEventListener('click', () => {
+      const set = gallerySets[currentGalleryKey];
+      if (!set) return;
+      currentIndex = (currentIndex - 1 + set.images.length) % set.images.length;
+      renderGallery();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      const set = gallerySets[currentGalleryKey];
+      if (!set) return;
+      currentIndex = (currentIndex + 1) % set.images.length;
+      renderGallery();
+    });
+
+    closeBtn.addEventListener('click', closeGallery);
+    backdrop.addEventListener('click', closeGallery);
+    document.addEventListener('keydown', (event) => {
+      if (!modal.classList.contains('is-open')) return;
+      if (event.key === 'Escape') closeGallery();
+      if (event.key === 'ArrowLeft') {
+        const set = gallerySets[currentGalleryKey];
+        if (!set) return;
+        currentIndex = (currentIndex - 1 + set.images.length) % set.images.length;
+        renderGallery();
+      }
+      if (event.key === 'ArrowRight') {
+        const set = gallerySets[currentGalleryKey];
+        if (!set) return;
+        currentIndex = (currentIndex + 1) % set.images.length;
+        renderGallery();
+      }
+    });
+  </script>
+</body>
+</html>
