@@ -43,6 +43,7 @@
     }
     img{max-width:100%;display:block}
     a{text-decoration:none;color:inherit}
+    button{font:inherit}
     .container{
       width:min(var(--container), calc(100% - 32px));
       margin-inline:auto;
@@ -351,28 +352,68 @@
       text-transform:uppercase;
     }
 
-    .gallery{
-      margin-top:22px;
+    .gallery-grid,
+    .gallery-row{
       display:grid;
-      grid-template-columns:repeat(3, minmax(0,1fr));
-      gap:18px;
+      gap:22px;
+      margin-top:24px;
     }
-    .gallery a{
+    .gallery-grid{
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+    .gallery-row{
+      grid-template-columns:repeat(1, minmax(0, 1fr));
+      max-width:660px;
+      margin-inline:auto;
+    }
+    .gallery-card{
+      position:relative;
       display:block;
-      border-radius:22px;
+      width:100%;
+      padding:0;
+      border:none;
+      background:none;
       overflow:hidden;
+      border-radius:24px;
+      cursor:pointer;
+      box-shadow:0 18px 34px rgba(16,42,56,0.10);
       border:1px solid var(--line);
-      box-shadow:0 16px 28px rgba(16,42,56,0.08);
       transition:transform .2s ease, box-shadow .2s ease;
     }
-    .gallery a:hover{
-      transform:translateY(-2px);
-      box-shadow:0 22px 36px rgba(16,42,56,0.12);
+    .gallery-card:hover,
+    .gallery-card:focus-visible{
+      transform:translateY(-3px);
+      box-shadow:0 22px 38px rgba(16,42,56,0.14);
+      outline:none;
     }
-    .gallery img{
+    .gallery-card img{
       width:100%;
-      height:240px;
+      height:360px;
       object-fit:cover;
+      display:block;
+    }
+    .gallery-card__overlay{
+      position:absolute;
+      inset:auto 0 0 0;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      padding:18px 20px;
+      background:linear-gradient(180deg, rgba(16,42,56,0), rgba(16,42,56,0.72) 60%, rgba(16,42,56,0.88));
+      color:var(--white);
+    }
+    .gallery-card__overlay strong{
+      display:block;
+      font-size:clamp(1.5rem, 2vw, 2rem);
+      font-family:var(--heading);
+      line-height:1;
+    }
+    .gallery-card__overlay span{
+      font-size:0.78rem;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      opacity:0.9;
     }
 
     .faq{
@@ -439,6 +480,119 @@
       box-shadow:0 14px 30px rgba(16,42,56,0.08);
     }
 
+    .gallery-modal{
+      position:fixed;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:30px 20px;
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none;
+      transition:opacity .2s ease, visibility .2s ease;
+      z-index:2000;
+    }
+    .gallery-modal.is-open{
+      opacity:1;
+      visibility:visible;
+      pointer-events:auto;
+    }
+    .gallery-modal__backdrop{
+      position:absolute;
+      inset:0;
+      background:rgba(9,18,24,0.78);
+      backdrop-filter:blur(5px);
+    }
+    .gallery-modal__dialog{
+      position:relative;
+      z-index:1;
+      width:min(980px, 100%);
+      background:#fff;
+      border-radius:26px;
+      box-shadow:0 26px 80px rgba(0,0,0,0.28);
+      border:1px solid rgba(255,255,255,0.12);
+      overflow:hidden;
+    }
+    .gallery-modal__header{
+      padding:22px 22px 0;
+    }
+    .gallery-modal__header h3{
+      margin:0;
+      font-size:clamp(2rem, 3vw, 2.8rem);
+      color:var(--navy);
+    }
+    .gallery-modal__close{
+      position:absolute;
+      top:16px;
+      right:16px;
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      border:none;
+      background:rgba(16,42,56,0.08);
+      color:var(--navy);
+      font-size:2rem;
+      line-height:1;
+      cursor:pointer;
+    }
+    .gallery-modal__viewport{
+      position:relative;
+      display:grid;
+      place-items:center;
+      padding:18px 62px 24px;
+      background:linear-gradient(180deg, rgba(247,243,238,0.8), rgba(255,255,255,1));
+    }
+    .gallery-modal__viewport img{
+      width:100%;
+      max-height:70vh;
+      object-fit:contain;
+      border-radius:18px;
+      background:#f7f3ee;
+    }
+    .gallery-modal__nav{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      border:none;
+      background:rgba(16,42,56,0.9);
+      color:#fff;
+      font-size:2rem;
+      line-height:1;
+      cursor:pointer;
+      box-shadow:0 10px 20px rgba(15,42,56,0.14);
+    }
+    .gallery-modal__nav.prev{left:16px}
+    .gallery-modal__nav.next{right:16px}
+    .gallery-modal__thumbs{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(84px, 1fr));
+      gap:10px;
+      padding:0 22px 22px;
+      background:#fff;
+    }
+    .gallery-modal__thumb{
+      border:2px solid transparent;
+      border-radius:12px;
+      padding:0;
+      overflow:hidden;
+      background:none;
+      cursor:pointer;
+      transition:border-color .15s ease, transform .15s ease;
+    }
+    .gallery-modal__thumb.is-active{
+      border-color:var(--gold);
+    }
+    .gallery-modal__thumb img{
+      width:100%;
+      height:72px;
+      object-fit:cover;
+      display:block;
+    }
+
     footer{
       background:linear-gradient(135deg, #102a38 0%, #0d2030 100%);
       color:rgba(255,255,255,0.9);
@@ -456,12 +610,13 @@
     }
 
     @media (max-width: 980px){
-      .hero-inner,.card-grid,.contact-grid,.gallery,.stats{
+      .hero-inner,.card-grid,.contact-grid,.gallery-grid,.stats{
         grid-template-columns:1fr;
       }
       .hero-inner{padding-top:110px}
       .hero-card{justify-self:start}
       .topbar nav{justify-content:flex-start}
+      .gallery-card img{height:300px}
     }
 
     @media (max-width: 640px){
@@ -474,7 +629,9 @@
       .topbar nav{gap:4px;padding:12px 0}
       .topbar a{font-size:0.82rem}
       .panel,.card,.contact-box{padding:18px}
-      .gallery img{height:200px}
+      .gallery-card img{height:220px}
+      .gallery-modal__viewport{padding-inline:52px}
+      .gallery-modal__nav{width:36px;height:36px;font-size:1.8rem}
     }
   </style>
 </head>
@@ -607,10 +764,22 @@
         </article>
       </div>
 
-      <div class="gallery">
-        <a href="images/Olive1.JPG"><img src="images/Olive1.JPG" alt="Apartma Olive" /></a>
-        <a href="images/Olive2.JPG"><img src="images/Olive2.JPG" alt="Notranjost Olive" /></a>
-        <a href="images/Lavander1.JPG"><img src="images/Lavander1.JPG" alt="Apartma Lavender" /></a>
+      <div class="gallery-grid">
+        <button class="gallery-card gallery-trigger" type="button" data-gallery="olive" aria-label="Odpri galerijo apartmaja Olive">
+          <img src="images/Olive1.JPG" alt="Apartma Olive" />
+          <div class="gallery-card__overlay">
+            <strong>Olive</strong>
+            <span>6 slik</span>
+          </div>
+        </button>
+
+        <button class="gallery-card gallery-trigger" type="button" data-gallery="lavender" aria-label="Odpri galerijo apartmaja Lavender">
+          <img src="images/Lavander1.JPG" alt="Apartma Lavender" />
+          <div class="gallery-card__overlay">
+            <strong>Lavender</strong>
+            <span>6 slik</span>
+          </div>
+        </button>
       </div>
     </section>
 
@@ -648,6 +817,16 @@
             <h3>📍 Dobra povezanost</h3>
             <p>Približno 200 m od plaže, blizu mestnih centrov, obalnih poti in znanih istrskih znamenitosti.</p>
           </article>
+        </div>
+
+        <div class="gallery-row">
+          <button class="gallery-card gallery-trigger" type="button" data-gallery="karigador" aria-label="Odpri galerijo Karigadorja">
+            <img src="images/sl1.jpg" alt="Karigador" />
+            <div class="gallery-card__overlay">
+              <strong>Karigador</strong>
+              <span>6 slik</span>
+            </div>
+          </button>
         </div>
       </div>
     </section>
@@ -704,6 +883,22 @@
     </section>
   </main>
 
+  <div id="galleryModal" class="gallery-modal" aria-hidden="true">
+    <div class="gallery-modal__backdrop" data-close="true"></div>
+    <div class="gallery-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle">
+      <button class="gallery-modal__close" type="button" aria-label="Zapri galerijo">×</button>
+      <div class="gallery-modal__header">
+        <h3 id="galleryModalTitle">Galerija</h3>
+      </div>
+      <div class="gallery-modal__viewport">
+        <button class="gallery-modal__nav prev" type="button" aria-label="Prejšnja slika">‹</button>
+        <img id="galleryModalImage" src="" alt="" />
+        <button class="gallery-modal__nav next" type="button" aria-label="Naslednja slika">›</button>
+      </div>
+      <div id="galleryModalThumbs" class="gallery-modal__thumbs"></div>
+    </div>
+  </div>
+
   <footer>
     <div class="footer-inner">
       <span>© Villa Mare</span>
@@ -711,5 +906,115 @@
       <a href="https://wa.me/38641776608" target="_blank" rel="noreferrer">WhatsApp</a>
     </div>
   </footer>
+
+  <script>
+    const gallerySets = {
+      olive: {
+        title: 'Apartma Olive',
+        images: [
+          'images/Olive1.JPG',
+          'images/Olive2.JPG',
+          'images/Parking1.JPG',
+          'images/sl1.jpg',
+          'images/sl2.jpg',
+          'images/sl3.jpg'
+        ]
+      },
+      lavender: {
+        title: 'Apartma Lavender',
+        images: [
+          'images/Lavander1.JPG',
+          'images/sl4.jpg',
+          'images/sl5.jpg',
+          'images/sl6.jpg',
+          'images/sl7.jpg',
+          'images/Parking1.JPG'
+        ]
+      },
+      karigador: {
+        title: 'Karigador',
+        images: [
+          'images/sl1.jpg',
+          'images/sl2.jpg',
+          'images/sl3.jpg',
+          'images/sl4.jpg',
+          'images/sl5.jpg',
+          'images/sl6.jpg'
+        ]
+      }
+    };
+
+    const modal = document.getElementById('galleryModal');
+    const modalTitle = document.getElementById('galleryModalTitle');
+    const modalImage = document.getElementById('galleryModalImage');
+    const modalThumbs = document.getElementById('galleryModalThumbs');
+    const prevBtn = document.querySelector('.gallery-modal__nav.prev');
+    const nextBtn = document.querySelector('.gallery-modal__nav.next');
+    const closeBtn = document.querySelector('.gallery-modal__close');
+    const backdrop = document.querySelector('.gallery-modal__backdrop');
+    let currentGalleryKey = null;
+    let currentIndex = 0;
+
+    function openGallery(key) {
+      currentGalleryKey = key;
+      currentIndex = 0;
+      renderGallery();
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGallery() {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    function renderGallery() {
+      if (!currentGalleryKey || !gallerySets[currentGalleryKey]) return;
+
+      const set = gallerySets[currentGalleryKey];
+      modalTitle.textContent = set.title;
+      modalImage.src = set.images[currentIndex];
+      modalImage.alt = set.title + ' ' + (currentIndex + 1);
+
+      modalThumbs.innerHTML = '';
+      set.images.forEach((image, idx) => {
+        const thumb = document.createElement('button');
+        thumb.type = 'button';
+        thumb.className = 'gallery-modal__thumb' + (idx === currentIndex ? ' is-active' : '');
+        thumb.setAttribute('aria-label', 'Odpri sliko ' + (idx + 1));
+        thumb.innerHTML = '<img src="' + image + '" alt="' + set.title + ' slika ' + (idx + 1) + '" />';
+        thumb.addEventListener('click', () => {
+          currentIndex = idx;
+          renderGallery();
+        });
+        modalThumbs.appendChild(thumb);
+      });
+    }
+
+    function moveGallery(offset) {
+      if (!currentGalleryKey) return;
+      const total = gallerySets[currentGalleryKey].images.length;
+      currentIndex = (currentIndex + offset + total) % total;
+      renderGallery();
+    }
+
+    document.querySelectorAll('.gallery-trigger').forEach((button) => {
+      button.addEventListener('click', () => openGallery(button.dataset.gallery));
+    });
+
+    prevBtn.addEventListener('click', () => moveGallery(-1));
+    nextBtn.addEventListener('click', () => moveGallery(1));
+    closeBtn.addEventListener('click', closeGallery);
+    backdrop.addEventListener('click', closeGallery);
+
+    document.addEventListener('keydown', (event) => {
+      if (!modal.classList.contains('is-open')) return;
+      if (event.key === 'Escape') closeGallery();
+      if (event.key === 'ArrowLeft') moveGallery(-1);
+      if (event.key === 'ArrowRight') moveGallery(1);
+    });
+  </script>
 </body>
 </html>
