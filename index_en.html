@@ -1,1320 +1,745 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#102a38" />
-    <title>Villa Mare – Olive & Lavender Apartments in Karigador, Istria</title>
-    <meta
-      name="description"
-      content="Discover Olive and Lavender apartments in Karigador, Istria, approximately 200 m from the beach. Explore the amenities, parking and photos, then contact us for availability."
-    />
-    <link rel="canonical" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_en.html" />
-    <link rel="alternate" hreflang="sl" href="https://gorazdvrabic-sudo.github.io/username.github.io/" />
-    <link rel="alternate" hreflang="en" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_en.html" />
-    <link rel="alternate" hreflang="de" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_de.html" />
-    <link rel="alternate" hreflang="it" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_it.html" />
-    <link rel="alternate" hreflang="x-default" href="https://gorazdvrabic-sudo.github.io/username.github.io/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --navy: #102a38;
-        --navy-2: #173a4d;
-        --gold: #c9a970;
-        --gold-soft: #f4e6c0;
-        --ivory: #f7f3ee;
-        --stone: #efeae2;
-        --ink: #1d2a32;
-        --muted: #536d78;
-        --white: #ffffff;
-        --line: rgba(16, 42, 56, 0.14);
-        --shadow: 0 24px 60px rgba(8, 18, 25, 0.12);
-        --radius-xl: 28px;
-        --radius-lg: 18px;
-        --radius-md: 14px;
-        --container: 1180px;
-        --heading: "Cormorant Garamond", "Georgia", serif;
-        --body: "Inter", "Segoe UI", sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 90px;
-      }
-
-      body {
-        margin: 0;
-        background: linear-gradient(180deg, #f5f1ea, #f0ece6);
-        color: var(--ink);
-        font-family: var(--body);
-        line-height: 1.6;
-      }
-
-      img {
-        max-width: 100%;
-        display: block;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      button {
-        font: inherit;
-      }
-
-      :focus-visible {
-        outline: 3px solid #e7b958;
-        outline-offset: 3px;
-      }
-
-      .container {
-        width: min(var(--container), calc(100% - 32px));
-        margin-inline: auto;
-      }
-
-      .skip-link {
-        position: absolute;
-        left: -9999px;
-        top: auto;
-      }
-
-      .skip-link:focus {
-        left: 16px;
-        top: 12px;
-        z-index: 2000;
-        background: #fff;
-        padding: 10px 14px;
-        border-radius: 999px;
-        box-shadow: var(--shadow);
-      }
-
-      .lang-switcher {
-        position: fixed;
-        top: 16px;
-        left: 16px;
-        z-index: 60;
-        display: flex;
-        gap: 6px;
-        padding: 6px;
-        border-radius: 999px;
-        background: rgba(16, 42, 56, 0.78);
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-      }
-
-      .lang-switcher a {
-        display: grid;
-        place-items: center;
-        width: 42px;
-        height: 42px;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid transparent;
-        transition: transform 0.2s ease, border-color 0.2s ease;
-      }
-
-      .lang-switcher a:hover,
-      .lang-switcher a:focus-visible {
-        transform: translateY(-1px);
-        border-color: rgba(255, 255, 255, 0.9);
-        outline: none;
-      }
-
-      .lang-switcher a[aria-current="page"] {
-        background: rgba(255, 255, 255, 0.12);
-        border-color: rgba(255, 255, 255, 0.9);
-      }
-
-      .lang-switcher img {
-        display: block;
-        width: 24px;
-        height: 18px;
-        object-fit: cover;
-        border-radius: 2px;
-      }
-
-      .topbar {
-        position: sticky;
-        top: 0;
-        z-index: 30;
-        background: rgba(16, 42, 56, 0.94);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(12px);
-      }
-
-      .topbar nav {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 6px;
-        padding: 12px 0;
-      }
-
-      .topbar a {
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 0.82rem;
-        font-weight: 600;
-        letter-spacing: 0.02em;
-        padding: 8px 12px;
-        border-radius: 999px;
-        transition: background 0.2s ease, color 0.2s ease;
-      }
-
-      .topbar a:hover,
-      .topbar a:focus-visible {
-        background: rgba(255, 255, 255, 0.06);
-        outline: none;
-      }
-
-      .hero {
-        position: relative;
-        min-height: 520px;
-        display: grid;
-        place-items: center;
-        overflow: hidden;
-        background:
-          linear-gradient(120deg, rgba(12, 25, 31, 0.74), rgba(12, 29, 36, 0.52)),
-          url("images/hero.png") center/cover no-repeat;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      }
-
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(circle at top right, rgba(199, 166, 106, 0.18), transparent 28%);
-      }
-
-      .hero-inner {
-        position: relative;
-        z-index: 1;
-        width: min(var(--container), calc(100% - 32px));
-        display: grid;
-        grid-template-columns: 1.5fr 0.7fr;
-        align-items: center;
-        gap: 38px;
-        padding: 100px 0 72px;
-      }
-
-      .eyebrow {
-        display: inline-block;
-        margin-bottom: 18px;
-        padding: 7px 12px;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        color: #edf5fb;
-        font-size: 0.66rem;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
-
-      h1,
-      h2,
-      h3 {
-        margin: 0 0 12px;
-        font-family: var(--heading);
-        font-weight: 500;
-        line-height: 1;
-        letter-spacing: -0.03em;
-        color: var(--navy);
-      }
-
-      .hero h1 {
-        max-width: 640px;
-        font-size: clamp(2.8rem, 4vw, 5rem);
-        color: #fff;
-        text-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
-      }
-
-      .hero p {
-        margin: 0;
-        max-width: 680px;
-        color: rgba(255, 255, 255, 0.85);
-        font-size: 1rem;
-      }
-
-      .cta-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 24px;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 13px 18px;
-        border-radius: 12px;
-        font-weight: 700;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .btn:hover,
-      .btn:focus-visible {
-        transform: translateY(-1px);
-        outline: none;
-      }
-
-      .btn-primary {
-        background: linear-gradient(135deg, var(--gold), #b98d4d);
-        color: var(--navy);
-        box-shadow: 0 18px 28px rgba(199, 166, 106, 0.22);
-      }
-
-      .btn-secondary {
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        color: #fff;
-      }
-
-      .hero-card {
-        justify-self: end;
-        width: min(100%, 340px);
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 22px;
-        padding: 22px 20px;
-        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
-        backdrop-filter: blur(10px);
-      }
-
-      .hero-card .label {
-        color: rgba(255, 255, 255, 0.72);
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        font-size: 0.62rem;
-        font-weight: 700;
-        margin-bottom: 10px;
-      }
-
-      .hero-card h2 {
-        font-size: clamp(1.65rem, 2vw, 2.2rem);
-        color: #fff;
-        margin-bottom: 14px;
-      }
-
-      .hero-card ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: grid;
-        gap: 10px;
-      }
-
-      .hero-card li {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 0.95rem;
-      }
-
-      .dot {
-        width: 9px;
-        height: 9px;
-        border-radius: 50%;
-        background: linear-gradient(180deg, #f0d79d, #d7a95f);
-        box-shadow: 0 0 0 6px rgba(199, 166, 106, 0.1);
-        flex-shrink: 0;
-      }
-
-      .stats {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 16px;
-        width: min(var(--container), calc(100% - 32px));
-        margin: -34px auto 0;
-        position: relative;
-        z-index: 2;
-      }
-
-      .stat {
-        background: rgba(255, 255, 255, 0.9);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        box-shadow: var(--shadow);
-        padding: 18px 14px;
-        text-align: center;
-      }
-
-      .stat strong {
-        display: block;
-        font-family: var(--heading);
-        font-size: clamp(1.8rem, 2.5vw, 2.8rem);
-        color: var(--navy);
-        line-height: 1;
-        margin-bottom: 8px;
-      }
-
-      .stat span {
-        color: var(--muted);
-        font-size: 0.77rem;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-      }
-
-      main {
-        padding: 62px 0 80px;
-      }
-
-      section {
-        margin-top: 56px;
-        scroll-margin-top: 90px;
-      }
-
-      .intro {
-        max-width: 780px;
-        margin: 0 auto 20px;
-        text-align: center;
-      }
-
-      .intro h2 {
-        font-size: clamp(2.3rem, 3vw, 3.5rem);
-        margin-bottom: 8px;
-      }
-
-      .intro p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 1rem;
-      }
-
-      .panel {
-        background: rgba(255, 255, 255, 0.72);
-        border: 1px solid var(--line);
-        border-radius: var(--radius-xl);
-        box-shadow: 0 14px 30px rgba(17, 33, 39, 0.04);
-        padding: 22px;
-      }
-
-      .highlight {
-        margin: 0 0 18px;
-        padding: 16px 18px;
-        border-radius: 14px;
-        text-align: center;
-        background: rgba(199, 166, 106, 0.08);
-        border: 1px solid rgba(199, 166, 106, 0.18);
-        color: var(--navy);
-        font-weight: 700;
-        font-size: 0.95rem;
-      }
-
-      .card-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 20px;
-      }
-
-      .card {
-        background: #fff;
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        padding: 24px;
-        box-shadow: 0 10px 28px rgba(17, 33, 39, 0.03);
-      }
-
-      .card h3 {
-        font-size: clamp(1.7rem, 2vw, 2.2rem);
-        color: var(--navy);
-        margin-bottom: 10px;
-      }
-
-      .card p,
-      .card li,
-      .faq-item p,
-      .contact-box p {
-        color: var(--muted);
-        margin: 0;
-      }
-
-      .card ul {
-        margin: 14px 0 0;
-        padding-left: 18px;
-        display: grid;
-        gap: 8px;
-      }
-
-      .badges {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin: 12px 0 14px;
-      }
-
-      .badge {
-        display: inline-block;
-        padding: 6px 10px;
-        border-radius: 999px;
-        border: 1px solid rgba(23, 58, 77, 0.1);
-        background: rgba(23, 58, 77, 0.03);
-        color: var(--navy);
-        font-size: 0.68rem;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-      }
-
-      .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-        margin-top: 20px;
-      }
-
-      .gallery-card {
-        position: relative;
-        display: block;
-        width: 100%;
-        padding: 0;
-        border: none;
-        background: none;
-        overflow: hidden;
-        border-radius: 18px;
-        cursor: pointer;
-        border: 1px solid var(--line);
-        box-shadow: 0 16px 28px rgba(16, 42, 56, 0.08);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .gallery-card:hover,
-      .gallery-card:focus-visible {
-        transform: translateY(-2px);
-        box-shadow: 0 20px 32px rgba(16, 42, 56, 0.1);
-        outline: none;
-      }
-
-      .gallery-card img {
-        width: 100%;
-        height: 330px;
-        object-fit: cover;
-        display: block;
-      }
-
-      .gallery-card__overlay {
-        position: absolute;
-        inset: auto 0 0 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 12px;
-        padding: 14px 16px;
-        background: linear-gradient(180deg, rgba(10, 20, 24, 0), rgba(10, 20, 24, 0.64) 55%, rgba(10, 20, 24, 0.82));
-        color: #fff;
-      }
-
-      .gallery-card__overlay strong {
-        display: block;
-        font-size: clamp(1.4rem, 2vw, 1.8rem);
-        font-family: var(--heading);
-        line-height: 1;
-      }
-
-      .gallery-card__overlay span {
-        font-size: 0.7rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        opacity: 0.9;
-      }
-
-      .faq {
-        display: grid;
-        gap: 16px;
-      }
-
-      .faq-item {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 243, 238, 0.8));
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 20px 22px;
-        box-shadow: 0 10px 20px rgba(15, 42, 56, 0.02);
-      }
-
-      .faq-item h3 {
-        font-size: clamp(1.5rem, 2vw, 2rem);
-        color: var(--navy);
-        margin-bottom: 7px;
-      }
-
-      .contact-grid {
-        display: grid;
-        grid-template-columns: 1.05fr 0.95fr;
-        gap: 20px;
-      }
-
-      .contact-box {
-        background: #fff;
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        padding: 22px;
-        box-shadow: var(--shadow);
-      }
-
-      .contact-box h3 {
-        font-size: clamp(2rem, 2.8vw, 2.6rem);
-        color: var(--navy);
-        margin-bottom: 10px;
-      }
-
-      .contact-list {
-        display: grid;
-        gap: 12px;
-        margin-top: 18px;
-      }
-
-      .contact-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-      }
-
-      .contact-item strong {
-        display: block;
-        color: var(--navy);
-        margin-bottom: 2px;
-        font-size: 0.92rem;
-      }
-
-      .contact-item a {
-        color: var(--navy-2);
-        font-weight: 600;
-      }
-
-      .map {
-        width: 100%;
-        min-height: 280px;
-        border: 0;
-        border-radius: 16px;
-        margin-top: 12px;
-        box-shadow: 0 12px 24px rgba(16, 42, 56, 0.04);
-      }
-
-      .lightbox {
-        position: fixed;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 24px 18px;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transition: opacity 0.2s ease, visibility 0.2s ease;
-        z-index: 2000;
-      }
-
-      .lightbox.open {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-      }
-
-      .lightbox-backdrop {
-        position: absolute;
-        inset: 0;
-        background: rgba(12, 18, 22, 0.7);
-        backdrop-filter: blur(4px);
-      }
-
-      .lightbox-dialog {
-        position: relative;
-        z-index: 1;
-        width: min(920px, 100%);
-        background: #fff;
-        border-radius: 22px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        box-shadow: 0 26px 80px rgba(0, 0, 0, 0.2);
-        overflow: hidden;
-        outline: none;
-      }
-
-      .lightbox-title {
-        margin: 0;
-        padding: 18px 22px 0;
-        font-size: clamp(1.8rem, 3vw, 2.5rem);
-        color: var(--navy);
-      }
-
-      .lightbox-close,
-      .lightbox-nav {
-        z-index: 2;
-      }
-
-      .lightbox-close {
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        width: 38px;
-        height: 38px;
-        border: none;
-        border-radius: 50%;
-        background: rgba(21, 44, 57, 0.06);
-        color: var(--navy);
-        font-size: 1.8rem;
-        line-height: 1;
-        cursor: pointer;
-      }
-
-      .lightbox-stage {
-        position: relative;
-        display: grid;
-        place-items: center;
-        padding: 16px 58px 20px;
-        background: linear-gradient(180deg, rgba(247, 245, 241, 0.9), rgba(255, 255, 255, 1));
-      }
-
-      .lightbox-stage img {
-        width: 100%;
-        max-height: 70vh;
-        object-fit: contain;
-        border-radius: 16px;
-        background: #f7f5f1;
-      }
-
-      .lightbox-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 40px;
-        height: 40px;
-        border: none;
-        border-radius: 50%;
-        background: rgba(21, 44, 57, 0.88);
-        color: #fff;
-        font-size: 1.8rem;
-        line-height: 1;
-        cursor: pointer;
-        box-shadow: 0 12px 18px rgba(15, 42, 56, 0.12);
-      }
-
-      .lightbox-nav[data-direction="prev"] {
-        left: 12px;
-      }
-
-      .lightbox-nav[data-direction="next"] {
-        right: 12px;
-      }
-
-      .lightbox-caption {
-        width: 100%;
-        margin: 0;
-        padding: 8px 0 0;
-        text-align: center;
-        color: var(--muted);
-        font-weight: 600;
-      }
-
-      footer {
-        background: linear-gradient(135deg, #152c39 0%, #0f212d 100%);
-        color: rgba(255, 255, 255, 0.9);
-        padding: 26px 0 32px;
-        margin-top: 58px;
-      }
-
-      .footer-inner {
-        width: min(var(--container), calc(100% - 32px));
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-
-      .footer-inner a {
-        color: #e5f0f8;
-        font-weight: 600;
-      }
-
-      @media (max-width: 980px) {
-        .hero-inner,
-        .card-grid,
-        .contact-grid,
-        .gallery-grid,
-        .stats {
-          grid-template-columns: 1fr;
-        }
-
-        .hero-inner {
-          padding-top: 110px;
-        }
-
-        .hero-card {
-          justify-self: start;
-        }
-
-        .topbar nav {
-          justify-content: flex-start;
-        }
-      }
-
-      @media (max-width: 640px) {
-        .lang-switcher {
-          position: relative;
-          top: auto;
-          left: auto;
-          width: max-content;
-          margin: 10px auto;
-          padding: 5px;
-        }
-
-        .hero {
-          min-height: 440px;
-        }
-
-        .cta-row {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        .btn {
-          width: 100%;
-        }
-
-        .topbar nav {
-          gap: 4px;
-          padding: 8px 0;
-        }
-
-        .panel,
-        .card,
-        .contact-box {
-          padding: 18px;
-        }
-
-        .gallery-card img {
-          height: 220px;
-        }
-
-        .lightbox-stage {
-          padding-inline: 48px;
-        }
-
-        .lightbox-nav {
-          width: 32px;
-          height: 32px;
-          font-size: 1.5rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <nav class="lang-switcher" aria-label="Language switcher">
-      <a href="index.html" aria-label="Slovenščina" title="Slovenščina">
-        <img src="https://flagcdn.com/w40/si.png" alt="" />
-      </a>
-      <a href="index_en.html" aria-current="page" aria-label="English" title="English">
-        <img src="https://flagcdn.com/w40/gb.png" alt="" />
-      </a>
-      <a href="index_de.html" aria-label="Deutsch" title="Deutsch">
-        <img src="https://flagcdn.com/w40/de.png" alt="" />
-      </a>
-      <a href="index_it.html" aria-label="Italiano" title="Italiano">
-        <img src="https://flagcdn.com/w40/it.png" alt="" />
-      </a>
-    </nav>
-
-    <div class="topbar">
-      <nav aria-label="Main navigation">
-        <a href="#services">Services</a>
-        <a href="#apartments">Apartments</a>
-        <a href="#parking">Parking</a>
-        <a href="#location">Location</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-
-    <header class="hero">
-      <div class="hero-inner">
-        <div>
-          <p class="eyebrow">Istria • Karigador</p>
-          <h1>Seaside holidays you won’t want to end.</h1>
-          <p>
-            Olive and Lavender apartments in a peaceful and elegant setting, just 200 metres from
-            the beach. Enjoy a relaxing stay by the sea.
-          </p>
-          <div class="cta-row">
-            <a
-              class="btn btn-primary"
-              href="https://wa.me/38641776608?text=Hello%2C%20I%20would%20like%20to%20check%20availability"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Check availability</a
-            >
-            <a class="btn btn-secondary" href="#contact">Contact us</a>
-          </div>
-        </div>
-
-        <aside class="hero-card" aria-labelledby="hero-card-title">
-          <p class="label">Why guests return</p>
-          <h2 id="hero-card-title">Peace, elegance and comfort</h2>
-          <ul>
-            <li><span class="dot" aria-hidden="true"></span>Quiet, welcoming location</li>
-            <li><span class="dot" aria-hidden="true"></span>Apartments for 2–4 guests</li>
-            <li><span class="dot" aria-hidden="true"></span>Parking for cars and boats</li>
-            <li><span class="dot" aria-hidden="true"></span>Tailored recommendations and activities</li>
-          </ul>
-        </aside>
-      </div>
-    </header>
-
-    <div class="stats" aria-label="Key information">
-      <div class="stat"><strong>200 m</strong><span>to the beach</span></div>
-      <div class="stat"><strong>2</strong><span>apartments</span></div>
-      <div class="stat"><strong>up to 4</strong><span>guests</span></div>
-      <div class="stat"><strong>24/7</strong><span>support</span></div>
-    </div>
-
-    <main class="container" id="main">
-      <section id="services" aria-labelledby="services-title">
-        <div class="intro">
-          <h2 id="services-title">Let your holiday become an unforgettable experience</h2>
-          <p>
-            At Villa Mare, we combine comfort, a peaceful atmosphere and personal attention so you
-            can enjoy relaxing evenings, active excursions and special moments by the sea.
-          </p>
-        </div>
-
-        <div class="panel">
-          <p class="highlight">
-            SUP, boat and bike rental • Excursions in Istria and Brijuni • Traditional Istrian
-            dinners • Tailor-made experiences
-          </p>
-
-          <div class="card-grid">
-            <article class="card">
-              <h3>Active holiday</h3>
-              <p>
-                SUP, boat and bike rental, plus organised trips around Istria and Brijuni for
-                those who love exploring the surroundings.
-              </p>
-            </article>
-
-            <article class="card">
-              <h3>Local flavours</h3>
-              <p>
-                Traditional Istrian dinners with local dishes, good company and a warm, personal
-                atmosphere.
-              </p>
-            </article>
-
-            <article class="card">
-              <h3>Family holidays</h3>
-              <p>
-                A quiet location and spacious apartments for families who want a relaxed and
-                comfortable stay by the sea.
-              </p>
-            </article>
-
-            <article class="card">
-              <h3>Personal assistance</h3>
-              <p>
-                We are happy to recommend activities and help plan your stay around your wishes.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="apartments" aria-labelledby="apartments-title">
-        <div class="intro">
-          <h2 id="apartments-title">Comfortable accommodation tailored to you</h2>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <h3>Olive apartment</h3>
-            <div class="badges">
-              <span class="badge">200 m to the sea</span>
-              <span class="badge">2–3 guests</span>
-              <span class="badge">air conditioning</span>
-              <span class="badge">Wi‑Fi</span>
-            </div>
-            <p>
-              A bright, peaceful apartment for 2–3 guests, ideal for couples or smaller families.
-            </p>
-            <ul>
-              <li>Bedroom with a double bed</li>
-              <li>Living area with a sofa bed</li>
-              <li>Equipped kitchen and bathroom</li>
-              <li>Covered parking and EV charging</li>
-            </ul>
-            <p style="margin-top: 18px;">
-              <a
-                class="btn btn-primary"
-                href="mailto:villamare.olive.lavender@gmail.com?subject=Olive%20Apartment"
-                >Send inquiry</a
-              >
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Lavender apartment</h3>
-            <div class="badges">
-              <span class="badge">200 m to the sea</span>
-              <span class="badge">up to 4 guests</span>
-              <span class="badge">air conditioning</span>
-              <span class="badge">Wi‑Fi</span>
-            </div>
-            <p>
-              A modern, spacious apartment for up to four guests, perfect for families and friends.
-            </p>
-            <ul>
-              <li>Large bedroom with a double bed</li>
-              <li>Second bedroom with two single beds</li>
-              <li>Living area with kitchen</li>
-              <li>Comfortable stay for families and friends</li>
-            </ul>
-            <p style="margin-top: 18px;">
-              <a
-                class="btn btn-primary"
-                href="mailto:villamare.olive.lavender@gmail.com?subject=Lavender%20Apartment"
-                >Send inquiry</a
-              >
-            </p>
-          </article>
-        </div>
-
-        <div class="gallery-grid">
-          <button
-            class="gallery-card gallery-trigger"
-            type="button"
-            data-gallery="olive"
-            data-start="0"
-            aria-label="Open Olive apartment gallery"
-          >
-            <img src="images/Olive1.JPG" alt="Olive apartment" loading="lazy" />
-            <div class="gallery-card__overlay">
-              <strong>Olive</strong>
-              <span>6 photos</span>
-            </div>
-          </button>
-
-          <button
-            class="gallery-card gallery-trigger"
-            type="button"
-            data-gallery="lavender"
-            data-start="0"
-            aria-label="Open Lavender apartment gallery"
-          >
-            <img src="images/Lavander1.JPG" alt="Lavender apartment" loading="lazy" />
-            <div class="gallery-card__overlay">
-              <strong>Lavender</strong>
-              <span>6 photos</span>
-            </div>
-          </button>
-        </div>
-      </section>
-
-      <section id="parking">
-        <div class="panel">
-          <div class="intro">
-            <h2>Parking for cars and boats</h2>
-          </div>
-
-          <div class="card-grid">
-            <article class="card">
-              <h3>Free parking</h3>
-              <p>
-                Guests have access to a free covered parking area for vehicles, making arrivals and
-                departures easier.
-              </p>
-            </article>
-
-            <article class="card">
-              <h3>Boat parking</h3>
-              <p>
-                Two covered boat parking spaces are available, with electrical access and direct
-                water access.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="location">
-        <div class="panel">
-          <div class="intro">
-            <h2>Karigador and surroundings</h2>
-          </div>
-
-          <div class="card-grid">
-            <article class="card">
-              <h3>Quiet location</h3>
-              <p>
-                Karigador is a peaceful, friendly holiday village with access to the sea, nearby
-                villages and excellent relaxation opportunities.
-              </p>
-            </article>
-
-            <article class="card">
-              <h3>Good connections</h3>
-              <p>
-                Approximately 200 metres from the beach, close to town centres, coastal paths and
-                well-known Istrian attractions.
-              </p>
-            </article>
-          </div>
-
-          <div class="gallery-grid" style="max-width: 620px; margin-inline: auto;">
-            <button
-              class="gallery-card gallery-trigger"
-              type="button"
-              data-gallery="karigador"
-              data-start="0"
-              aria-label="Open Karigador gallery"
-            >
-              <img src="images/sl1.jpg" alt="Karigador" loading="lazy" />
-              <div class="gallery-card__overlay">
-                <strong>Karigador</strong>
-                <span>6 photos</span>
-              </div>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq">
-        <div class="intro">
-          <h2>Frequently asked questions</h2>
-        </div>
-
-        <div class="faq">
-          <div class="faq-item">
-            <h3>How far is the beach from the apartments?</h3>
-            <p>The apartments are approximately 200 metres from the beach.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Is parking available?</h3>
-            <p>Yes, guests have access to free covered parking.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Is Wi‑Fi available?</h3>
-            <p>Yes, both apartments have free Wi‑Fi.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div class="contact-grid">
-          <div class="contact-box">
-            <h3>Contact us</h3>
-            <p>
-              For reservations, additional information or personalised recommendations, please get in
-              touch. We would be delighted to help you find the ideal stay.
-            </p>
-
-            <div class="contact-list">
-              <div class="contact-item">
-                <div>
-                  <strong>Phone</strong>
-                  <a href="tel:+38641776608">+386 41 776 608</a>
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div>
-                  <strong>Email</strong>
-                  <a href="mailto:villamare.olive.lavender@gmail.com"
-                    >villamare.olive.lavender@gmail.com</a
-                  >
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div>
-                  <strong>WhatsApp</strong>
-                  <a href="https://wa.me/38641776608" target="_blank" rel="noopener noreferrer"
-                    >Send a message</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-box">
-            <h3>Location</h3>
-            <p>Karigador, Istria, Croatia</p>
-            <iframe
-              class="map"
-              src="https://www.google.com/maps?q=45.3595613983202,13.56048904460079&z=14&output=embed"
-              loading="lazy"
-              title="Villa Mare location"
-            ></iframe>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <div class="lightbox" id="lightbox" aria-hidden="true" inert>
-      <div class="lightbox-backdrop" data-close="true"></div>
-      <div
-        class="lightbox-dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="lightbox-title"
-        tabindex="-1"
-      >
-        <h2 class="lightbox-title" id="lightbox-title">Photo gallery</h2>
-        <button class="lightbox-close" type="button" aria-label="Close gallery">×</button>
-        <button
-          class="lightbox-nav"
-          type="button"
-          data-direction="prev"
-          aria-label="Previous photo"
-        >
-          ‹
-        </button>
-        <div class="lightbox-stage">
-          <img id="lightbox-image" src="" alt="" loading="eager" />
-          <p class="lightbox-caption" id="lightbox-caption" aria-live="polite"></p>
-        </div>
-        <button
-          class="lightbox-nav"
-          type="button"
-          data-direction="next"
-          aria-label="Next photo"
-        >
-          ›
-        </button>
-      </div>
-    </div>
-
-    <footer>
-      <div class="footer-inner">
-        <span>© Villa Mare</span>
-        <a href="mailto:villamare.olive.lavender@gmail.com">villamare.olive.lavender@gmail.com</a>
-        <a href="https://wa.me/38641776608" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-      </div>
-    </footer>
-
-    <script>
-      const gallerySets = {
-        olive: {
-          title: "Olive apartment",
-          images: [
-            "images/Olive1.JPG",
-            "images/Olive2.JPG",
-            "images/Parking1.JPG",
-            "images/sl1.jpg",
-            "images/sl2.jpg",
-            "images/sl3.jpg",
-          ],
-        },
-        lavender: {
-          title: "Lavender apartment",
-          images: [
-            "images/Lavander1.JPG",
-            "images/sl4.jpg",
-            "images/sl5.jpg",
-            "images/sl6.jpg",
-            "images/sl7.jpg",
-            "images/Parking1.JPG",
-          ],
-        },
-        karigador: {
-          title: "Karigador",
-          images: ["images/sl1.jpg", "images/sl2.jpg", "images/sl3.jpg", "images/sl4.jpg", "images/sl5.jpg", "images/sl6.jpg"],
-        },
-      };
-
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImage = document.getElementById("lightbox-image");
-      const lightboxCaption = document.getElementById("lightbox-caption");
-      const triggers = document.querySelectorAll(".gallery-trigger");
-      let currentSet = null;
-      let currentIndex = 0;
-      let previouslyFocusedElement = null;
-
-      function openLightbox(key, index = 0) {
-        if (!gallerySets[key]) return;
-
-        previouslyFocusedElement = document.activeElement;
-        currentSet = key;
-        currentIndex = index;
-        renderLightbox();
-
-        lightbox.removeAttribute("inert");
-        lightbox.setAttribute("aria-hidden", "false");
-        lightbox.classList.add("open");
-        document.body.style.overflow = "hidden";
-
-        const dialog = lightbox.querySelector(".lightbox-dialog");
-        dialog.focus();
-      }
-
-      function closeLightbox() {
-        lightbox.classList.remove("open");
-        lightbox.setAttribute("aria-hidden", "true");
-        lightbox.setAttribute("inert", "");
-        document.body.style.overflow = "";
-
-        if (previouslyFocusedElement) {
-          previouslyFocusedElement.focus();
-        }
-      }
-
-      function renderLightbox() {
-        if (!currentSet) return;
-        const set = gallerySets[currentSet];
-        const src = set.images[currentIndex];
-        lightboxImage.src = src;
-        lightboxImage.alt = `${set.title} ${currentIndex + 1}`;
-        lightboxCaption.textContent = `${set.title} (${currentIndex + 1}/${set.images.length})`;
-      }
-
-      function moveLightbox(step) {
-        if (!currentSet) return;
-        const set = gallerySets[currentSet];
-        currentIndex = (currentIndex + step + set.images.length) % set.images.length;
-        renderLightbox();
-      }
-
-      triggers.forEach((button) => {
-        button.addEventListener("click", () => {
-          openLightbox(button.dataset.gallery, Number(button.dataset.start || 0));
-        });
-      });
-
-      document.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
-      document.querySelector(".lightbox-backdrop").addEventListener("click", closeLightbox);
-
-      document
-        .querySelector('.lightbox-nav[data-direction="prev"]')
-        .addEventListener("click", () => moveLightbox(-1));
-
-      document
-        .querySelector('.lightbox-nav[data-direction="next"]')
-        .addEventListener("click", () => moveLightbox(1));
-
-      document.addEventListener("keydown", (event) => {
-        if (!lightbox.classList.contains("open")) return;
-
-        if (event.key === "Escape") closeLightbox();
-        if (event.key === "ArrowLeft") moveLightbox(-1);
-        if (event.key === "ArrowRight") moveLightbox(1);
-      });
-    </script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#102a38" />
+  <title>Villa Mare – Olive and Lavender Apartments in Karigador, Istria</title>
+  <meta
+    name="description"
+    content="Discover the Olive and Lavender apartments in Karigador, Istria, just 200 m from the beach. Explore the amenities, parking and photos, and contact us for more information."
+  />
+
+  <link rel="canonical" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_en.html" />
+  <link rel="alternate" hreflang="sl" href="https://gorazdvrabic-sudo.github.io/username.github.io/" />
+  <link rel="alternate" hreflang="en" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_en.html" />
+  <link rel="alternate" hreflang="de" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_de.html" />
+  <link rel="alternate" hreflang="it" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_it.html" />
+  <link rel="alternate" hreflang="x-default" href="https://gorazdvrabic-sudo.github.io/username.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Villa Mare" />
+  <meta property="og:title" content="Villa Mare – Olive and Lavender Apartments in Karigador, Istria" />
+  <meta
+    property="og:description"
+    content="Apartments in Karigador, Istria, just 200 m from the beach. Explore the amenities, photos and contact us for availability."
+  />
+  <meta property="og:url" content="https://gorazdvrabic-sudo.github.io/username.github.io/index_en.html" />
+  <meta property="og:image" content="https://gorazdvrabic-sudo.github.io/username.github.io/images/hero.png" />
+  <meta property="og:image:alt" content="Villa Mare in Karigador" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Villa Mare – Olive and Lavender Apartments in Karigador" />
+  <meta
+    name="twitter:description"
+    content="Apartments in Istria, around 200 m from the beach. Explore the amenities and photos."
+  />
+  <meta name="twitter:image" content="https://gorazdvrabic-sudo.github.io/username.github.io/images/hero.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root{
+      --navy:#102a38;
+      --navy-2:#173a4d;
+      --gold:#c9a970;
+      --gold-soft:#f4e6c0;
+      --ivory:#f7f3ee;
+      --stone:#efeae2;
+      --ink:#1d2a32;
+      --muted:#536d78;
+      --white:#ffffff;
+      --line:rgba(16,42,56,.14);
+      --shadow:0 24px 60px rgba(8,18,25,.12);
+      --radius-xl:28px;
+      --radius-lg:18px;
+      --radius-md:14px;
+      --container:1180px;
+      --heading:"Cormorant Garamond","Georgia",serif;
+      --body:"Inter","Segoe UI",sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#f5f1ea,#f0ece6);
+      color:var(--ink);
+      font-family:var(--body);
+      line-height:1.6;
+    }
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit}
+    :focus-visible{
+      outline:3px solid #e7b958;
+      outline-offset:3px;
+    }
+    .container{
+      width:min(var(--container), calc(100% - 32px));
+      margin-inline:auto;
+    }
+    .skip-link{
+      position:absolute;
+      left:-9999px;
+      top:auto;
+    }
+    .skip-link:focus{
+      left:16px;
+      top:12px;
+      z-index:2000;
+      background:#fff;
+      padding:10px 14px;
+      border-radius:999px;
+      box-shadow:var(--shadow);
+    }
+
+    .lang-switcher{
+      position:fixed;
+      top:16px;
+      left:16px;
+      z-index:60;
+      display:flex;
+      gap:6px;
+      padding:6px;
+      border-radius:999px;
+      background:rgba(16,42,56,.78);
+      border:1px solid rgba(255,255,255,.16);
+      backdrop-filter:blur(10px);
+      box-shadow:0 10px 25px rgba(0,0,0,.12);
+    }
+    .lang-switcher a{
+      display:grid;
+      place-items:center;
+      width:42px;
+      height:42px;
+      border-radius:999px;
+      color:#fff;
+      font-weight:700;
+      font-size:1.2rem;
+      background:rgba(255,255,255,.06);
+      border:1px solid transparent;
+      transition:transform .2s ease,border-color .2s ease;
+    }
+    .lang-switcher a:hover,
+    .lang-switcher a:focus-visible{
+      transform:translateY(-1px);
+      border-color:rgba(255,255,255,.9);
+      outline:none;
+    }
+    .lang-switcher a[aria-current="page"]{
+      background:rgba(255,255,255,.12);
+      border-color:rgba(255,255,255,.9);
+    }
+    .lang-switcher img{
+      display:block;
+      width:24px;
+      height:18px;
+      object-fit:cover;
+      border-radius:2px;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:30;
+      background:rgba(16,42,56,.94);
+      border-bottom:1px solid rgba(255,255,255,.1);
+      backdrop-filter:blur(12px);
+    }
+    .topbar nav{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:6px;
+      padding:12px 0;
+    }
+    .topbar a{
+      color:rgba(255,255,255,.9);
+      font-size:.82rem;
+      font-weight:600;
+      letter-spacing:.02em;
+      padding:8px 12px;
+      border-radius:999px;
+      transition:background .2s ease,color .2s ease;
+    }
+    .topbar a:hover,
+    .topbar a:focus-visible{
+      background:rgba(255,255,255,.06);
+      outline:none;
+    }
+
+    .hero{
+      position:relative;
+      min-height:520px;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      background:
+        linear-gradient(120deg, rgba(12,25,31,.74), rgba(12,29,36,.52)),
+        url("images/hero.png") center/cover no-repeat;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at top right, rgba(199,166,106,.18), transparent 28%);
+    }
+    .hero-inner{
+      position:relative;
+      z-index:1;
+      width:min(var(--container), calc(100% - 32px));
+      display:grid;
+      grid-template-columns:1.5fr .7fr;
+      align-items:center;
+      gap:38px;
+      padding:100px 0 72px;
+    }
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:18px;
+      padding:7px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      color:#edf5fb;
+      font-size:.66rem;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    h1,h2,h3{
+      margin:0 0 12px;
+      font-family:var(--heading);
+      font-weight:500;
+      line-height:1;
+      letter-spacing:-.03em;
+      color:var(--navy);
+    }
+    .hero h1{
+      max-width:640px;
+      font-size:clamp(2.8rem,4vw,5rem);
+      color:#fff;
+      text-shadow:0 14px 30px rgba(0,0,0,.18);
+    }
+    .hero p{
+      margin:0;
+      max-width:680px;
+      color:rgba(255,255,255,.85);
+      font-size:1rem;
+    }
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:13px 18px;
+      border-radius:12px;
+      font-weight:700;
+      transition:transform .2s ease,box-shadow .2s ease;
+    }
+    .btn:hover,
+    .btn:focus-visible{
+      transform:translateY(-1px);
+      outline:none;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,var(--gold),#b98d4d);
+      color:var(--navy);
+      box-shadow:0 18px 28px rgba(199,166,106,.22);
+    }
+    .btn-secondary{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.18);
+      color:#fff;
+    }
+
+    .hero-card{
+      justify-self:end;
+      width:min(100%,340px);
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:22px;
+      padding:22px 20px;
+      box-shadow:0 18px 36px rgba(0,0,0,.12);
+      backdrop-filter:blur(10px);
+    }
+    .hero-card .label{
+      color:rgba(255,255,255,.72);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.62rem;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+    .hero-card h2{
+      font-size:clamp(1.65rem, 2vw, 2.2rem);
+      color:#fff;
+      margin-bottom:14px;
+    }
+    .hero-card ul{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:grid;
+      gap:10px;
+    }
+    .hero-card li{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:rgba(255,255,255,.9);
+      font-size:.95rem;
+    }
+    .dot{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:linear-gradient(180deg,#f0d79d,#d7a95f);
+      box-shadow:0 0 0 6px rgba(199,166,106,.1);
+      flex-shrink:0;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:16px;
+      width:min(var(--container), calc(100% - 32px));
+      margin:-34px auto 0;
+      position:relative;
+      z-index:2;
+    }
+    .stat{
+      background:rgba(255,255,255,.9);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      padding:18px 14px;
+      text-align:center;
+    }
+    .stat strong{
+      display:block;
+      font-family:var(--heading);
+      font-size:clamp(1.8rem,2.5vw,2.8rem);
+      color:var(--navy);
+      line-height:1;
+      margin-bottom:8px;
+    }
+    .stat span{
+      color:var(--muted);
+      font-size:.77rem;
+      font-weight:700;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+    }
+
+    main{
+      padding:62px 0 80px;
+    }
+    section{
+      margin-top:56px;
+      scroll-margin-top:90px;
+    }
+    .intro{
+      max-width:780px;
+      margin:0 auto 20px;
+      text-align:center;
+    }
+    .intro h2{
+      font-size:clamp(2.3rem,3vw,3.5rem);
+      margin-bottom:8px;
+    }
+    .intro p{
+      margin:0;
+      color:var(--muted);
+      font-size:1rem;
+    }
+
+    .panel{
+      background:rgba(255,255,255,.72);
+      border:1px solid var(--line);
+      border-radius:var(--radius-xl);
+      box-shadow:0 14px 30px rgba(17,33,39,.04);
+      padding:22px;
+    }
+    .highlight{
+      margin:0 0 18px;
+      padding:16px 18px;
+      border-radius:14px;
+      text-align:center;
+      background:rgba(199,166,106,.08);
+      border:1px solid rgba(199,166,106,.18);
+      color:var(--navy);
+      font-weight:700;
+      font-size:.95rem;
+    }
+
+    .card-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:20px;
+    }
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:24px;
+      box-shadow:0 10px 28px rgba(17,33,39,.03);
+    }
+    .card h3{
+      font-size:clamp(1.7rem,2vw,2.2rem);
+      color:var(--navy);
+      margin-bottom:10px;
+    }
+    .card p,
+    .card li,
+    .faq-item p,
+    .contact-box p{
+      color:var(--muted);
+      margin:0;
+    }
+    .card ul{
+      margin:14px 0 0;
+      padding-left:18px;
+      display:grid;
+      gap:8px;
+    }
+
+    .badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:12px 0 14px;
+    }
+    .badge{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(23,58,77,.1);
+      background:rgba(23,58,77,.03);
+      color:var(--navy);
+      font-size:.68rem;
+      font-weight:700;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    .gallery-card{
+      position:relative;
+      display:block;
+      width:100%;
+      margin-top:18px;
+      padding:0;
+      border:none;
+      background:none;
+      overflow:hidden;
+      border-radius:18px;
+      cursor:pointer;
+      border:1px solid var(--line);
+      box-shadow:0 16px 28px rgba(16,42,56,.08);
+      transition:transform .2s ease,box-shadow .2s ease;
+    }
+    .gallery-card:hover,
+    .gallery-card:focus-visible{
+      transform:translateY(-2px);
+      box-shadow:0 20px 32px rgba(16,42,56,.1);
+      outline:none;
+    }
+    .gallery-card img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+      display:block;
+    }
+    .gallery-card__overlay{
+      position:absolute;
+      inset:auto 0 0 0;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      padding:14px 16px;
+      background:linear-gradient(180deg, rgba(10,20,24,0), rgba(10,20,24,.64) 55%, rgba(10,20,24,.82));
+      color:#fff;
+    }
+    .gallery-card__overlay strong{
+      display:block;
+      font-size:clamp(1.4rem,2vw,1.8rem);
+      font-family:var(--heading);
+      line-height:1;
+    }
+    .gallery-card__overlay span{
+      font-size:.7rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      opacity:.9;
+    }
+
+    .faq{
+      display:grid;
+      gap:16px;
+    }
+    .faq-item{
+      background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(247,243,238,.8));
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:20px 22px;
+      box-shadow:0 10px 20px rgba(15,42,56,.02);
+    }
+    .faq-item h3{
+      font-size:clamp(1.5rem,2vw,2rem);
+      color:var(--navy);
+      margin-bottom:7px;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:20px;
+    }
+    .contact-box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+    .contact-box h3{
+      font-size:clamp(2rem,2.8vw,2.6rem);
+      color:var(--navy);
+      margin-bottom:10px;
+    }
+
+    .contact-list{
+      display:grid;
+      gap:12px;
+      margin-top:18px;
+    }
+    .contact-item{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+    }
+    .contact-item strong{
+      display:block;
+      color:var(--navy);
+      margin-bottom:2px;
+      font-size:.92rem;
+    }
+    .contact-item a{
+      color:var(--navy-2);
+      font-weight:600;
+      overflow-wrap:anywhere;
+    }
+
+    .map{
+      width:100%;
+      min-height:280px;
+      border:0;
+      border-radius:16px;
+      margin-top:12px;
+      box-shadow:0 12px 24px rgba(16,42,56,.04);
+    }
+
+    .lightbox{
+      position:fixed;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px 18px;
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none;
+      transition:opacity .2s ease,visibility .2s ease;
+      z-index:2000;
+    }
+    .lightbox.open{
+      opacity:1;
+      visibility:visible;
+      pointer-events:auto;
+    }
+    .lightbox-backdrop{
+      position:absolute;
+      inset:0;
+      background:rgba(12,18,22,.7);
+      backdrop-filter:blur(4px);
+    }
+    .lightbox-dialog{
+      position:relative;
+      z-index:1;
+      width:min(920px,100%);
+      background:#fff;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:0 26px 80px rgba(0,0,0,.2);
+      overflow:hidden;
+    }
+    .lightbox-title{
+      margin:0;
+      padding:18px 22px 0;
+      font-size:clamp(1.8rem,3vw,2.5rem);
+      color:var(--navy);
+    }
+    .lightbox-close{
+      position:absolute;
+      top:12px;
+      right:12px;
+      width:38px;
+      height:38px;
+      border:none;
+      border-radius:50%;
+      background:rgba(21,44,57,.06);
+      color:var(--navy);
+      font-size:1.8rem;
+      line-height:1;
+      cursor:pointer;
+    }
+    .lightbox-stage{
+      position:relative;
+      display:grid;
+      place-items:center;
+      padding:16px 58px 20px;
+      background:linear-gradient(180deg, rgba(247,245,241,.9), rgba(255,255,255,1));
+    }
+    .lightbox-stage img{
+      width:100%;
+      max-height:70vh;
+      object-fit:contain;
+      border-radius:16px;
+      background:#f7f5f1;
+    }
+    .lightbox-nav{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:40px;
+      height:40px;
+      border:none;
+      border-radius:50%;
+      background:rgba(21,44,57,.88);
+      color:#fff;
+      font-size:1.8rem;
+      line-height:1;
+      cursor:pointer;
+      box-shadow:0 12px 18px rgba(15,42,56,.12);
+    }
+    .lightbox-nav[data-direction="prev"]{left:12px}
+    .lightbox-nav[data-direction="next"]{right:12px}
+    .lightbox-caption{
+      width:100%;
+      margin:0;
+      padding:8px 0 0;
+      text-align:center;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    footer{
+      background:linear-gradient(135deg,#152c39 0%, #0f212d 100%);
+      color:rgba(255,255,255,.9);
+      padding:26px 0 32px;
+      margin-top:58px;
+    }
+    .footer-inner{
+      width:min(var(--container), calc(100% - 32px));
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+    .footer-inner a{
+      color:#e5f0f8;
+      font-weight:600;
+    }
+
+    @media (max-width: 980px){
+      .hero-inner,
+      .card-grid,
+      .contact-grid,
+      .gallery-grid,
+      .stats{
+        grid-template-columns:1fr;
+      }
+      .hero-inner{
+        padding-top:110px;
+      }
+      .hero-card{
+        justify-self:start;
+      }
+      .topbar nav{
+        justify-content:flex-start;
+      }
+    }
+
+    @media (max-width: 640px){
+      .lang-switcher{
+        position:relative;
+        top:auto;
+        left:auto;
+        width:max-content;
+        margin:10px auto;
+        padding:5px;
+      }
+      .hero{
+        min-height:440px;
+      }
+      .cta-row{
+        flex-direction:column;
+        align-items:stretch;
+      }
+      .btn{
+        width:100%;
+      }
+      .topbar nav{
+        gap:4px;
+        padding:8px 0;
+      }
+      .panel,.card,.contact-box{
+        padding:18px;
+      }
+      .gallery-card img{
+        height:220px;
+      }
+      .lightbox-stage{
+        padding-inline:48px;
+      }
+      .lightbox-nav{
+        width:32px;
+        height:32px;
+        font-size:1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="lang-switcher" aria-label="Language switcher">
+    <a href="index.html" aria-label="Slovenščina" title="Slovenščina">
+      <img src="https://flagcdn.com/w40/si.png" alt="" />
+    </a>
+    <a href="index_en.html" aria-current="page" aria-label="English" title="English">
+      <img src="https://flagcdn.com/w40/gb.png" alt="" />
+    </a>
+    <a href="index_de.html" aria-label="Deutsch" title="Deutsch">
+      <img src="https://flagcdn.com/w40/de.png" alt="" />
+    </a>
+    <a href="index_it.html*
+
