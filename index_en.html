@@ -641,6 +641,7 @@
         border: 1px solid rgba(255, 255, 255, 0.12);
         box-shadow: 0 26px 80px rgba(0, 0, 0, 0.2);
         overflow: hidden;
+        outline: none;
       }
 
       .lightbox-title {
@@ -648,6 +649,11 @@
         padding: 18px 22px 0;
         font-size: clamp(1.8rem, 3vw, 2.5rem);
         color: var(--navy);
+      }
+
+      .lightbox-close,
+      .lightbox-nav {
+        z-index: 2;
       }
 
       .lightbox-close {
@@ -760,8 +766,11 @@
 
       @media (max-width: 640px) {
         .lang-switcher {
-          top: 10px;
-          left: 10px;
+          position: relative;
+          top: auto;
+          left: auto;
+          width: max-content;
+          margin: 10px auto;
           padding: 5px;
         }
 
@@ -1169,12 +1178,26 @@
       >
         <h2 class="lightbox-title" id="lightbox-title">Photo gallery</h2>
         <button class="lightbox-close" type="button" aria-label="Close gallery">×</button>
-        <button class="lightbox-nav" type="button" data-direction="prev" aria-label="Previous photo">‹</button>
+        <button
+          class="lightbox-nav"
+          type="button"
+          data-direction="prev"
+          aria-label="Previous photo"
+        >
+          ‹
+        </button>
         <div class="lightbox-stage">
           <img id="lightbox-image" src="" alt="" loading="eager" />
           <p class="lightbox-caption" id="lightbox-caption" aria-live="polite"></p>
         </div>
-        <button class="lightbox-nav" type="button" data-direction="next" aria-label="Next photo">›</button>
+        <button
+          class="lightbox-nav"
+          type="button"
+          data-direction="next"
+          aria-label="Next photo"
+        >
+          ›
+        </button>
       </div>
     </div>
 
@@ -1222,21 +1245,34 @@
       const triggers = document.querySelectorAll(".gallery-trigger");
       let currentSet = null;
       let currentIndex = 0;
+      let previouslyFocusedElement = null;
 
       function openLightbox(key, index = 0) {
         if (!gallerySets[key]) return;
+
+        previouslyFocusedElement = document.activeElement;
         currentSet = key;
         currentIndex = index;
         renderLightbox();
-        lightbox.classList.add("open");
+
+        lightbox.removeAttribute("inert");
         lightbox.setAttribute("aria-hidden", "false");
+        lightbox.classList.add("open");
         document.body.style.overflow = "hidden";
+
+        const dialog = lightbox.querySelector(".lightbox-dialog");
+        dialog.focus();
       }
 
       function closeLightbox() {
         lightbox.classList.remove("open");
         lightbox.setAttribute("aria-hidden", "true");
+        lightbox.setAttribute("inert", "");
         document.body.style.overflow = "";
+
+        if (previouslyFocusedElement) {
+          previouslyFocusedElement.focus();
+        }
       }
 
       function renderLightbox() {
