@@ -1,1000 +1,883 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#102a38" />
-    <title>Villa Mare – Appartamenti Olive & Lavender a Karigador, Istria</title>
-    <meta
-      name="description"
-      content="Scopri gli appartamenti Olive e Lavender a Karigador, in Istria, a circa 200 m dalla spiaggia. Esplora attrezzature, parcheggio e foto e contattaci per verificare la disponibilità."
-    />
-    <link rel="canonical" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_it.html" />
-    <link rel="alternate" hreflang="sl" href="https://gorazdvrabic-sudo.github.io/username.github.io/" />
-    <link rel="alternate" hreflang="en" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_en.html" />
-    <link rel="alternate" hreflang="de" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_de.html" />
-    <link rel="alternate" hreflang="it" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_it.html" />
-    <link rel="alternate" hreflang="x-default" href="https://gorazdvrabic-sudo.github.io/username.github.io/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --navy: #102a38;
-        --navy-2: #173a4d;
-        --gold: #c9a970;
-        --gold-soft: #f4e6c0;
-        --ivory: #f7f3ee;
-        --stone: #efeae2;
-        --ink: #1d2a32;
-        --muted: #536d78;
-        --white: #ffffff;
-        --line: rgba(16, 42, 56, 0.14);
-        --shadow: 0 24px 60px rgba(8, 18, 25, 0.12);
-        --radius-xl: 28px;
-        --radius-lg: 18px;
-        --radius-md: 14px;
-        --container: 1180px;
-        --heading: "Cormorant Garamond", "Georgia", serif;
-        --body: "Inter", "Segoe UI", sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 90px;
-      }
-
-      body {
-        margin: 0;
-        background: linear-gradient(180deg, #f5f1ea, #f0ece6);
-        color: var(--ink);
-        font-family: var(--body);
-        line-height: 1.6;
-      }
-
-      img {
-        max-width: 100%;
-        display: block;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      button {
-        font: inherit;
-      }
-
-      :focus-visible {
-        outline: 3px solid #e7b958;
-        outline-offset: 3px;
-      }
-
-      .container {
-        width: min(var(--container), calc(100% - 32px));
-        margin-inline: auto;
-      }
-
-      .skip-link {
-        position: absolute;
-        left: -9999px;
-        top: auto;
-      }
-
-      .skip-link:focus {
-        left: 16px;
-        top: 12px;
-        z-index: 2000;
-        background: #fff;
-        padding: 10px 14px;
-        border-radius: 999px;
-        box-shadow: var(--shadow);
-      }
-
-      .lang-switcher {
-        position: fixed;
-        top: 16px;
-        left: 16px;
-        z-index: 60;
-        display: flex;
-        gap: 6px;
-        padding: 6px;
-        border-radius: 999px;
-        background: rgba(16, 42, 56, 0.78);
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-      }
-
-      .lang-switcher a {
-        display: grid;
-        place-items: center;
-        width: 42px;
-        height: 42px;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid transparent;
-        transition: transform 0.2s ease, border-color 0.2s ease;
-      }
-
-      .lang-switcher a:hover,
-      .lang-switcher a:focus-visible {
-        transform: translateY(-1px);
-        border-color: rgba(255, 255, 255, 0.9);
-        outline: none;
-      }
-
-      .lang-switcher a[aria-current="page"] {
-        background: rgba(255, 255, 255, 0.12);
-        border-color: rgba(255, 255, 255, 0.9);
-      }
-
-      .lang-switcher img {
-        display: block;
-        width: 24px;
-        height: 18px;
-        object-fit: cover;
-        border-radius: 2px;
-      }
-
-      .topbar {
-        position: sticky;
-        top: 0;
-        z-index: 30;
-        background: rgba(16, 42, 56, 0.94);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(12px);
-      }
-
-      .topbar nav {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 6px;
-        padding: 12px 0;
-      }
-
-      .topbar a {
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 0.82rem;
-        font-weight: 600;
-        letter-spacing: 0.02em;
-        padding: 8px 12px;
-        border-radius: 999px;
-        transition: background 0.2s ease, color 0.2s ease;
-      }
-
-      .topbar a:hover,
-      .topbar a:focus-visible {
-        background: rgba(255, 255, 255, 0.06);
-        outline: none;
-      }
-
-      .hero {
-        position: relative;
-        min-height: 520px;
-        display: grid;
-        place-items: center;
-        overflow: hidden;
-        background:
-          linear-gradient(120deg, rgba(12, 25, 31, 0.74), rgba(12, 29, 36, 0.52)),
-          url("images/hero.png") center/cover no-repeat;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      }
-
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(circle at top right, rgba(199, 166, 106, 0.18), transparent 28%);
-      }
-
-      .hero-inner {
-        position: relative;
-        z-index: 1;
-        width: min(var(--container), calc(100% - 32px));
-        display: grid;
-        grid-template-columns: 1.5fr 0.7fr;
-        align-items: center;
-        gap: 38px;
-        padding: 100px 0 72px;
-      }
-
-      .eyebrow {
-        display: inline-block;
-        margin-bottom: 18px;
-        padding: 7px 12px;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        color: #edf5fb;
-        font-size: 0.66rem;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
-
-      h1,
-      h2,
-      h3 {
-        margin: 0 0 12px;
-        font-family: var(--heading);
-        font-weight: 500;
-        line-height: 1;
-        letter-spacing: -0.03em;
-        color: var(--navy);
-      }
-
-      .hero h1 {
-        max-width: 640px;
-        font-size: clamp(2.8rem, 4vw, 5rem);
-        color: #fff;
-        text-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
-      }
-
-      .hero p {
-        margin: 0;
-        max-width: 680px;
-        color: rgba(255, 255, 255, 0.85);
-        font-size: 1rem;
-      }
-
-      .cta-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 24px;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 13px 18px;
-        border-radius: 12px;
-        font-weight: 700;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .btn:hover,
-      .btn:focus-visible {
-        transform: translateY(-1px);
-        outline: none;
-      }
-
-      .btn-primary {
-        background: linear-gradient(135deg, var(--gold), #b98d4d);
-        color: var(--navy);
-        box-shadow: 0 18px 28px rgba(199, 166, 106, 0.22);
-      }
-
-      .btn-secondary {
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        color: #fff;
-      }
-
-      .hero-card {
-        justify-self: end;
-        width: min(100%, 340px);
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 22px;
-        padding: 22px 20px;
-        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
-        backdrop-filter: blur(10px);
-      }
-
-      .hero-card .label {
-        color: rgba(255, 255, 255, 0.72);
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        font-size: 0.62rem;
-        font-weight: 700;
-        margin-bottom: 10px;
-      }
-
-      .hero-card h2 {
-        font-size: clamp(1.65rem, 2vw, 2.2rem);
-        color: #fff;
-        margin-bottom: 14px;
-      }
-
-      .hero-card ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: grid;
-        gap: 10px;
-      }
-
-      .hero-card li {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 0.95rem;
-      }
-
-      .dot {
-        width: 9px;
-        height: 9px;
-        border-radius: 50%;
-        background: linear-gradient(180deg, #f0d79d, #d7a95f);
-        box-shadow: 0 0 0 6px rgba(199, 166, 106, 0.1);
-        flex-shrink: 0;
-      }
-
-      .stats {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 16px;
-        width: min(var(--container), calc(100% - 32px));
-        margin: -34px auto 0;
-        position: relative;
-        z-index: 2;
-      }
-
-      .stat {
-        background: rgba(255, 255, 255, 0.9);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        box-shadow: var(--shadow);
-        padding: 18px 14px;
-        text-align: center;
-      }
-
-      .stat strong {
-        display: block;
-        font-family: var(--heading);
-        font-size: clamp(1.8rem, 2.5vw, 2.8rem);
-        color: var(--navy);
-        line-height: 1;
-        margin-bottom: 8px;
-      }
-
-      .stat span {
-        color: var(--muted);
-        font-size: 0.77rem;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-      }
-
-      main {
-        padding: 62px 0 80px;
-      }
-
-      section {
-        margin-top: 56px;
-        scroll-margin-top: 90px;
-      }
-
-      .intro {
-        max-width: 780px;
-        margin: 0 auto 20px;
-        text-align: center;
-      }
-
-      .intro h2 {
-        font-size: clamp(2.3rem, 3vw, 3.5rem);
-        margin-bottom: 8px;
-      }
-
-      .intro p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 1rem;
-      }
-
-      .panel {
-        background: rgba(255, 255, 255, 0.72);
-        border: 1px solid var(--line);
-        border-radius: var(--radius-xl);
-        box-shadow: 0 14px 30px rgba(17, 33, 39, 0.04);
-        padding: 22px;
-      }
-
-      .highlight {
-        margin: 0 0 18px;
-        padding: 16px 18px;
-        border-radius: 14px;
-        text-align: center;
-        background: rgba(199, 166, 106, 0.08);
-        border: 1px solid rgba(199, 166, 106, 0.18);
-        color: var(--navy);
-        font-weight: 700;
-        font-size: 0.95rem;
-      }
-
-      .card-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 20px;
-      }
-
-      .card {
-        background: #fff;
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        padding: 24px;
-        box-shadow: 0 10px 28px rgba(17, 33, 39, 0.03);
-      }
-
-      .card h3 {
-        font-size: clamp(1.7rem, 2vw, 2.2rem);
-        color: var(--navy);
-        margin-bottom: 10px;
-      }
-
-      .card p,
-      .card li,
-      .faq-item p,
-      .contact-box p {
-        color: var(--muted);
-        margin: 0;
-      }
-
-      .card ul {
-        margin: 14px 0 0;
-        padding-left: 18px;
-        display: grid;
-        gap: 8px;
-      }
-
-      .badges {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin: 12px 0 14px;
-      }
-
-      .badge {
-        display: inline-block;
-        padding: 6px 10px;
-        border-radius: 999px;
-        border: 1px solid rgba(23, 58, 77, 0.1);
-        background: rgba(23, 58, 77, 0.03);
-        color: var(--navy);
-        font-size: 0.68rem;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-      }
-
-      .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-        margin-top: 20px;
-      }
-
-      .gallery-card {
-        position: relative;
-        display: block;
-        width: 100%;
-        padding: 0;
-        border: none;
-        background: none;
-        overflow: hidden;
-        border-radius: 18px;
-        cursor: pointer;
-        border: 1px solid var(--line);
-        box-shadow: 0 16px 28px rgba(16, 42, 56, 0.08);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .gallery-card:hover,
-      .gallery-card:focus-visible {
-        transform: translateY(-2px);
-        box-shadow: 0 20px 32px rgba(16, 42, 56, 0.1);
-        outline: none;
-      }
-
-      .gallery-card img {
-        width: 100%;
-        height: 330px;
-        object-fit: cover;
-        display: block;
-      }
-
-      .gallery-card__overlay {
-        position: absolute;
-        inset: auto 0 0 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 12px;
-        padding: 14px 16px;
-        background: linear-gradient(180deg, rgba(10, 20, 24, 0), rgba(10, 20, 24, 0.64) 55%, rgba(10, 20, 24, 0.82));
-        color: #fff;
-      }
-
-      .gallery-card__overlay strong {
-        display: block;
-        font-size: clamp(1.4rem, 2vw, 1.8rem);
-        font-family: var(--heading);
-        line-height: 1;
-      }
-
-      .gallery-card__overlay span {
-        font-size: 0.7rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        opacity: 0.9;
-      }
-
-      .faq {
-        display: grid;
-        gap: 16px;
-      }
-
-      .faq-item {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 243, 238, 0.8));
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 20px 22px;
-        box-shadow: 0 10px 20px rgba(15, 42, 56, 0.02);
-      }
-
-      .faq-item h3 {
-        font-size: clamp(1.5rem, 2vw, 2rem);
-        color: var(--navy);
-        margin-bottom: 7px;
-      }
-
-      .contact-grid {
-        display: grid;
-        grid-template-columns: 1.05fr 0.95fr;
-        gap: 20px;
-      }
-
-      .contact-box {
-        background: #fff;
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        padding: 22px;
-        box-shadow: var(--shadow);
-      }
-
-      .contact-box h3 {
-        font-size: clamp(2rem, 2.8vw, 2.6rem);
-        color: var(--navy);
-        margin-bottom: 10px;
-      }
-
-      .contact-list {
-        display: grid;
-        gap: 12px;
-        margin-top: 18px;
-      }
-
-      .contact-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-      }
-
-      .contact-item strong {
-        display: block;
-        color: var(--navy);
-        margin-bottom: 2px;
-        font-size: 0.92rem;
-      }
-
-      .contact-item a {
-        color: var(--navy-2);
-        font-weight: 600;
-      }
-
-      .map {
-        width: 100%;
-        min-height: 280px;
-        border: 0;
-        border-radius: 16px;
-        margin-top: 12px;
-        box-shadow: 0 12px 24px rgba(16, 42, 56, 0.04);
-      }
-
-      .lightbox {
-        position: fixed;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 24px 18px;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transition: opacity 0.2s ease, visibility 0.2s ease;
-        z-index: 2000;
-      }
-
-      .lightbox.open {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-      }
-
-      .lightbox-backdrop {
-        position: absolute;
-        inset: 0;
-        background: rgba(12, 18, 22, 0.7);
-        backdrop-filter: blur(4px);
-      }
-
-      .lightbox-dialog {
-        position: relative;
-        z-index: 1;
-        width: min(920px, 100%);
-        background: #fff;
-        border-radius: 22px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        box-shadow: 0 26px 80px rgba(0, 0, 0, 0.2);
-        overflow: hidden;
-      }
-
-      .lightbox-title {
-        margin: 0;
-        padding: 18px 22px 0;
-        font-size: clamp(1.8rem, 3vw, 2.5rem);
-        color: var(--navy);
-      }
-
-      .lightbox-close {
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        width: 38px;
-        height: 38px;
-        border: none;
-        border-radius: 50%;
-        background: rgba(21, 44, 57, 0.06);
-        color: var(--navy);
-        font-size: 1.8rem;
-        line-height: 1;
-        cursor: pointer;
-      }
-
-      .lightbox-stage {
-        position: relative;
-        display: grid;
-        place-items: center;
-        padding: 16px 58px 20px;
-        background: linear-gradient(180deg, rgba(247, 245, 241, 0.9), rgba(255, 255, 255, 1));
-      }
-
-      .lightbox-stage img {
-        width: 100%;
-        max-height: 70vh;
-        object-fit: contain;
-        border-radius: 16px;
-        background: #f7f5f1;
-      }
-
-      .lightbox-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 40px;
-        height: 40px;
-        border: none;
-        border-radius: 50%;
-        background: rgba(21, 44, 57, 0.88);
-        color: #fff;
-        font-size: 1.8rem;
-        line-height: 1;
-        cursor: pointer;
-        box-shadow: 0 12px 18px rgba(15, 42, 56, 0.12);
-      }
-
-      .lightbox-nav[data-direction="prev"] {
-        left: 12px;
-      }
-
-      .lightbox-nav[data-direction="next"] {
-        right: 12px;
-      }
-
-      .lightbox-caption {
-        width: 100%;
-        margin: 0;
-        padding: 8px 0 0;
-        text-align: center;
-        color: var(--muted);
-        font-weight: 600;
-      }
-
-      footer {
-        background: linear-gradient(135deg, #152c39 0%, #0f212d 100%);
-        color: rgba(255, 255, 255, 0.9);
-        padding: 26px 0 32px;
-        margin-top: 58px;
-      }
-
-      .footer-inner {
-        width: min(var(--container), calc(100% - 32px));
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-
-      .footer-inner a {
-        color: #e5f0f8;
-        font-weight: 600;
-      }
-
-      @media (max-width: 980px) {
-        .hero-inner,
-        .card-grid,
-        .contact-grid,
-        .gallery-grid,
-        .stats {
-          grid-template-columns: 1fr;
-        }
-
-        .hero-inner {
-          padding-top: 110px;
-        }
-
-        .hero-card {
-          justify-self: start;
-        }
-
-        .topbar nav {
-          justify-content: flex-start;
-        }
-      }
-
-      @media (max-width: 640px) {
-        .lang-switcher {
-          top: 10px;
-          left: 10px;
-          padding: 5px;
-        }
-
-        .hero {
-          min-height: 440px;
-        }
-
-        .cta-row {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        .btn {
-          width: 100%;
-        }
-
-        .topbar nav {
-          gap: 4px;
-          padding: 8px 0;
-        }
-
-        .panel,
-        .card,
-        .contact-box {
-          padding: 18px;
-        }
-
-        .gallery-card img {
-          height: 220px;
-        }
-
-        .lightbox-stage {
-          padding-inline: 48px;
-        }
-
-        .lightbox-nav {
-          width: 32px;
-          height: 32px;
-          font-size: 1.5rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Salta al contenuto</a>
-
-    <nav class="lang-switcher" aria-label="Selezione lingua">
-      <a href="index.html" aria-label="Slovenščina" title="Slovenščina">
-        <img src="https://flagcdn.com/w40/si.png" alt="" />
-      </a>
-      <a href="index_en.html" aria-label="English" title="English">
-        <img src="https://flagcdn.com/w40/gb.png" alt="" />
-      </a>
-      <a href="index_de.html" aria-label="Deutsch" title="Deutsch">
-        <img src="https://flagcdn.com/w40/de.png" alt="" />
-      </a>
-      <a href="index_it.html" aria-current="page" aria-label="Italiano" title="Italiano">
-        <img src="https://flagcdn.com/w40/it.png" alt="" />
-      </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#102a38" />
+  <title>Villa Mare – Appartamenti Olive e Lavender a Karigador, Istria</title>
+  <meta
+    name="description"
+    content="Scopri gli appartamenti Olive e Lavender a Karigador, in Istria, a circa 200 m dalla spiaggia. Esplora dotazioni, parcheggio e foto e contattaci per maggiori informazioni."
+  />
+
+  <link rel="canonical" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_it.html" />
+  <link rel="alternate" hreflang="sl" href="https://gorazdvrabic-sudo.github.io/username.github.io/" />
+  <link rel="alternate" hreflang="en" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_en.html" />
+  <link rel="alternate" hreflang="de" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_de.html" />
+  <link rel="alternate" hreflang="it" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_it.html" />
+  <link rel="alternate" hreflang="x-default" href="https://gorazdvrabic-sudo.github.io/username.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:site_name" content="Villa Mare" />
+  <meta property="og:title" content="Villa Mare – Appartamenti Olive e Lavender a Karigador, Istria" />
+  <meta
+    property="og:description"
+    content="Appartamenti a Karigador, in Istria, a circa 200 m dalla spiaggia. Esplora dotazioni e foto e contattaci per disponibilità."
+  />
+  <meta property="og:url" content="https://gorazdvrabic-sudo.github.io/username.github.io/index_it.html" />
+  <meta property="og:image" content="https://gorazdvrabic-sudo.github.io/username.github.io/images/hero.png" />
+  <meta property="og:image:alt" content="Villa Mare a Karigador" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Villa Mare – Appartamenti Olive e Lavender a Karigador" />
+  <meta
+    name="twitter:description"
+    content="Appartamenti in Istria, a circa 200 m dalla spiaggia. Esplora dotazioni e foto."
+  />
+  <meta name="twitter:image" content="https://gorazdvrabic-sudo.github.io/username.github.io/images/hero.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --navy:#102a38;
+      --navy-2:#173a4d;
+      --gold:#c9a970;
+      --gold-soft:#f4e6c0;
+      --ivory:#f7f3ee;
+      --stone:#efeae2;
+      --ink:#1d2a32;
+      --muted:#536d78;
+      --white:#ffffff;
+      --line:rgba(16,42,56,.14);
+      --shadow:0 24px 60px rgba(8,18,25,.12);
+      --radius-xl:28px;
+      --radius-lg:18px;
+      --radius-md:14px;
+      --container:1180px;
+      --heading:"Cormorant Garamond","Georgia",serif;
+      --body:"Inter","Segoe UI",sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#f5f1ea,#f0ece6);
+      color:var(--ink);
+      font-family:var(--body);
+      line-height:1.6;
+    }
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit}
+    :focus-visible{
+      outline:3px solid #e7b958;
+      outline-offset:3px;
+    }
+    .container{
+      width:min(var(--container), calc(100% - 32px));
+      margin-inline:auto;
+    }
+    .skip-link{
+      position:absolute;
+      left:-9999px;
+      top:auto;
+    }
+    .skip-link:focus{
+      left:16px;
+      top:12px;
+      z-index:2000;
+      background:#fff;
+      padding:10px 14px;
+      border-radius:999px;
+      box-shadow:var(--shadow);
+    }
+
+    .lang-switcher{
+      position:fixed;
+      top:16px;
+      left:16px;
+      z-index:60;
+      display:flex;
+      gap:6px;
+      padding:6px;
+      border-radius:999px;
+      background:rgba(16,42,56,.78);
+      border:1px solid rgba(255,255,255,.16);
+      backdrop-filter:blur(10px);
+      box-shadow:0 10px 25px rgba(0,0,0,.12);
+    }
+    .lang-switcher a{
+      display:grid;
+      place-items:center;
+      width:42px;
+      height:42px;
+      border-radius:999px;
+      color:#fff;
+      font-weight:700;
+      font-size:1.2rem;
+      background:rgba(255,255,255,.06);
+      border:1px solid transparent;
+      transition:transform .2s ease,border-color .2s ease;
+    }
+    .lang-switcher a:hover,
+    .lang-switcher a:focus-visible{
+      transform:translateY(-1px);
+      border-color:rgba(255,255,255,.9);
+      outline:none;
+    }
+    .lang-switcher a[aria-current="page"]{
+      background:rgba(255,255,255,.12);
+      border-color:rgba(255,255,255,.9);
+    }
+    .lang-switcher img{
+      display:block;
+      width:24px;
+      height:18px;
+      object-fit:cover;
+      border-radius:2px;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:30;
+      background:rgba(16,42,56,.94);
+      border-bottom:1px solid rgba(255,255,255,.1);
+      backdrop-filter:blur(12px);
+    }
+    .topbar nav{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:6px;
+      padding:12px 0;
+    }
+    .topbar a{
+      color:rgba(255,255,255,.9);
+      font-size:.82rem;
+      font-weight:600;
+      letter-spacing:.02em;
+      padding:8px 12px;
+      border-radius:999px;
+      transition:background .2s ease,color .2s ease;
+    }
+    .topbar a:hover,
+    .topbar a:focus-visible{
+      background:rgba(255,255,255,.06);
+      outline:none;
+    }
+
+    .hero{
+      position:relative;
+      min-height:520px;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      background:
+        linear-gradient(120deg, rgba(12,25,31,.74), rgba(12,29,36,.52)),
+        url("images/hero.png") center/cover no-repeat;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at top right, rgba(199,166,106,.18), transparent 28%);
+    }
+    .hero-inner{
+      position:relative;
+      z-index:1;
+      width:min(var(--container), calc(100% - 32px));
+      display:grid;
+      grid-template-columns:1.5fr .7fr;
+      align-items:center;
+      gap:38px;
+      padding:100px 0 72px;
+    }
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:18px;
+      padding:7px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      color:#edf5fb;
+      font-size:.66rem;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    h1,h2,h3{
+      margin:0 0 12px;
+      font-family:var(--heading);
+      font-weight:500;
+      line-height:1;
+      letter-spacing:-.03em;
+      color:var(--navy);
+    }
+    .hero h1{
+      max-width:640px;
+      font-size:clamp(2.8rem,4vw,5rem);
+      color:#fff;
+      text-shadow:0 14px 30px rgba(0,0,0,.18);
+    }
+    .hero p{
+      margin:0;
+      max-width:680px;
+      color:rgba(255,255,255,.85);
+      font-size:1rem;
+    }
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:13px 18px;
+      border-radius:12px;
+      font-weight:700;
+      transition:transform .2s ease,box-shadow .2s ease;
+    }
+    .btn:hover,
+    .btn:focus-visible{
+      transform:translateY(-1px);
+      outline:none;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,var(--gold),#b98d4d);
+      color:var(--navy);
+      box-shadow:0 18px 28px rgba(199,166,106,.22);
+    }
+    .btn-secondary{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.18);
+      color:#fff;
+    }
+
+    .hero-card{
+      justify-self:end;
+      width:min(100%,340px);
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:22px;
+      padding:22px 20px;
+      box-shadow:0 18px 36px rgba(0,0,0,.12);
+      backdrop-filter:blur(10px);
+    }
+    .hero-card .label{
+      color:rgba(255,255,255,.72);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.62rem;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+    .hero-card h2{
+      font-size:clamp(1.65rem, 2vw, 2.2rem);
+      color:#fff;
+      margin-bottom:14px;
+    }
+    .hero-card ul{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:grid;
+      gap:10px;
+    }
+    .hero-card li{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:rgba(255,255,255,.9);
+      font-size:.95rem;
+    }
+    .dot{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:linear-gradient(180deg,#f0d79d,#d7a95f);
+      box-shadow:0 0 0 6px rgba(199,166,106,.1);
+      flex-shrink:0;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:16px;
+      width:min(var(--container), calc(100% - 32px));
+      margin:-34px auto 0;
+      position:relative;
+      z-index:2;
+    }
+    .stat{
+      background:rgba(255,255,255,.9);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      padding:18px 14px;
+      text-align:center;
+    }
+    .stat strong{
+      display:block;
+      font-family:var(--heading);
+      font-size:clamp(1.8rem,2.5vw,2.8rem);
+      color:var(--navy);
+      line-height:1;
+      margin-bottom:8px;
+    }
+    .stat span{
+      color:var(--muted);
+      font-size:.77rem;
+      font-weight:700;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+    }
+
+    main{
+      padding:62px 0 80px;
+    }
+    section{
+      margin-top:56px;
+      scroll-margin-top:90px;
+    }
+    .intro{
+      max-width:780px;
+      margin:0 auto 20px;
+      text-align:center;
+    }
+    .intro h2{
+      font-size:clamp(2.3rem,3vw,3.5rem);
+      margin-bottom:8px;
+    }
+    .intro p{
+      margin:0;
+      color:var(--muted);
+      font-size:1rem;
+    }
+
+    .panel{
+      background:rgba(255,255,255,.72);
+      border:1px solid var(--line);
+      border-radius:var(--radius-xl);
+      box-shadow:0 14px 30px rgba(17,33,39,.04);
+      padding:22px;
+    }
+    .highlight{
+      margin:0 0 18px;
+      padding:16px 18px;
+      border-radius:14px;
+      text-align:center;
+      background:rgba(199,166,106,.08);
+      border:1px solid rgba(199,166,106,.18);
+      color:var(--navy);
+      font-weight:700;
+      font-size:.95rem;
+    }
+
+    .card-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:20px;
+    }
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:24px;
+      box-shadow:0 10px 28px rgba(17,33,39,.03);
+    }
+    .card h3{
+      font-size:clamp(1.7rem,2vw,2.2rem);
+      color:var(--navy);
+      margin-bottom:10px;
+    }
+    .card p,
+    .card li,
+    .faq-item p,
+    .contact-box p{
+      color:var(--muted);
+      margin:0;
+    }
+    .card ul{
+      margin:14px 0 0;
+      padding-left:18px;
+      display:grid;
+      gap:8px;
+    }
+
+    .badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:12px 0 14px;
+    }
+    .badge{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(23,58,77,.1);
+      background:rgba(23,58,77,.03);
+      color:var(--navy);
+      font-size:.68rem;
+      font-weight:700;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    .gallery-card{
+      position:relative;
+      display:block;
+      width:100%;
+      margin-top:18px;
+      padding:0;
+      border:none;
+      background:none;
+      overflow:hidden;
+      border-radius:18px;
+      cursor:pointer;
+      border:1px solid var(--line);
+      box-shadow:0 16px 28px rgba(16,42,56,.08);
+      transition:transform .2s ease,box-shadow .2s ease;
+    }
+    .gallery-card:hover,
+    .gallery-card:focus-visible{
+      transform:translateY(-2px);
+      box-shadow:0 20px 32px rgba(16,42,56,.1);
+      outline:none;
+    }
+    .gallery-card img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+      display:block;
+    }
+    .gallery-card__overlay{
+      position:absolute;
+      inset:auto 0 0 0;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      padding:14px 16px;
+      background:linear-gradient(180deg, rgba(10,20,24,0), rgba(10,20,24,.64) 55%, rgba(10,20,24,.82));
+      color:#fff;
+    }
+    .gallery-card__overlay strong{
+      display:block;
+      font-size:clamp(1.4rem,2vw,1.8rem);
+      font-family:var(--heading);
+      line-height:1;
+    }
+    .gallery-card__overlay span{
+      font-size:.7rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      opacity:.9;
+    }
+
+    .faq{
+      display:grid;
+      gap:16px;
+    }
+    .faq-item{
+      background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(247,243,238,.8));
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:20px 22px;
+      box-shadow:0 10px 20px rgba(15,42,56,.02);
+    }
+    .faq-item h3{
+      font-size:clamp(1.5rem,2vw,2rem);
+      color:var(--navy);
+      margin-bottom:7px;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:20px;
+    }
+    .contact-box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+    .contact-box h3{
+      font-size:clamp(2rem,2.8vw,2.6rem);
+      color:var(--navy);
+      margin-bottom:10px;
+    }
+
+    .contact-list{
+      display:grid;
+      gap:12px;
+      margin-top:18px;
+    }
+    .contact-item{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+    }
+    .contact-item strong{
+      display:block;
+      color:var(--navy);
+      margin-bottom:2px;
+      font-size:.92rem;
+    }
+    .contact-item a{
+      color:var(--navy-2);
+      font-weight:600;
+      overflow-wrap:anywhere;
+    }
+
+    .map{
+      width:100%;
+      min-height:280px;
+      border:0;
+      border-radius:16px;
+      margin-top:12px;
+      box-shadow:0 12px 24px rgba(16,42,56,.04);
+    }
+
+    .lightbox{
+      position:fixed;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px 18px;
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none;
+      transition:opacity .2s ease,visibility .2s ease;
+      z-index:2000;
+    }
+    .lightbox.open{
+      opacity:1;
+      visibility:visible;
+      pointer-events:auto;
+    }
+    .lightbox-backdrop{
+      position:absolute;
+      inset:0;
+      background:rgba(12,18,22,.7);
+      backdrop-filter:blur(4px);
+    }
+    .lightbox-dialog{
+      position:relative;
+      z-index:1;
+      width:min(920px,100%);
+      background:#fff;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:0 26px 80px rgba(0,0,0,.2);
+      overflow:hidden;
+    }
+    .lightbox-title{
+      margin:0;
+      padding:18px 22px 0;
+      font-size:clamp(1.8rem,3vw,2.5rem);
+      color:var(--navy);
+    }
+    .lightbox-close{
+      position:absolute;
+      top:12px;
+      right:12px;
+      width:38px;
+      height:38px;
+      border:none;
+      border-radius:50%;
+      background:rgba(21,44,57,.06);
+      color:var(--navy);
+      font-size:1.8rem;
+      line-height:1;
+      cursor:pointer;
+    }
+    .lightbox-stage{
+      position:relative;
+      display:grid;
+      place-items:center;
+      padding:16px 58px 20px;
+      background:linear-gradient(180deg, rgba(247,245,241,.9), rgba(255,255,255,1));
+    }
+    .lightbox-stage img{
+      width:100%;
+      max-height:70vh;
+      object-fit:contain;
+      border-radius:16px;
+      background:#f7f5f1;
+    }
+    .lightbox-nav{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:40px;
+      height:40px;
+      border:none;
+      border-radius:50%;
+      background:rgba(21,44,57,.88);
+      color:#fff;
+      font-size:1.8rem;
+      line-height:1;
+      cursor:pointer;
+      box-shadow:0 12px 18px rgba(15,42,56,.12);
+    }
+    .lightbox-nav[data-direction="prev"]{left:12px}
+    .lightbox-nav[data-direction="next"]{right:12px}
+    .lightbox-caption{
+      width:100%;
+      margin:0;
+      padding:8px 0 0;
+      text-align:center;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    footer{
+      background:linear-gradient(135deg,#152c39 0%, #0f212d 100%);
+      color:rgba(255,255,255,.9);
+      padding:26px 0 32px;
+      margin-top:58px;
+    }
+    .footer-inner{
+      width:min(var(--container), calc(100% - 32px));
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+    .footer-inner a{
+      color:#e5f0f8;
+      font-weight:600;
+    }
+
+    @media (max-width: 980px){
+      .hero-inner,
+      .card-grid,
+      .contact-grid,
+      .gallery-grid,
+      .stats{
+        grid-template-columns:1fr;
+      }
+      .hero-inner{
+        padding-top:110px;
+      }
+      .hero-card{
+        justify-self:start;
+      }
+      .topbar nav{
+        justify-content:flex-start;
+      }
+    }
+
+    @media (max-width: 640px){
+      .lang-switcher{
+        position:relative;
+        top:auto;
+        left:auto;
+        width:max-content;
+        margin:10px auto;
+        padding:5px;
+      }
+      .hero{
+        min-height:440px;
+      }
+      .cta-row{
+        flex-direction:column;
+        align-items:stretch;
+      }
+      .btn{
+        width:100%;
+      }
+      .topbar nav{
+        gap:4px;
+        padding:8px 0;
+      }
+      .panel,.card,.contact-box{
+        padding:18px;
+      }
+      .gallery-card img{
+        height:220px;
+      }
+      .lightbox-stage{
+        padding-inline:48px;
+      }
+      .lightbox-nav{
+        width:32px;
+        height:32px;
+        font-size:1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Salta al contenuto</a>
+
+  <nav class="lang-switcher" aria-label="Selezione lingua">
+    <a href="index.html" aria-label="Slovenščina" title="Slovenščina">
+      <img src="https://flagcdn.com/w40/si.png" alt="" />
+    </a>
+    <a href="index_en.html" aria-label="English" title="English">
+      <img src="https://flagcdn.com/w40/gb.png" alt="" />
+    </a>
+    <a href="index_de.html" aria-label="Deutsch" title="Deutsch">
+      <img src="https://flagcdn.com/w40/de.png" alt="" />
+    </a>
+    <a href="index_it.html" aria-current="page" aria-label="Italiano" title="Italiano">
+      <img src="https://flagcdn.com/w40/it.png" alt="" />
+    </a>
+  </nav>
+
+  <div class="topbar">
+    <nav aria-label="Navigazione principale">
+      <a href="#services">Servizi</a>
+      <a href="#apartments">Appartamenti</a>
+      <a href="#parking">Parcheggio</a>
+      <a href="#location">Posizione</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contatti</a>
     </nav>
+  </div>
 
-    <div class="topbar">
-      <nav aria-label="Navigazione principale">
-        <a href="#services">Servizi</a>
-        <a href="#apartments">Appartamenti</a>
-        <a href="#parking">Parcheggio</a>
-        <a href="#location">Posizione</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contatti</a>
-      </nav>
-    </div>
-
-    <header class="hero">
-      <div class="hero-inner">
-        <div>
-          <p class="eyebrow">Istria • Karigador</p>
-          <h1>Vacanze al mare che non vorresti finissero.</h1>
-          <p>
-            Gli appartamenti Olive &amp; Lavender si trovano in una posizione tranquilla ed elegante,
-            a soli 200 metri dalla spiaggia. Goditi una vacanza rilassante al mare.
-          </p>
-          <div class="cta-row">
-            <a
-              class="btn btn-primary"
-              href="https://wa.me/38641776608?text=Ciao%2C%20vorrei%20controllare%20la%20disponibilità"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Verifica disponibilità</a
-            >
-            <a class="btn btn-secondary" href="#contact">Contattaci</a>
-          </div>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow">Istria • Karigador</p>
+        <h1>Vacanze al mare che non vorrai far finire.</h1>
+        <p>
+          Gli appartamenti Olive e Lavender si trovano in una zona tranquilla, a circa 200 metri
+          dalla spiaggia. Goditi una vacanza comoda e rilassante al mare.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://wa.me/38641776608?text=Ciao%2C%20vorrei%20controllare%20la%20disponibilit%C3%A0" target="_blank" rel="noopener noreferrer">
+            Controlla disponibilità
+          </a>
+          <a class="btn btn-secondary" href="#contact">Contattaci</a>
         </div>
-
-        <aside class="hero-card" aria-labelledby="hero-card-title">
-          <p class="label">Perché tornano</p>
-          <h2 id="hero-card-title">Tranquillità, eleganza e comfort</h2>
-          <ul>
-            <li><span class="dot" aria-hidden="true"></span>Posizione tranquilla e accogliente</li>
-            <li><span class="dot" aria-hidden="true"></span>Appartamenti per 2–4 persone</li>
-            <li><span class="dot" aria-hidden="true"></span>Parcheggio per auto e barche</li>
-            <li><span class="dot" aria-hidden="true"></span>Consigli personalizzati e attività</li>
-          </ul>
-        </aside>
       </div>
-    </header>
 
-    <div class="stats" aria-label="Informazioni principali">
-      <div class="stat"><strong>200 m</strong><span>dalla spiaggia</span></div>
-      <div class="stat"><strong>2</strong><span>appartamenti</span></div>
-      <div class="stat"><strong>fino a 4</strong><span>persone</span></div>
-      <div class="stat"><strong>24/7</strong><span>assistenza</span></div>
+      <aside class="hero-card" aria-labelledby="hero-card-title">
+        <p class="label">Perché i clienti tornano</p>
+        <h2 id="hero-card-title">Pace, eleganza e comfort</h2>
+        <ul>
+          <li><span class="dot" aria-hidden="true"></span>Posizione tranquilla e accogliente</li>
+          <li><span class="dot" aria-hidden="true"></span>Appartamenti per 2–4 persone</li>
+          <li><span class="dot" aria-hidden="true"></span>Parcheggio per auto e barche</li>
+          <li><span class="dot" aria-hidden="true"></span>Consigli e attività personalizzati</li>
+        </ul>
+      </aside>
     </div>
+  </header>
 
-    <main class="container" id="main">
-      <section id="services" aria-labelledby="services-title">
-        <div class="intro">
-          <h2 id="services-title">Trasforma le tue vacanze in un’esperienza indimenticabile</h2>
-          <p>
-            A Villa Mare uniamo comfort, ambiente tranquillo e attenzione personale, così puoi
-            goderti serate rilassanti, escursioni attive e momenti speciali al mare.
-          </p>
-        </div>
+  <div class="stats" aria-label="Informazioni principali">
+    <div class="stat"><strong>200 m</strong><span>alla spiaggia</span></div>
+    <div class="stat"><strong>2</strong><span>appartamenti</span></div>
+    <div class="stat"><strong>fino a 4</strong><span>persone</span></div>
+    <div class="stat"><strong>24/7</strong><span>supporto</span></div>
+  </div>
 
-        <div class="panel">
-          <p class="highlight">
-            Noleggio SUP, barche e biciclette • Escursioni in Istria e Brioni • Cene istriane
-            tradizionali • Esperienze personalizzate
-          </p>
+  <main class="container" id="main">
+    <section id="services" aria-labelledby="services-title">
+      <div class="intro">
+        <h2 id="services-title">Trasforma le tue vacanze in un’esperienza indimenticabile</h2>
+        <p>
+          A Villa Mare uniamo comfort, atmosfera tranquilla e attenzione personale così da poter
+          godere di serate rilassanti, escursioni attive e momenti speciali al mare.
+        </p>
+      </div>
 
-          <div class="card-grid">
-            <article class="card">
-              <h3>Vacanza attiva</h3>
-              <p>
-                Noleggio di SUP, barche e biciclette, oltre a escursioni organizzate in Istria e
-                Brioni per chi ama esplorare il territorio.
-              </p>
-            </article>
-
-            <article class="card">
-              <h3>Gusto locale</h3>
-              <p>
-                Cene istriane tradizionali con piatti tipici, momenti conviviali e un’atmosfera
-                calda e personale.
-              </p>
-            </article>
-
-            <article class="card">
-              <h3>Vacanze in famiglia</h3>
-              <p>
-                Posizione tranquilla e spazi ampi per famiglie che desiderano un soggiorno rilassato
-                e confortevole al mare.
-              </p>
-            </article>
-
-            <article class="card">
-              <h3>Assistenza personalizzata</h3>
-              <p>
-                Ti consigliamo attività e ti aiutiamo a organizzare il soggiorno in base ai tuoi
-                desideri.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="apartments" aria-labelledby="apartments-title">
-        <div class="intro">
-          <h2 id="apartments-title">Alloggio confortevole su misura</h2>
-        </div>
+      <div class="panel">
+        <p class="highlight">
+          Noleggio SUP, barche e bici • Escursioni in Istria e Brijuni • Cene tradizionali istriane • Esperienze su misura
+        </p>
 
         <div class="card-grid">
           <article class="card">
-            <h3>Appartamento Olive</h3>
-            <div class="badges">
-              <span class="badge">200 m dal mare</span>
-              <span class="badge">2–3 persone</span>
-              <span class="badge">aria condizionata</span>
-              <span class="badge">Wi‑Fi</span>
-            </div>
+            <h3>Vacanza attiva</h3>
             <p>
-              Un appartamento piacevole, luminoso e tranquillo per 2–3 persone, ideale per coppie o
-              famiglie piccole.
-            </p>
-            <ul>
-              <li>Camera da letto con letto matrimoniale</li>
-              <li>Zona giorno con divano letto</li>
-              <li>Cucina e bagno attrezzati</li>
-              <li>Parcheggio coperto e ricarica EV</li>
-            </ul>
-            <p style="margin-top: 18px;">
-              <a
-                class="btn btn-primary"
-                href="mailto:villamare.olive.lavender@gmail.com?subject=Appartamento%20Olive"
-                >Invia richiesta</a
-              >
+              Noleggio di SUP, barche e biciclette, oltre a viaggi organizzati in Istria e Brijuni
+              per chi ama esplorare l’area circostante.
             </p>
           </article>
 
           <article class="card">
-            <h3>Appartamento Lavender</h3>
-            <div class="badges">
-              <span class="badge">200 m dal mare</span>
-              <span class="badge">fino a 4 persone</span>
-              <span class="badge">aria condizionata</span>
-              <span class="badge">Wi‑Fi</span>
-            </div>
+            <h3>Gusti locali</h3>
             <p>
-              Appartamento moderno e arredato con spazi più ampi, perfetto per fino a 4 persone e
-              atmosfere accoglienti.
+              Cene tradizionali istriane con piatti tipici, buona compagnia e un’atmosfera calda e
+              personale.
             </p>
-            <ul>
-              <li>Camera principale con letto matrimoniale</li>
-              <li>Seconda camera con due letti singoli</li>
-              <li>Zona giorno condivisa con cucina</li>
-              <li>Ospitalità confortevole per famiglie e amici</li>
-            </ul>
-            <p style="margin-top: 18px;">
-              <a
-                class="btn btn-primary"
-                href="mailto:villamare.olive.lavender@gmail.com?subject=Appartamento%20Lavender"
-                >Invia richiesta</a
-              >
+          </article>
+
+          <article class="card">
+            <h3>Vacanza in famiglia</h3>
+            <p>
+              Posizione tranquilla e appartamenti spaziosi per famiglie che desiderano un soggiorno
+              rilassato e confortevole al mare.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Assistenza personalizzata</h3>
+            <p>
+              Siamo felici di consigliarti attività e di aiutarti a organizzare il tuo soggiorno in
+              base ai tuoi desideri.
             </p>
           </article>
         </div>
+      </div>
+    </section>
 
-        <div class="gallery-grid">
+    <section id="apartments" aria-labelledby="apartments-title">
+      <div class="intro">
+        <h2 id="apartments-title">Alloggio confortevole su misura</h2>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>Appartamento Olive</h3>
+          <div class="badges">
+            <span class="badge">200 m dal mare</span>
+            <span class="badge">2–3 persone</span>
+            <span class="badge">aria condizionata</span>
+            <span class="badge">Wi‑Fi</span>
+          </div>
+          <p>
+            Un appartamento luminoso e tranquillo per 2–3 persone, ideale per coppie o famiglie
+            piccole.
+          </p>
+          <ul>
+            <li>Camera da letto con letto matrimoniale</li>
+            <li>Sala soggiorno con divano letto</li>
+            <li>Cucina attrezzata e bagno</li>
+            <li>Parcheggio coperto e ricarica per auto elettriche</li>
+          </ul>
+          <p style="margin-top:18px;">
+            <a class="btn btn-primary" href="mailto:villamare.olive.lavender@gmail.com?subject=Richiesta%20Appartamento%20Olive">
+              Invia richiesta
+            </a>
+          </p>
+
           <button
             class="gallery-card gallery-trigger"
             type="button"
             data-gallery="olive"
             data-start="0"
-            aria-label="Apri galleria appartamento Olive"
+            aria-label="Apri la galleria dell'appartamento Olive"
           >
             <img src="images/Olive1.JPG" alt="Appartamento Olive" loading="lazy" />
             <div class="gallery-card__overlay">
@@ -1002,13 +885,38 @@
               <span>6 foto</span>
             </div>
           </button>
+        </article>
+
+        <article class="card">
+          <h3>Appartamento Lavender</h3>
+          <div class="badges">
+            <span class="badge">200 m dal mare</span>
+            <span class="badge">fino a 4 persone</span>
+            <span class="badge">aria condizionata</span>
+            <span class="badge">Wi‑Fi</span>
+          </div>
+          <p>
+            Un appartamento moderno e spazioso per un massimo di quattro persone, perfetto per
+            famiglie e amici.
+          </p>
+          <ul>
+            <li>Camera da letto grande con letto matrimoniale</li>
+            <li>Seconda camera con due letti singoli</li>
+            <li>Sala soggiorno con cucina</li>
+            <li>Soggiorno confortevole per famiglie e amici</li>
+          </ul>
+          <p style="margin-top:18px;">
+            <a class="btn btn-primary" href="mailto:villamare.olive.lavender@gmail.com?subject=Richiesta%20Appartamento%20Lavender">
+              Invia richiesta
+            </a>
+          </p>
 
           <button
             class="gallery-card gallery-trigger"
             type="button"
             data-gallery="lavender"
             data-start="0"
-            aria-label="Apri galleria appartamento Lavender"
+            aria-label="Apri la galleria dell'appartamento Lavender"
           >
             <img src="images/Lavander1.JPG" alt="Appartamento Lavender" loading="lazy" />
             <div class="gallery-card__overlay">
@@ -1016,271 +924,286 @@
               <span>6 foto</span>
             </div>
           </button>
-        </div>
-      </section>
+        </article>
+      </div>
+    </section>
 
-      <section id="parking">
-        <div class="panel">
-          <div class="intro">
-            <h2>Parcheggio per auto e barche</h2>
-          </div>
-
-          <div class="card-grid">
-            <article class="card">
-              <h3>Parcheggio gratuito</h3>
-              <p>
-                Gli ospiti hanno a disposizione un parcheggio coperto gratuito per i veicoli, che
-                semplifica arrivi e partenze.
-              </p>
-            </article>
-
-            <article class="card">
-              <h3>Parcheggio barche</h3>
-              <p>
-                Sono disponibili due posti coperti per imbarcazioni con accesso elettrico e acqua.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="location">
-        <div class="panel">
-          <div class="intro">
-            <h2>Karigador e dintorni</h2>
-          </div>
-
-          <div class="card-grid">
-            <article class="card">
-              <h3>Posizione tranquilla</h3>
-              <p>
-                Karigador è un villaggio turistico tranquillo e cordiale con accesso al mare, paesi
-                vicini e ottime opportunità di relax.
-              </p>
-            </article>
-
-            <article class="card">
-              <h3>Buona connessione</h3>
-              <p>
-                A circa 200 metri dalla spiaggia, vicino ai centri abitati, ai sentieri costieri e
-                alle famose attrazioni dell’Istria.
-              </p>
-            </article>
-          </div>
-
-          <div class="gallery-grid" style="max-width: 620px; margin-inline: auto;">
-            <button
-              class="gallery-card gallery-trigger"
-              type="button"
-              data-gallery="karigador"
-              data-start="0"
-              aria-label="Apri galleria di Karigador"
-            >
-              <img src="images/sl1.jpg" alt="Karigador" loading="lazy" />
-              <div class="gallery-card__overlay">
-                <strong>Karigador</strong>
-                <span>6 foto</span>
-              </div>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq">
+    <section id="parking" aria-labelledby="parking-title">
+      <div class="panel">
         <div class="intro">
-          <h2>Domande frequenti</h2>
+          <h2 id="parking-title">Parcheggio per veicoli e barche</h2>
         </div>
 
-        <div class="faq">
-          <div class="faq-item">
-            <h3>Quanto dista il mare dagli appartamenti?</h3>
-            <p>Gli appartamenti si trovano a circa 200 metri dalla spiaggia.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>È previsto il parcheggio?</h3>
-            <p>Sì, gli ospiti hanno a disposizione un parcheggio coperto gratuito.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>È disponibile il Wi‑Fi?</h3>
-            <p>Sì, in entrambi gli appartamenti è presente Wi‑Fi gratuito.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div class="contact-grid">
-          <div class="contact-box">
-            <h3>Contattaci</h3>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Parcheggio gratuito</h3>
             <p>
-              Per prenotazioni, ulteriori informazioni o consigli personalizzati, contattaci. Saremo
-              felici di aiutarti a trovare la vacanza ideale.
+              Gli ospiti hanno accesso a un parcheggio coperto gratuito per veicoli, che rende
+              arrivi e partenze più semplici.
             </p>
+          </article>
 
-            <div class="contact-list">
-              <div class="contact-item">
-                <div>
-                  <strong>Telefono</strong>
-                  <a href="tel:+38641776608">+386 41 776 608</a>
-                </div>
+          <article class="card">
+            <h3>Parcheggio per barche</h3>
+            <p>
+              Sono disponibili due posti per barche, con accesso elettrico e accesso diretto
+              all’acqua.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="location" aria-labelledby="location-title">
+      <div class="panel">
+        <div class="intro">
+          <h2 id="location-title">Karigador e dintorni</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Posizione tranquilla</h3>
+            <p>
+              Karigador è un tranquillo e accogliente paese turistico con accesso al mare, paesi
+              vicini e ottime opportunità di relax.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Buoni collegamenti</h3>
+            <p>
+              A circa 200 metri dalla spiaggia, vicino ai centri abitati, ai percorsi costieri e alle
+              famose attrazioni dell’Istria.
+            </p>
+          </article>
+        </div>
+
+        <div style="max-width:620px; margin:20px auto 0;">
+          <button
+            class="gallery-card gallery-trigger"
+            type="button"
+            data-gallery="karigador"
+            data-start="0"
+            aria-label="Apri la galleria di Karigador"
+          >
+            <img src="images/sl1.jpg" alt="Karigador" loading="lazy" />
+            <div class="gallery-card__overlay">
+              <strong>Karigador</strong>
+              <span>6 foto</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="intro">
+        <h2 id="faq-title">Domande frequenti</h2>
+      </div>
+
+      <div class="faq">
+        <article class="faq-item">
+          <h3>Quanto è lontana la spiaggia dagli appartamenti?</h3>
+          <p>Gli appartamenti si trovano a circa 200 metri dalla spiaggia.</p>
+        </article>
+
+        <article class="faq-item">
+          <h3>È disponibile il parcheggio?</h3>
+          <p>Sì, gli ospiti hanno accesso a un parcheggio coperto gratuito.</p>
+        </article>
+
+        <article class="faq-item">
+          <h3>È disponibile il Wi‑Fi?</h3>
+          <p>Sì, in entrambi gli appartamenti è disponibile Wi‑Fi gratuito.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" aria-label="Contatti e posizione">
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3>Contattaci</h3>
+          <p>
+            Per prenotazioni, ulteriori informazioni o consigli personalizzati, contattaci pure. Saremo
+            felici di aiutarti a trovare il soggiorno ideale.
+          </p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div>
+                <strong>Telefono</strong>
+                <a href="tel:+38641776608">+386 41 776 608</a>
               </div>
+            </div>
 
-              <div class="contact-item">
-                <div>
-                  <strong>Email</strong>
-                  <a href="mailto:villamare.olive.lavender@gmail.com"
-                    >villamare.olive.lavender@gmail.com</a
-                  >
-                </div>
+            <div class="contact-item">
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:villamare.olive.lavender@gmail.com">
+                  villamare.olive.lavender@gmail.com
+                </a>
               </div>
+            </div>
 
-              <div class="contact-item">
-                <div>
-                  <strong>WhatsApp</strong>
-                  <a href="https://wa.me/38641776608" target="_blank" rel="noopener noreferrer"
-                    >Scrivici</a
-                  >
-                </div>
+            <div class="contact-item">
+              <div>
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/38641776608" target="_blank" rel="noopener noreferrer">
+                  Invia un messaggio
+                </a>
               </div>
             </div>
           </div>
-
-          <div class="contact-box">
-            <h3>Posizione</h3>
-            <p>Karigador, Istria, Croazia</p>
-            <iframe
-              class="map"
-              src="https://www.google.com/maps?q=45.3595613983202,13.56048904460079&z=14&output=embed"
-              loading="lazy"
-              title="Villa Mare posizione"
-            ></iframe>
-          </div>
         </div>
-      </section>
-    </main>
 
-    <div class="lightbox" id="lightbox" aria-hidden="true" inert>
-      <div class="lightbox-backdrop" data-close="true"></div>
-      <div
-        class="lightbox-dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="lightbox-title"
-        tabindex="-1"
-      >
-        <h2 class="lightbox-title" id="lightbox-title">Galleria</h2>
-        <button class="lightbox-close" type="button" aria-label="Chiudi galleria">×</button>
-        <button class="lightbox-nav" type="button" data-direction="prev" aria-label="Immagine precedente">‹</button>
-        <div class="lightbox-stage">
-          <img id="lightbox-image" src="" alt="" loading="eager" />
-          <p class="lightbox-caption" id="lightbox-caption" aria-live="polite"></p>
+        <div class="contact-box">
+          <h3>Posizione</h3>
+          <p>Karigador, Istria, Croazia</p>
+          <iframe
+            class="map"
+            src="https://www.google.com/maps?q=45.3595613983202,13.56048904460079&z=14&output=embed"
+            loading="lazy"
+            title="Villa Mare posizione"
+          ></iframe>
         </div>
-        <button class="lightbox-nav" type="button" data-direction="next" aria-label="Immagine successiva">›</button>
       </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" inert>
+    <div class="lightbox-backdrop" data-close="true"></div>
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" tabindex="-1">
+      <h2 class="lightbox-title" id="lightbox-title">Galleria fotografica</h2>
+      <button class="lightbox-close" type="button" aria-label="Chiudi galleria">×</button>
+      <button class="lightbox-nav" type="button" data-direction="prev" aria-label="Foto precedente">‹</button>
+      <div class="lightbox-stage">
+        <img id="lightbox-image" src="" alt="" loading="eager" />
+        <p class="lightbox-caption" id="lightbox-caption" aria-live="polite"></p>
+      </div>
+      <button class="lightbox-nav" type="button" data-direction="next" aria-label="Foto successiva">›</button>
     </div>
+  </div>
 
-    <footer>
-      <div class="footer-inner">
-        <span>© Villa Mare</span>
-        <a href="mailto:villamare.olive.lavender@gmail.com">villamare.olive.lavender@gmail.com</a>
-        <a href="https://wa.me/38641776608" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-      </div>
-    </footer>
+  <footer>
+    <div class="footer-inner">
+      <span>© Villa Mare</span>
+      <a href="mailto:villamare.olive.lavender@gmail.com">villamare.olive.lavender@gmail.com</a>
+      <a href="https://wa.me/38641776608" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+  </footer>
 
-    <script>
-      const gallerySets = {
-        olive: {
-          title: "Appartamento Olive",
-          images: [
-            "images/Olive1.JPG",
-            "images/Olive2.JPG",
-            "images/Parking1.JPG",
-            "images/sl1.jpg",
-            "images/sl2.jpg",
-            "images/sl3.jpg",
-          ],
-        },
-        lavender: {
-          title: "Appartamento Lavender",
-          images: [
-            "images/Lavander1.JPG",
-            "images/sl4.jpg",
-            "images/sl5.jpg",
-            "images/sl6.jpg",
-            "images/sl7.jpg",
-            "images/Parking1.JPG",
-          ],
-        },
-        karigador: {
-          title: "Karigador",
-          images: ["images/sl1.jpg", "images/sl2.jpg", "images/sl3.jpg", "images/sl4.jpg", "images/sl5.jpg", "images/sl6.jpg"],
-        },
-      };
-
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImage = document.getElementById("lightbox-image");
-      const lightboxCaption = document.getElementById("lightbox-caption");
-      const triggers = document.querySelectorAll(".gallery-trigger");
-      let currentSet = null;
-      let currentIndex = 0;
-
-      function openLightbox(key, index = 0) {
-        if (!gallerySets[key]) return;
-        currentSet = key;
-        currentIndex = index;
-        renderLightbox();
-        lightbox.classList.add("open");
-        lightbox.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
+  <script>
+    const gallerySets = {
+      olive: {
+        title: "Appartamento Olive",
+        images: [
+          "images/Olive1.JPG",
+          "images/Olive2.JPG",
+          "images/Parking1.JPG",
+          "images/sl1.jpg",
+          "images/sl2.jpg",
+          "images/sl3.jpg"
+        ]
+      },
+      lavender: {
+        title: "Appartamento Lavender",
+        images: [
+          "images/Lavander1.JPG",
+          "images/sl4.jpg",
+          "images/sl5.jpg",
+          "images/sl6.jpg",
+          "images/sl7.jpg",
+          "images/Parking1.JPG"
+        ]
+      },
+      karigador: {
+        title: "Karigador",
+        images: [
+          "images/sl1.jpg",
+          "images/sl2.jpg",
+          "images/sl3.jpg",
+          "images/sl4.jpg",
+          "images/sl5.jpg",
+          "images/sl6.jpg"
+        ]
       }
+    };
 
-      function closeLightbox() {
-        lightbox.classList.remove("open");
-        lightbox.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const triggers = document.querySelectorAll(".gallery-trigger");
+
+    let currentSet = null;
+    let currentIndex = 0;
+    let previouslyFocusedElement = null;
+
+    function renderLightbox() {
+      if (!currentSet) return;
+      const set = gallerySets[currentSet];
+      lightboxImage.src = set.images[currentIndex];
+      lightboxImage.alt = `${set.title} ${currentIndex + 1}`;
+      lightboxCaption.textContent = `${set.title} (${currentIndex + 1}/${set.images.length})`;
+    }
+
+    function openLightbox(key, index = 0) {
+      if (!gallerySets[key]) return;
+
+      previouslyFocusedElement = document.activeElement;
+      currentSet = key;
+      currentIndex = index;
+      renderLightbox();
+
+      lightbox.removeAttribute("inert");
+      lightbox.setAttribute("aria-hidden", "false");
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+
+      const dialog = lightbox.querySelector(".lightbox-dialog");
+      dialog.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightbox.setAttribute("inert", "");
+      document.body.style.overflow = "";
+
+      if (previouslyFocusedElement && typeof previouslyFocusedElement.focus === "function") {
+        previouslyFocusedElement.focus();
       }
+    }
 
-      function renderLightbox() {
-        if (!currentSet) return;
-        const set = gallerySets[currentSet];
-        const src = set.images[currentIndex];
-        lightboxImage.src = src;
-        lightboxImage.alt = `${set.title} ${currentIndex + 1}`;
-        lightboxCaption.textContent = `${set.title} (${currentIndex + 1}/${set.images.length})`;
-      }
+    function moveLightbox(step) {
+      if (!currentSet) return;
+      const set = gallerySets[currentSet];
+      currentIndex = (currentIndex + step + set.images.length) % set.images.length;
+      renderLightbox();
+    }
 
-      function moveLightbox(step) {
-        if (!currentSet) return;
-        const set = gallerySets[currentSet];
-        currentIndex = (currentIndex + step + set.images.length) % set.images.length;
-        renderLightbox();
-      }
-
-      triggers.forEach((button) => {
-        button.addEventListener("click", () => {
-          openLightbox(button.dataset.gallery, Number(button.dataset.start || 0));
-        });
+    triggers.forEach((button) => {
+      button.addEventListener("click", () => {
+        openLightbox(button.dataset.gallery, Number(button.dataset.start || 0));
       });
+    });
 
-      document.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
-      document.querySelector(".lightbox-backdrop").addEventListener("click", closeLightbox);
+    document.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
+    document.querySelector(".lightbox-backdrop").addEventListener("click", closeLightbox);
 
-      document
-        .querySelector('.lightbox-nav[data-direction="prev"]')
-        .addEventListener("click", () => moveLightbox(-1));
+    document.querySelector('.lightbox-nav[data-direction="prev"]').addEventListener("click", () => moveLightbox(-1));
+    document.querySelector('.lightbox-nav[data-direction="next"]').addEventListener("click", () => moveLightbox(1));
 
-      document
-        .querySelector('.lightbox-nav[data-direction="next"]')
-        .addEventListener("click", () => moveLightbox(1));
+    document.addEventListener("keydown", (event) => {
+      if (!lightbox.classList.contains("open")) return;
 
-      document.addEventListener("keydown", (event) => {
-        if (!lightbox.classList.contains("open")) return;
-
-        if (event.key === "Escape") closeLightbox();
-        if (event.key === "ArrowLeft") moveLightbox(-1);
-        if (event.key === "ArrowRight") moveLightbox(1);
-      });
-    </script>
-  </body>
+      if (event.key === "Escape") {
+        closeLightbox();
+      } else if (event.key === "ArrowLeft") {
+        moveLightbox(-1);
+      } else if (event.key === "ArrowRight") {
+        moveLightbox(1);
+      }
+    });
+  </script>
+</body>
 </html>
