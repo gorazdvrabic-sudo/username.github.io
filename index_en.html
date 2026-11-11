@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#102a38" />
-
-  <title>Villa Mare – Olive &amp; Lavender Apartments in Karigador, Istria</title>
+  <title>Villa Mare – Olive & Lavender Apartments in Karigador, Istria</title>
   <meta
     name="description"
-    content="Discover Villa Mare’s Olive and Lavender apartments in Karigador, Istria, approximately 200 m from the beach. Check amenities, parking and photos, then contact us to ask about availability."
+    content="Discover Olive and Lavender apartments in Karigador, Istria, approximately 200 m from the beach. Explore the amenities, parking, and photos, then contact us for availability."
   />
 
   <link rel="canonical" href="https://gorazdvrabic-sudo.github.io/username.github.io/index_en.html" />
@@ -22,7 +21,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:site_name" content="Villa Mare" />
-  <meta property="og:title" content="Villa Mare – Olive &amp; Lavender Apartments in Karigador, Istria" />
+  <meta property="og:title" content="Villa Mare – Olive & Lavender Apartments in Karigador, Istria" />
   <meta
     property="og:description"
     content="Apartments in Karigador, Istria, approximately 200 m from the beach. Explore the amenities and photos, then contact us with an enquiry."
@@ -32,14 +31,12 @@
   <meta property="og:image:alt" content="Villa Mare accommodation in Karigador" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Villa Mare – Apartments in Karigador, Istria" />
+  <meta name="twitter:title" content="Villa Mare – Olive & Lavender Apartments in Karigador" />
   <meta
     name="twitter:description"
     content="Olive and Lavender apartments in Istria, approximately 200 m from the beach."
   />
   <meta name="twitter:image" content="https://gorazdvrabic-sudo.github.io/username.github.io/images/hero.png" />
-
-  <!-- Keep the existing Google Fonts links and <style> block below. -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,234 +53,266 @@
       --ink:#1b2a32;
       --muted:#5f6d76;
       --white:#fff;
-      --line:rgba(21,44,57,0.10);
-      --shadow:0 20px 50px rgba(19,35,43,0.08);
+      --line:rgba(21,44,57,.10);
+      --shadow:0 20px 50px rgba(19,35,43,.08);
       --radius-xl:26px;
       --radius-lg:18px;
       --radius-md:14px;
       --container:1180px;
-      --heading:"Cormorant Garamond", Georgia, serif;
-      --body:"Inter", Arial, sans-serif;
+      --heading:"Cormorant Garamond","Georgia",serif;
+      --body:"Inter","Segoe UI",sans-serif;
     }
 
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
     body{
       margin:0;
       background:#f6f4f1;
       color:var(--ink);
       font-family:var(--body);
-      line-height:1.7;
+      line-height:1.6;
     }
     img{max-width:100%;display:block}
     a{text-decoration:none;color:inherit}
     button{font:inherit}
+    :focus-visible{
+      outline:3px solid #e7b958;
+      outline-offset:3px;
+    }
     .container{
       width:min(var(--container), calc(100% - 32px));
       margin-inline:auto;
     }
+    .skip-link{
+      position:absolute;
+      left:-9999px;
+      top:auto;
+    }
+    .skip-link:focus{
+      left:16px;
+      top:12px;
+      z-index:2000;
+      background:#fff;
+      padding:10px 14px;
+      border-radius:999px;
+      box-shadow:var(--shadow);
+    }
 
     .lang-switcher{
       position:fixed;
-      top:18px;
-      left:18px;
-      z-index:9999;
+      top:16px;
+      left:16px;
+      z-index:60;
       display:flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 10px;
+      gap:6px;
+      padding:6px;
       border-radius:999px;
-      background:rgba(255,255,255,0.18);
-      border:1px solid rgba(255,255,255,0.12);
-      box-shadow:0 10px 25px rgba(0,0,0,0.12);
+      background:rgba(16,42,56,.78);
+      border:1px solid rgba(255,255,255,.16);
       backdrop-filter:blur(10px);
+      box-shadow:0 10px 25px rgba(0,0,0,.12);
     }
     .lang-switcher a{
-      width:34px;height:34px;border-radius:50%;
-      overflow:hidden;
-      border:2px solid transparent;
-      display:grid;place-items:center;
-      background:rgba(255,255,255,0.1);
-      transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+      display:grid;
+      place-items:center;
+      width:42px;
+      height:42px;
+      border-radius:999px;
+      color:#fff;
+      font-weight:700;
+      font-size:.72rem;
+      background:rgba(255,255,255,.06);
+      border:1px solid transparent;
+      transition:transform .2s ease,border-color .2s ease;
     }
     .lang-switcher a:hover,
     .lang-switcher a:focus-visible{
       transform:translateY(-1px);
-      border-color:rgba(255,255,255,0.9);
-      box-shadow:0 0 0 3px rgba(255,255,255,0.08);
+      border-color:rgba(255,255,255,.9);
       outline:none;
     }
-    .lang-switcher a.active{
-      border-color:rgba(255,255,255,1);
-      box-shadow:0 0 0 3px rgba(255,255,255,0.10);
-    }
-    .lang-switcher img{
-      width:100%;height:100%;object-fit:cover;display:block;
+    .lang-switcher a[aria-current="page"]{
+      background:rgba(255,255,255,.12);
+      border-color:rgba(255,255,255,.9);
     }
 
     .topbar{
       position:sticky;
       top:0;
       z-index:30;
-      background:rgba(21,44,57,0.88);
-      border-bottom:1px solid rgba(255,255,255,0.08);
+      background:rgba(21,44,57,.88);
+      border-bottom:1px solid rgba(255,255,255,.08);
       backdrop-filter:blur(10px);
     }
     .topbar nav{
-      display:flex;justify-content:center;flex-wrap:wrap;gap:6px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:6px;
       padding:12px 0;
     }
     .topbar a{
-      color:rgba(255,255,255,0.88);
-      font-size:0.83rem;
-      font-weight:500;
-      letter-spacing:0.02em;
+      color:rgba(255,255,255,.9);
+      font-size:.82rem;
+      font-weight:600;
+      letter-spacing:.02em;
       padding:8px 12px;
       border-radius:999px;
-      transition:background .2s ease, color .2s ease;
+      transition:background .2s ease,color .2s ease;
     }
     .topbar a:hover,
     .topbar a:focus-visible{
-      background:rgba(255,255,255,0.06);
+      background:rgba(255,255,255,.06);
       outline:none;
     }
 
     .hero{
       position:relative;
-      height:62vh;
       min-height:520px;
-      background-color:#152c39;
-      background-image:
-        linear-gradient(120deg, rgba(19,36,44,0.72), rgba(12,29,36,0.52)),
-        url("images/hero.png");
-      background-position:center center;
-      background-repeat:no-repeat;
-      background-size:cover;
-      -webkit-background-size:cover;
-      display:grid;place-items:center;
+      display:grid;
+      place-items:center;
       overflow:hidden;
+      background:
+        linear-gradient(120deg, rgba(12,25,31,.74), rgba(12,29,36,.52)),
+        url("images/hero.png") center/cover no-repeat;
     }
     .hero::before{
       content:"";
-      position:absolute;inset:0;
-      background:radial-gradient(circle at top right, rgba(199,166,106,0.18), transparent 28%);
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at top right, rgba(199,166,106,.18), transparent 28%);
     }
     .hero-inner{
       position:relative;
       z-index:1;
       width:min(var(--container), calc(100% - 32px));
       display:grid;
-      grid-template-columns:1.5fr 0.7fr;
+      grid-template-columns:1.5fr .7fr;
       align-items:center;
       gap:38px;
-      padding:95px 0 72px;
+      padding:100px 0 72px;
     }
     .eyebrow{
       display:inline-block;
-      color:#edf5fb;
-      background:rgba(255,255,255,0.07);
-      border:1px solid rgba(255,255,255,0.12);
-      border-radius:999px;
-      padding:7px 12px;
-      font-size:0.66rem;
-      font-weight:700;
-      letter-spacing:0.14em;
-      text-transform:uppercase;
       margin-bottom:18px;
+      padding:7px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      color:#edf5fb;
+      font-size:.66rem;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
     }
     h1,h2,h3{
+      margin:0 0 12px;
       font-family:var(--heading);
       font-weight:500;
+      line-height:1;
+      letter-spacing:-.03em;
       color:var(--navy);
-      line-height:0.98;
-      margin:0 0 12px;
-      letter-spacing:-0.03em;
     }
     .hero h1{
-      font-size:clamp(2.8rem, 4vw, 5rem);
-      color:var(--white);
       max-width:640px;
-      text-shadow:0 14px 30px rgba(0,0,0,0.18);
+      font-size:clamp(2.8rem,4vw,5rem);
+      color:#fff;
+      text-shadow:0 14px 30px rgba(0,0,0,.18);
     }
     .hero p{
       margin:0;
       max-width:680px;
-      color:rgba(255,255,255,0.84);
+      color:rgba(255,255,255,.85);
       font-size:1rem;
     }
     .cta-row{
-      display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
     }
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
       padding:13px 18px;
       border-radius:12px;
       font-weight:700;
-      transition:transform .2s ease, box-shadow .2s ease;
+      transition:transform .2s ease,box-shadow .2s ease;
     }
-    .btn:hover,.btn:focus-visible{
+    .btn:hover,
+    .btn:focus-visible{
       transform:translateY(-1px);
       outline:none;
     }
     .btn-primary{
-      background:linear-gradient(135deg, var(--gold), #b98d4d);
+      background:linear-gradient(135deg,var(--gold),#b98d4d);
       color:var(--navy);
-      box-shadow:0 18px 28px rgba(199,166,106,0.24);
+      box-shadow:0 18px 28px rgba(199,166,106,.22);
     }
     .btn-secondary{
-      color:var(--white);
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.18);
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.18);
+      color:#fff;
     }
 
     .hero-card{
       justify-self:end;
-      width:min(100%, 340px);
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.12);
+      width:min(100%,340px);
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
       border-radius:22px;
       padding:22px 20px;
+      box-shadow:0 18px 36px rgba(0,0,0,.12);
       backdrop-filter:blur(10px);
-      box-shadow:0 18px 36px rgba(0,0,0,0.12);
     }
     .hero-card .label{
-      color:rgba(255,255,255,0.7);
+      color:rgba(255,255,255,.72);
       text-transform:uppercase;
-      letter-spacing:0.12em;
-      font-size:0.62rem;
+      letter-spacing:.12em;
+      font-size:.62rem;
       font-weight:700;
       margin-bottom:10px;
     }
-    .hero-card h3{
-      font-size:clamp(1.65rem, 2vw, 2.2rem);
-      color:var(--white);
+    .hero-card h2{
+      font-size:clamp(1.65rem,2vw,2.2rem);
+      color:#fff;
       margin-bottom:14px;
     }
     .hero-card ul{
-      list-style:none;margin:0;padding:0;display:grid;gap:10px;
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:grid;
+      gap:10px;
     }
     .hero-card li{
-      display:flex;align-items:center;gap:12px;
-      color:rgba(255,255,255,0.9);
-      font-size:0.95rem;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:rgba(255,255,255,.9);
+      font-size:.95rem;
     }
     .dot{
-      width:9px;height:9px;border-radius:50%;
+      width:9px;
+      height:9px;
+      border-radius:50%;
       background:linear-gradient(180deg,#f0d79d,#d7a95f);
-      box-shadow:0 0 0 6px rgba(199,166,106,0.10);
+      box-shadow:0 0 0 6px rgba(199,166,106,.1);
       flex-shrink:0;
     }
 
     .stats{
       display:grid;
-      grid-template-columns:repeat(4, minmax(0,1fr));
+      grid-template-columns:repeat(4,minmax(0,1fr));
       gap:16px;
       width:min(var(--container), calc(100% - 32px));
-      margin:-32px auto 0;
-      position:relative;z-index:2;
+      margin:-34px auto 0;
+      position:relative;
+      z-index:2;
     }
     .stat{
-      background:rgba(255,255,255,0.85);
+      background:rgba(255,255,255,.9);
       border:1px solid var(--line);
       border-radius:18px;
       box-shadow:var(--shadow);
@@ -293,35 +322,34 @@
     .stat strong{
       display:block;
       font-family:var(--heading);
-      font-size:clamp(1.8rem, 2.5vw, 2.8rem);
+      font-size:clamp(1.8rem,2.5vw,2.8rem);
       color:var(--navy);
       line-height:1;
       margin-bottom:8px;
     }
     .stat span{
       color:var(--muted);
-      font-size:0.77rem;
-      font-weight:600;
-      letter-spacing:0.05em;
+      font-size:.77rem;
+      font-weight:700;
+      letter-spacing:.05em;
       text-transform:uppercase;
     }
 
     main{
-      padding:68px 0 84px;
+      padding:62px 0 80px;
     }
     section{
-      margin-top:52px;
+      margin-top:56px;
+      scroll-margin-top:90px;
     }
     .intro{
       max-width:780px;
-      margin-inline:auto;
+      margin:0 auto 20px;
       text-align:center;
-      margin-bottom:18px;
     }
     .intro h2{
-      font-size:clamp(2.3rem, 2.5vw, 3.2rem);
+      font-size:clamp(2.3rem,3vw,3.5rem);
       margin-bottom:8px;
-      color:var(--navy);
     }
     .intro p{
       margin:0;
@@ -330,27 +358,27 @@
     }
 
     .panel{
-      background:rgba(255,255,255,0.68);
+      background:rgba(255,255,255,.72);
       border:1px solid var(--line);
       border-radius:var(--radius-xl);
-      box-shadow:0 14px 30px rgba(17,33,39,0.04);
+      box-shadow:0 14px 30px rgba(17,33,39,.04);
       padding:22px;
     }
     .highlight{
       margin:0 0 18px;
       padding:16px 18px;
-      text-align:center;
       border-radius:14px;
-      background:rgba(199,166,106,0.08);
-      border:1px solid rgba(199,166,106,0.18);
+      text-align:center;
+      background:rgba(199,166,106,.08);
+      border:1px solid rgba(199,166,106,.18);
       color:var(--navy);
       font-weight:700;
-      font-size:0.95rem;
+      font-size:.95rem;
     }
 
     .card-grid{
       display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
+      grid-template-columns:repeat(2,minmax(0,1fr));
       gap:20px;
     }
     .card{
@@ -358,10 +386,10 @@
       border:1px solid var(--line);
       border-radius:20px;
       padding:24px;
-      box-shadow:0 10px 28px rgba(17,33,39,0.03);
+      box-shadow:0 10px 28px rgba(17,33,39,.03);
     }
     .card h3{
-      font-size:clamp(1.7rem, 2vw, 2.2rem);
+      font-size:clamp(1.7rem,2vw,2.2rem);
       color:var(--navy);
       margin-bottom:10px;
     }
@@ -380,34 +408,29 @@
     }
 
     .badges{
-      display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:12px 0 14px;
     }
     .badge{
       display:inline-block;
       padding:6px 10px;
       border-radius:999px;
-      border:1px solid rgba(23,58,77,0.10);
-      background:rgba(23,58,77,0.03);
+      border:1px solid rgba(23,58,77,.1);
+      background:rgba(23,58,77,.03);
       color:var(--navy);
-      font-size:0.68rem;
+      font-size:.68rem;
       font-weight:700;
-      letter-spacing:0.04em;
+      letter-spacing:.04em;
       text-transform:uppercase;
     }
 
-    .gallery-grid,
-    .gallery-row{
+    .gallery-grid{
       display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
       gap:18px;
       margin-top:20px;
-    }
-    .gallery-grid{
-      grid-template-columns:repeat(2, minmax(0, 1fr));
-    }
-    .gallery-row{
-      grid-template-columns:repeat(1, minmax(0, 1fr));
-      max-width:620px;
-      margin-inline:auto;
     }
     .gallery-card{
       position:relative;
@@ -419,14 +442,14 @@
       overflow:hidden;
       border-radius:18px;
       cursor:pointer;
-      box-shadow:0 16px 28px rgba(16,42,56,0.08);
       border:1px solid var(--line);
-      transition:transform .2s ease, box-shadow .2s ease;
+      box-shadow:0 16px 28px rgba(16,42,56,.08);
+      transition:transform .2s ease,box-shadow .2s ease;
     }
     .gallery-card:hover,
     .gallery-card:focus-visible{
       transform:translateY(-2px);
-      box-shadow:0 20px 32px rgba(16,42,56,0.10);
+      box-shadow:0 20px 32px rgba(16,42,56,.1);
       outline:none;
     }
     .gallery-card img{
@@ -443,20 +466,20 @@
       align-items:center;
       gap:12px;
       padding:14px 16px;
-      background:linear-gradient(180deg, rgba(10,20,24,0), rgba(10,20,24,0.58) 55%, rgba(10,20,24,0.82));
-      color:var(--white);
+      background:linear-gradient(180deg, rgba(10,20,24,0), rgba(10,20,24,.64) 55%, rgba(10,20,24,.82));
+      color:#fff;
     }
     .gallery-card__overlay strong{
       display:block;
-      font-size:clamp(1.4rem, 2vw, 1.8rem);
+      font-size:clamp(1.4rem,2vw,1.8rem);
       font-family:var(--heading);
       line-height:1;
     }
     .gallery-card__overlay span{
-      font-size:0.7rem;
-      letter-spacing:0.08em;
+      font-size:.7rem;
+      letter-spacing:.08em;
       text-transform:uppercase;
-      opacity:0.9;
+      opacity:.9;
     }
 
     .faq{
@@ -464,21 +487,21 @@
       gap:16px;
     }
     .faq-item{
-      background:linear-gradient(180deg, rgba(255,255,255,0.92), rgba(247,243,238,0.78));
+      background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(247,243,238,.8));
       border:1px solid var(--line);
       border-radius:18px;
       padding:20px 22px;
-      box-shadow:0 10px 20px rgba(15,42,56,0.02);
+      box-shadow:0 10px 20px rgba(15,42,56,.02);
     }
     .faq-item h3{
-      font-size:clamp(1.5rem, 2vw, 2rem);
+      font-size:clamp(1.5rem,2vw,2rem);
       color:var(--navy);
       margin-bottom:7px;
     }
 
     .contact-grid{
       display:grid;
-      grid-template-columns:1.05fr 0.95fr;
+      grid-template-columns:1.05fr .95fr;
       gap:20px;
     }
     .contact-box{
@@ -489,7 +512,7 @@
       box-shadow:var(--shadow);
     }
     .contact-box h3{
-      font-size:clamp(2rem, 2.8vw, 2.6rem);
+      font-size:clamp(2rem,2.8vw,2.6rem);
       color:var(--navy);
       margin-bottom:10px;
     }
@@ -499,13 +522,18 @@
       margin-top:18px;
     }
     .contact-item{
-      display:flex;align-items:flex-start;gap:12px;
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
     }
     .contact-item .icon{
-      width:40px;height:40px;border-radius:12px;
-      background:rgba(199,166,106,0.10);
-      border:1px solid rgba(199,166,106,0.18);
-      display:grid;place-items:center;
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      background:rgba(199,166,106,.1);
+      border:1px solid rgba(199,166,106,.18);
+      display:grid;
+      place-items:center;
       font-size:1rem;
       flex-shrink:0;
     }
@@ -513,18 +541,22 @@
       display:block;
       color:var(--navy);
       margin-bottom:2px;
-      font-size:0.92rem;
+      font-size:.92rem;
     }
     .contact-item a{
       color:var(--navy-2);
       font-weight:600;
     }
     .map{
-      width:100%;min-height:280px;border:0;border-radius:16px;margin-top:12px;
-      box-shadow:0 12px 24px rgba(16,42,56,0.04);
+      width:100%;
+      min-height:280px;
+      border:0;
+      border-radius:16px;
+      margin-top:12px;
+      box-shadow:0 12px 24px rgba(16,42,56,.04);
     }
 
-    .gallery-modal{
+    .lightbox{
       position:fixed;
       inset:0;
       display:flex;
@@ -534,119 +566,104 @@
       opacity:0;
       visibility:hidden;
       pointer-events:none;
-      transition:opacity .2s ease, visibility .2s ease;
+      transition:opacity .2s ease,visibility .2s ease;
       z-index:2000;
     }
-    .gallery-modal.is-open{
+    .lightbox.open{
       opacity:1;
       visibility:visible;
       pointer-events:auto;
     }
-    .gallery-modal__backdrop{
+    .lightbox-backdrop{
       position:absolute;
       inset:0;
-      background:rgba(12,18,22,0.70);
+      background:rgba(12,18,22,.7);
       backdrop-filter:blur(4px);
     }
-    .gallery-modal__dialog{
+    .lightbox-dialog{
       position:relative;
       z-index:1;
-      width:min(920px, 100%);
+      width:min(920px,100%);
       background:#fff;
       border-radius:22px;
-      box-shadow:0 26px 80px rgba(0,0,0,0.20);
-      border:1px solid rgba(255,255,255,0.12);
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:0 26px 80px rgba(0,0,0,.2);
       overflow:hidden;
     }
-    .gallery-modal__header{
-      padding:18px 22px 0;
-    }
-    .gallery-modal__header h3{
+    .lightbox-title{
       margin:0;
-      font-size:clamp(1.8rem, 3vw, 2.5rem);
+      padding:18px 22px 0;
+      font-size:clamp(1.8rem,3vw,2.5rem);
       color:var(--navy);
     }
-    .gallery-modal__close{
+    .lightbox-close{
       position:absolute;
       top:12px;
       right:12px;
       width:38px;
       height:38px;
-      border-radius:50%;
       border:none;
-      background:rgba(21,44,57,0.06);
+      border-radius:50%;
+      background:rgba(21,44,57,.06);
       color:var(--navy);
       font-size:1.8rem;
       line-height:1;
       cursor:pointer;
     }
-    .gallery-modal__viewport{
+    .lightbox-stage{
       position:relative;
       display:grid;
       place-items:center;
       padding:16px 58px 20px;
-      background:linear-gradient(180deg, rgba(247,245,241,0.9), rgba(255,255,255,1));
+      background:linear-gradient(180deg, rgba(247,245,241,.9), rgba(255,255,255,1));
     }
-    .gallery-modal__viewport img{
+    .lightbox-stage img{
       width:100%;
       max-height:70vh;
       object-fit:contain;
       border-radius:16px;
       background:#f7f5f1;
     }
-    .gallery-modal__nav{
+    .lightbox-nav{
       position:absolute;
       top:50%;
       transform:translateY(-50%);
       width:40px;
       height:40px;
-      border-radius:50%;
       border:none;
-      background:rgba(21,44,57,0.88);
+      border-radius:50%;
+      background:rgba(21,44,57,.88);
       color:#fff;
       font-size:1.8rem;
       line-height:1;
       cursor:pointer;
-      box-shadow:0 12px 18px rgba(15,42,56,0.12);
+      box-shadow:0 12px 18px rgba(15,42,56,.12);
     }
-    .gallery-modal__nav.prev{left:12px}
-    .gallery-modal__nav.next{right:12px}
-    .gallery-modal__thumbs{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(80px, 1fr));
-      gap:8px;
-      padding:0 18px 18px;
-      background:#fff;
-    }
-    .gallery-modal__thumb{
-      border:2px solid transparent;
-      border-radius:10px;
-      padding:0;
-      overflow:hidden;
-      background:none;
-      cursor:pointer;
-      transition:border-color .15s ease, transform .15s ease;
-    }
-    .gallery-modal__thumb.is-active{
-      border-color:var(--gold);
-    }
-    .gallery-modal__thumb img{
+    .lightbox-nav[data-direction="prev"]{left:12px}
+    .lightbox-nav[data-direction="next"]{right:12px}
+    .lightbox-caption{
       width:100%;
-      height:68px;
-      object-fit:cover;
-      display:block;
+      margin:0;
+      padding:8px 0 0;
+      text-align:center;
+      color:var(--muted);
+      font-weight:600;
     }
 
     footer{
-      background:linear-gradient(135deg, #152c39 0%, #0f212d 100%);
-      color:rgba(255,255,255,0.9);
+      background:linear-gradient(135deg,#152c39 0%, #0f212d 100%);
+      color:rgba(255,255,255,.9);
       padding:26px 0 32px;
       margin-top:58px;
     }
     .footer-inner{
       width:min(var(--container), calc(100% - 32px));
       margin:0 auto;
-      display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:12px;
     }
     .footer-inner a{
       color:#e5f0f8;
@@ -654,41 +671,70 @@
     }
 
     @media (max-width: 980px){
-      .hero-inner,.card-grid,.contact-grid,.gallery-grid,.stats{
+      .hero-inner,
+      .card-grid,
+      .contact-grid,
+      .gallery-grid,
+      .stats{
         grid-template-columns:1fr;
       }
-      .hero-inner{padding-top:110px}
-      .hero-card{justify-self:start}
-      .topbar nav{justify-content:flex-start}
-      .gallery-card img{height:290px}
+      .hero-inner{
+        padding-top:110px;
+      }
+      .hero-card{
+        justify-self:start;
+      }
+      .topbar nav{
+        justify-content:flex-start;
+      }
     }
 
     @media (max-width: 640px){
       .lang-switcher{
-        top:12px;left:12px;padding:7px 8px;
+        top:10px;
+        left:10px;
+        padding:5px;
       }
       .hero{
         min-height:440px;
-        height:52vh;
       }
-      .cta-row{flex-direction:column;align-items:stretch}
-      .btn{width:100%}
-      .topbar nav{gap:4px;padding:12px 0}
-      .topbar a{font-size:0.78rem}
-      .panel,.card,.contact-box{padding:18px}
-      .gallery-card img{height:220px}
-      .gallery-modal__viewport{padding-inline:48px}
-      .gallery-modal__nav{width:32px;height:32px;font-size:1.5rem}
+      .cta-row{
+        flex-direction:column;
+        align-items:stretch;
+      }
+      .btn{
+        width:100%;
+      }
+      .topbar nav{
+        gap:4px;
+        padding:8px 0;
+      }
+      .panel,.card,.contact-box{
+        padding:18px;
+      }
+      .gallery-card img{
+        height:220px;
+      }
+      .lightbox-stage{
+        padding-inline:48px;
+      }
+      .lightbox-nav{
+        width:32px;
+        height:32px;
+        font-size:1.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="lang-switcher" aria-label="Language selector">
-    <a href="index.html" title="Slovenščina"><img src="https://flagcdn.com/16x12/si.png" alt="Slovenščina" /></a>
-    <a href="index_en.html" class="active" title="English"><img src="https://flagcdn.com/16x12/gb.png" alt="English" /></a>
-    <a href="index_de.html" title="Deutsch"><img src="https://flagcdn.com/16x12/de.png" alt="Deutsch" /></a>
-    <a href="index_it.html" title="Italiano"><img src="https://flagcdn.com/16x12/it.png" alt="Italiano" /></a>
-  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="lang-switcher" aria-label="Language switcher">
+    <a href="index.html" aria-label="Slovenščina">SL</a>
+    <a href="index_en.html" aria-current="page" aria-label="English">EN</a>
+    <a href="index_de.html" aria-label="Deutsch">DE</a>
+    <a href="index_it.html" aria-label="Italiano">IT</a>
+  </nav>
 
   <div class="topbar">
     <nav aria-label="Main navigation">
@@ -704,44 +750,44 @@
   <header class="hero">
     <div class="hero-inner">
       <div>
-        <div class="eyebrow">Istria • Karigador</div>
+        <p class="eyebrow">Istria • Karigador</p>
         <h1>Seaside holidays you won’t want to end.</h1>
-        <p>Olive &amp; Lavender apartments in a tranquil, elegant location just 200 meters from the beach — for relaxed, comfortable, and premium stays.</p>
+        <p>Olive and Lavender apartments in a quiet, elegant setting just 200 meters from the beach — perfect for relaxed, comfortable, and premium stays.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://wa.me/38641776608?text=Hello,%20I%20would%20like%20to%20check%20availability" target="_blank" rel="noreferrer">💬 Check availability</a>
-          <a class="btn btn-secondary" href="#contact">📩 Contact</a>
+          <a class="btn btn-primary" href="https://wa.me/38641776608?text=Hello%2C%20I%20would%20like%20to%20check%20availability" target="_blank" rel="noopener noreferrer">Check availability</a>
+          <a class="btn btn-secondary" href="#contact">Contact us</a>
         </div>
       </div>
 
-      <aside class="hero-card">
-        <div class="label">Why guests return</div>
-        <h3>Peace, elegance and comfort</h3>
+      <aside class="hero-card" aria-labelledby="hero-card-title">
+        <p class="label">Why guests return</p>
+        <h2 id="hero-card-title">Peace, elegance and comfort</h2>
         <ul>
-          <li><span class="dot"></span>Quiet and welcoming location</li>
-          <li><span class="dot"></span>Comfortable apartments for 2–4 guests</li>
-          <li><span class="dot"></span>Parking for cars and boats</li>
-          <li><span class="dot"></span>Tailored activities</li>
+          <li><span class="dot" aria-hidden="true"></span>Quiet and welcoming location</li>
+          <li><span class="dot" aria-hidden="true"></span>Comfortable apartments for 2–4 guests</li>
+          <li><span class="dot" aria-hidden="true"></span>Parking for cars and boats</li>
+          <li><span class="dot" aria-hidden="true"></span>Tailored activities and personal recommendations</li>
         </ul>
       </aside>
     </div>
   </header>
 
-  <div class="stats">
+  <div class="stats" aria-label="Key information">
     <div class="stat"><strong>200 m</strong><span>to the beach</span></div>
     <div class="stat"><strong>2</strong><span>apartments</span></div>
     <div class="stat"><strong>4+</strong><span>guests in Lavender</span></div>
     <div class="stat"><strong>24/7</strong><span>support</span></div>
   </div>
 
-  <main class="container">
-    <section id="services">
+  <main class="container" id="main">
+    <section id="services" aria-labelledby="services-title">
       <div class="intro">
-        <h2>Let your holiday become an unforgettable experience</h2>
+        <h2 id="services-title">Let your holiday become an unforgettable experience</h2>
         <p>At Villa Mare, we combine comfort, peaceful surroundings, and personal attention so you can enjoy relaxed evenings, active excursions, and special moments by the sea.</p>
       </div>
 
       <div class="panel">
-        <div class="highlight">🌊 SUP, boat and bike rental • 🚤 Excursions in Istria and Brijuni • 🍷 Traditional Istrian dinners • 🎉 Tailor-made guest experiences</div>
+        <p class="highlight">SUP, boat and bike rental • Excursions in Istria and Brijuni • Traditional Istrian dinners • Tailor-made experiences</p>
 
         <div class="card-grid">
           <article class="card">
@@ -764,21 +810,21 @@
       </div>
     </section>
 
-    <section id="apartments">
+    <section id="apartments" aria-labelledby="apartments-title">
       <div class="intro">
-        <h2>Comfortable accommodation tailored to you</h2>
+        <h2 id="apartments-title">Comfortable accommodation tailored to you</h2>
       </div>
 
       <div class="card-grid">
         <article class="card">
-          <h3>🫒 Olive Apartment</h3>
+          <h3>Olive apartment</h3>
           <div class="badges">
             <span class="badge">200 m to the sea</span>
             <span class="badge">2–3 guests</span>
             <span class="badge">air conditioning</span>
             <span class="badge">Wi‑Fi</span>
           </div>
-          <p>A pleasant, bright and quiet apartment for 2–3 guests, ideal for couples or small families.</p>
+          <p>A bright, peaceful apartment for 2–3 guests, perfect for couples or small families.</p>
           <ul>
             <li>Bedroom with a double bed</li>
             <li>Living area with a sofa bed</li>
@@ -791,14 +837,14 @@
         </article>
 
         <article class="card">
-          <h3>🪴 Lavender Apartment</h3>
+          <h3>Lavender apartment</h3>
           <div class="badges">
             <span class="badge">200 m to the sea</span>
             <span class="badge">up to 4 guests</span>
             <span class="badge">air conditioning</span>
             <span class="badge">Wi‑Fi</span>
           </div>
-          <p>Modern and freely furnished apartment for up to 4 guests with more spacious rooms and a welcoming atmosphere.</p>
+          <p>A modern, spacious apartment for up to four guests, ideal for families and friends.</p>
           <ul>
             <li>Large bedroom with a double bed</li>
             <li>Second bedroom with two single beds</li>
@@ -812,16 +858,16 @@
       </div>
 
       <div class="gallery-grid">
-        <button class="gallery-card gallery-trigger" type="button" data-gallery="olive" aria-label="Open Olive apartment gallery">
-          <img src="images/Olive1.JPG" alt="Olive Apartment" />
+        <button class="gallery-card gallery-trigger" type="button" data-gallery="olive" data-start="0" aria-label="Open Olive apartment gallery">
+          <img src="images/Olive1.JPG" alt="Olive apartment" loading="lazy" />
           <div class="gallery-card__overlay">
             <strong>Olive</strong>
             <span>6 photos</span>
           </div>
         </button>
 
-        <button class="gallery-card gallery-trigger" type="button" data-gallery="lavender" aria-label="Open Lavender apartment gallery">
-          <img src="images/Lavander1.JPG" alt="Lavender Apartment" />
+        <button class="gallery-card gallery-trigger" type="button" data-gallery="lavender" data-start="0" aria-label="Open Lavender apartment gallery">
+          <img src="images/Lavander1.JPG" alt="Lavender apartment" loading="lazy" />
           <div class="gallery-card__overlay">
             <strong>Lavender</strong>
             <span>6 photos</span>
@@ -858,17 +904,17 @@
         <div class="card-grid">
           <article class="card">
             <h3>🌅 Quiet location</h3>
-            <p>Karigador is a peaceful and friendly holiday village with access to the sea, neighboring villages, and excellent relaxation opportunities.</p>
+            <p>Karigador is a peaceful and friendly holiday village with access to the sea, surrounding villages, and excellent relaxation opportunities.</p>
           </article>
           <article class="card">
-            <h3>📍 Good connections</h3>
+            <h3>📍 Great connections</h3>
             <p>Approximately 200 meters from the beach, close to town centers, coastal paths, and famous Istrian attractions.</p>
           </article>
         </div>
 
-        <div class="gallery-row">
-          <button class="gallery-card gallery-trigger" type="button" data-gallery="karigador" aria-label="Open Karigador gallery">
-            <img src="images/sl1.jpg" alt="Karigador" />
+        <div class="gallery-grid" style="max-width:620px;margin-inline:auto;">
+          <button class="gallery-card gallery-trigger" type="button" data-gallery="karigador" data-start="0" aria-label="Open Karigador gallery">
+            <img src="images/sl1.jpg" alt="Karigador" loading="lazy" />
             <div class="gallery-card__overlay">
               <strong>Karigador</strong>
               <span>6 photos</span>
@@ -903,20 +949,31 @@
       <div class="contact-grid">
         <div class="contact-box">
           <h3>Contact us</h3>
-          <p>For reservations, additional information, or personal recommendations, contact us. We will be happy to help you find the ideal holiday.</p>
+          <p>For reservations, additional information, or personal recommendations, contact us. We will be happy to help you find the ideal stay.</p>
 
           <div class="contact-list">
             <div class="contact-item">
-              <div class="icon">📞</div>
-              <div><strong>Phone</strong><a href="tel:+38641776608">+386 41 776 608</a></div>
+              <div class="icon" aria-hidden="true">📞</div>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+38641776608">+386 41 776 608</a>
+              </div>
             </div>
+
             <div class="contact-item">
-              <div class="icon">✉️</div>
-              <div><strong>Email</strong><a href="mailto:villamare.olive.lavender@gmail.com">villamare.olive.lavender@gmail.com</a></div>
+              <div class="icon" aria-hidden="true">✉️</div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:villamare.olive.lavender@gmail.com">villamare.olive.lavender@gmail.com</a>
+              </div>
             </div>
+
             <div class="contact-item">
-              <div class="icon">💬</div>
-              <div><strong>WhatsApp</strong><a href="https://wa.me/38641776608" target="_blank" rel="noreferrer">Message us</a></div>
+              <div class="icon" aria-hidden="true">💬</div>
+              <div>
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/38641776608" target="_blank" rel="noopener noreferrer">Message us</a>
+              </div>
             </div>
           </div>
         </div>
@@ -930,152 +987,157 @@
     </section>
   </main>
 
-  <div id="galleryModal" class="gallery-modal" aria-hidden="true">
-    <div class="gallery-modal__backdrop" data-close="true"></div>
-    <div class="gallery-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle">
-      <button class="gallery-modal__close" type="button" aria-label="Close gallery">×</button>
-      <div class="gallery-modal__header">
-        <h3 id="galleryModalTitle">Gallery</h3>
+  <div class="lightbox" id="lightbox" aria-hidden="true" inert>
+    <div class="lightbox-backdrop" data-close="true"></div>
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" tabindex="-1">
+      <h2 class="lightbox-title" id="lightbox-title">Gallery</h2>
+      <button class="lightbox-close" type="button" aria-label="Close gallery">×</button>
+      <button class="lightbox-nav" type="button" data-direction="prev" aria-label="Previous photo">‹</button>
+      <div class="lightbox-stage">
+        <img id="lightbox-image" src="" alt="" loading="eager" />
+        <p class="lightbox-caption" id="lightbox-caption" aria-live="polite"></p>
       </div>
-      <div class="gallery-modal__viewport">
-        <button class="gallery-modal__nav prev" type="button" aria-label="Previous image">‹</button>
-        <img id="galleryModalImage" src="" alt="" />
-        <button class="gallery-modal__nav next" type="button" aria-label="Next image">›</button>
-      </div>
-      <div id="galleryModalThumbs" class="gallery-modal__thumbs"></div>
+      <button class="lightbox-nav" type="button" data-direction="next" aria-label="Next photo">›</button>
     </div>
   </div>
 
   <footer>
     <div class="footer-inner">
-      <span>© Villa Mare</span>
+      <span>© <span id="year">2026</span> Villa Mare</span>
       <a href="mailto:villamare.olive.lavender@gmail.com">villamare.olive.lavender@gmail.com</a>
-      <a href="https://wa.me/38641776608" target="_blank" rel="noreferrer">WhatsApp</a>
+      <a href="https://wa.me/38641776608" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     </div>
   </footer>
 
   <script>
-    const gallerySets = {
-      olive: {
-        title: 'Olive Apartment',
-        images: [
-          'images/Olive1.JPG',
-          'images/Olive2.JPG',
-          'images/Parking1.JPG',
-          'images/sl1.jpg',
-          'images/sl2.jpg',
-          'images/sl3.jpg'
-        ]
-      },
-      lavender: {
-        title: 'Lavender Apartment',
-        images: [
-          'images/Lavander1.JPG',
-          'images/sl4.jpg',
-          'images/sl5.jpg',
-          'images/sl6.jpg',
-          'images/sl7.jpg',
-          'images/Parking1.JPG'
-        ]
-      },
-      karigador: {
-        title: 'Karigador',
-        images: [
-          'images/sl1.jpg',
-          'images/sl2.jpg',
-          'images/sl3.jpg',
-          'images/sl4.jpg',
-          'images/sl5.jpg',
-          'images/sl6.jpg'
-        ]
-      }
+    const galleries = {
+      olive: [
+        { src: "images/Olive1.JPG", alt: "Olive apartment, photo 1", name: "Olive apartment" },
+        { src: "images/Olive2.JPG", alt: "Olive apartment, photo 2", name: "Olive apartment" },
+        { src: "images/Parking1.JPG", alt: "Olive apartment parking", name: "Olive apartment" },
+        { src: "images/sl1.jpg", alt: "Karigador, photo 1", name: "Karigador" },
+        { src: "images/sl2.jpg", alt: "Karigador, photo 2", name: "Karigador" },
+        { src: "images/sl3.jpg", alt: "Karigador, photo 3", name: "Karigador" }
+      ],
+      lavender: [
+        { src: "images/Lavander1.JPG", alt: "Lavender apartment, photo 1", name: "Lavender apartment" },
+        { src: "images/sl4.jpg", alt: "Karigador, photo 4", name: "Karigador" },
+        { src: "images/sl5.jpg", alt: "Karigador, photo 5", name: "Karigador" },
+        { src: "images/sl6.jpg", alt: "Karigador, photo 6", name: "Karigador" },
+        { src: "images/sl7.jpg", alt: "Karigador, photo 7", name: "Karigador" },
+        { src: "images/Parking1.JPG", alt: "Lavender apartment parking", name: "Lavender apartment" }
+      ],
+      karigador: [
+        { src: "images/sl1.jpg", alt: "Karigador, photo 1", name: "Karigador" },
+        { src: "images/sl2.jpg", alt: "Karigador, photo 2", name: "Karigador" },
+        { src: "images/sl3.jpg", alt: "Karigador, photo 3", name: "Karigador" },
+        { src: "images/sl4.jpg", alt: "Karigador, photo 4", name: "Karigador" },
+        { src: "images/sl5.jpg", alt: "Karigador, photo 5", name: "Karigador" },
+        { src: "images/sl6.jpg", alt: "Karigador, photo 6", name: "Karigador" }
+      ]
     };
 
-    const modal = document.getElementById('galleryModal');
-    const modalTitle = document.getElementById('galleryModalTitle');
-    const modalImage = document.getElementById('galleryModalImage');
-    const modalThumbs = document.getElementById('galleryModalThumbs');
-    const prevBtn = document.querySelector('.gallery-modal__nav.prev');
-    const nextBtn = document.querySelector('.gallery-modal__nav.next');
-    const closeBtn = document.querySelector('.gallery-modal__close');
-    const backdrop = document.querySelector('.gallery-modal__backdrop');
-    let currentGalleryKey = null;
+    const lightbox = document.getElementById("lightbox");
+    const dialog = lightbox.querySelector(".lightbox-dialog");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const closeButton = lightbox.querySelector(".lightbox-close");
+    let currentGallery = null;
     let currentIndex = 0;
+    let previousFocus = null;
+    let previousOverflow = "";
 
-    function openGallery(key) {
-      currentGalleryKey = key;
-      currentIndex = 0;
-      renderGallery();
-      modal.classList.add('is-open');
-      modal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+    function openLightbox(key, index) {
+      currentGallery = galleries[key];
+      if (!currentGallery) return;
+
+      currentIndex = (index + currentGallery.length) % currentGallery.length;
+      previousFocus = document.activeElement;
+      previousOverflow = document.body.style.overflow;
+
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+      lightbox.inert = false;
+      document.body.style.overflow = "hidden";
+      renderSlide();
+      dialog.focus();
     }
 
-    function closeGallery() {
-      modal.classList.remove('is-open');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
+    function closeLightbox() {
+      if (!lightbox.classList.contains("open")) return;
+
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightbox.inert = true;
+      document.body.style.overflow = previousOverflow;
+      currentGallery = null;
+
+      if (previousFocus) previousFocus.focus();
     }
 
-    function renderGallery() {
-      if (!currentGalleryKey || !gallerySets[currentGalleryKey]) return;
+    function renderSlide() {
+      if (!currentGallery) return;
+      const item = currentGallery[currentIndex];
+      lightboxImage.src = item.src;
+      lightboxImage.alt = item.alt;
+      lightboxCaption.textContent = `${item.name} · photo ${currentIndex + 1}`;
+    }
 
-      const set = gallerySets[currentGalleryKey];
-      modalTitle.textContent = set.title;
-      modalImage.src = set.images[currentIndex];
-      modalImage.alt = set.title + ' ' + (currentIndex + 1);
+    function moveSlide(direction) {
+      if (!currentGallery) return;
+      currentIndex = (currentIndex + direction + currentGallery.length) % currentGallery.length;
+      renderSlide();
+    }
 
-      modalThumbs.innerHTML = '';
-      set.images.forEach((src, idx) => {
-        const button = document.createElement('button');
-        button.type = 'button';
-        button.className = 'gallery-modal__thumb' + (idx === currentIndex ? ' is-active' : '');
-        button.setAttribute('aria-label', 'Open image ' + (idx + 1));
-        button.innerHTML = '<img src="' + src + '" alt="' + set.title + ' ' + (idx + 1) + '" />';
-        button.addEventListener('click', () => {
-          currentIndex = idx;
-          renderGallery();
-        });
-        modalThumbs.appendChild(button);
+    document.querySelectorAll(".gallery-trigger").forEach((button) => {
+      button.addEventListener("click", () => {
+        openLightbox(button.dataset.gallery, Number(button.dataset.start || 0));
       });
-    }
-
-    document.querySelectorAll('.gallery-trigger').forEach(button => {
-      button.addEventListener('click', () => openGallery(button.dataset.gallery));
     });
 
-    prevBtn.addEventListener('click', () => {
-      const set = gallerySets[currentGalleryKey];
-      if (!set) return;
-      currentIndex = (currentIndex - 1 + set.images.length) % set.images.length;
-      renderGallery();
+    lightbox.querySelectorAll("[data-direction]").forEach((button) => {
+      button.addEventListener("click", () => {
+        moveSlide(button.dataset.direction === "next" ? 1 : -1);
+      });
     });
 
-    nextBtn.addEventListener('click', () => {
-      const set = gallerySets[currentGalleryKey];
-      if (!set) return;
-      currentIndex = (currentIndex + 1) % set.images.length;
-      renderGallery();
-    });
+    closeButton.addEventListener("click", closeLightbox);
+    lightbox.querySelector(".lightbox-backdrop").addEventListener("click", closeLightbox);
 
-    closeBtn.addEventListener('click', closeGallery);
-    backdrop.addEventListener('click', closeGallery);
-    document.addEventListener('keydown', (event) => {
-      if (!modal.classList.contains('is-open')) return;
-      if (event.key === 'Escape') closeGallery();
-      if (event.key === 'ArrowLeft') {
-        const set = gallerySets[currentGalleryKey];
-        if (!set) return;
-        currentIndex = (currentIndex - 1 + set.images.length) % set.images.length;
-        renderGallery();
+    document.addEventListener("keydown", (event) => {
+      if (!lightbox.classList.contains("open")) return;
+
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeLightbox();
       }
-      if (event.key === 'ArrowRight') {
-        const set = gallerySets[currentGalleryKey];
-        if (!set) return;
-        currentIndex = (currentIndex + 1) % set.images.length;
-        renderGallery();
+
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        moveSlide(1);
+      }
+
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        moveSlide(-1);
+      }
+
+      if (event.key === "Tab") {
+        const controls = [...lightbox.querySelectorAll("button")];
+        const first = controls[0];
+        const last = controls[controls.length - 1];
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
       }
     });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
