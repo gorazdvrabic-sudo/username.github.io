@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gorazdvrabic-sudo.github.io/username.github.io/sitemap.xml
+Sitemap: https://villamare.top/sitemap.xml
